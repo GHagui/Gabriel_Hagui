@@ -1,0 +1,19 @@
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/header.css" />
+</head>
+<header class="site-header">
+    <div class="container">
+        <h1 class="logo"><a>Gabriel Hagui dos Santos</a></h1>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ '/about' | relative_url }}">Sobre mim</a></li>
+                <li><a href="{{ '/projects' | relative_url }}">Projetos</a></li>
+                <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+                <li><a href="{{ '/cv' | relative_url }}">Currículo</a></li>
+                <li><a href="{{ '/contact' | relative_url }}" class="hire-me">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

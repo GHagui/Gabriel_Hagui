@@ -1,0 +1,68 @@
+.site-header {
+  border-bottom: 5px solid #000;
+  background: #daf5f0;
+  padding: 0;
+}
+
+.site-header .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header .logo a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  font-family: monospace;
+  font-size: 1.5rem;
+  padding: 1rem 1rem 1rem 0;}
+
+.site-header .site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header .site-nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  padding: 0.5rem;
+  font-family: monospace;
+  font-size: 1.2rem;
+  border: 5px solid transparent;
+  transition: border 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.site-header .site-nav a:hover {
+  border: 5px solid #000;
+  box-shadow: 5px 5px 0 #000;
+  background-color: #ffff00;
+  color: #000;
+
+}
+.hire-me {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  padding: 0.5rem;
+  font-family: monospace;
+  font-size: 1.2rem;
+  border: 5px solid #000 !important;
+
+}
+.hire-me:hover {
+  box-shadow: 5px 5px 0 #000;
+  background-color: #007bff !important;
+  color: #fff !important;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
