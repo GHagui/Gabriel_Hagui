@@ -4,22 +4,79 @@
 @import "custom/base";
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:wght@600&display=swap');
+
+:root {
+    /* Fontes */
+    --font-primary: 'Lexend Mega', monospace;
+    --font-secondary: 'Ubuntu Sans Mono', monospace;
+
+    /* Cores */
+    --color-black: #000;
+    --color-white: #fff;
+    --color-blue-primary: #0b27ff;
+    --color-orange-accent: #ff4d1e;
+    --color-purple-accent: #9723C9;
+    --color-pink-accent: #fe90e7;
+    --color-bg-body: #faeee8;
+    --color-bg-sidebar: #f5f5f5;
+    --color-bg-content: var(--color-white);
+
+    /* Bordas & Sombras */
+    --border-strong: 8px solid var(--color-black);
+    --border-medium: 5px solid var(--color-black);
+    --border-radius-default: 15px;
+    --border-radius-large: 20px;
+
+    --box-shadow-small: 5px 5px 0 var(--color-black);
+    --box-shadow-medium: 8px 8px 0 var(--color-black);
+    --box-shadow-large: 15px 15px 0 var(--color-black);
+
+    /* Espaçamento */
+    --spacing-unit: 1rem;
+    --spacing-xs: calc(var(--spacing-unit) * 0.5);   /* 0.5rem */
+    --spacing-sm: var(--spacing-unit);              /* 1rem */
+    --spacing-md: calc(var(--spacing-unit) * 1.5);  /* 1.5rem */
+    --spacing-lg: calc(var(--spacing-unit) * 2);    /* 2rem */
+    --spacing-xl: calc(var(--spacing-unit) * 5);    /* 5rem */
+
+    /* Layout */
+    --container-max-width: 1280px;
+    --sidebar-width: 320px;
+    --sidebar-min-width: 220px;
+    --sidebar-max-width: 350px;
+    --content-block-max-width: 800px; /* Para a seção .about */
+}
+
 /* -------------------*/
-/* HEADER STYLES */
+/* ESTILOS GLOBAIS */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg-body);
+    font-family: var(--font-secondary); /* Fonte padrão */
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+}
+
+/* -------------------*/
+/* ESTILOS DO CABEÇALHO */
 .site-header {
-    border-bottom: 8px solid #000;
-    background: #0b27ff;
+    border-bottom: var(--border-strong);
+    background: var(--color-blue-primary);
     padding: 0;
 }
 
 .site-header .container {
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
+    /* Usa o .container global para max-width, margin, padding horizontal */
+    /* Adiciona layout flex específico do cabeçalho */
+    margin-top: 0px; /* Definido explicitamente se necessário, embora auto centralize */
     margin-bottom: 0px;
-    padding-left: 5rem;
-    padding-right: 5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,70 +84,70 @@
 
 .site-header .logo a {
     text-decoration: none;
-    color: #fff;
+    color: var(--color-white);
     font-weight: 900;
-    font-family: 'Lexend Mega', monospace;
+    font-family: var(--font-primary);
     font-size: 1.8rem;
-    padding: 1rem 1rem 1rem 0;
+    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) 0;
     white-space: nowrap;
 }
 
 .site-header .site-nav ul {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: var(--spacing-lg);
     margin: 0;
     padding: 0;
 }
 
 .site-header .site-nav a {
     text-decoration: none;
-    color: #fff;
+    color: var(--color-white);
     font-weight: 600;
-    padding: 0.5rem;
-    font-family: 'Ubuntu Sans Mono', monospace;
+    padding: var(--spacing-xs);
+    font-family: var(--font-secondary);
     font-size: 1.2rem;
-    border: 5px solid transparent;
-    border-radius: 15px;
-    transition: box-shadow 0.3s, border 0.3s;
+    border: 5px solid transparent; /* Mantém espessura específica para transição */
+    border-radius: var(--border-radius-default);
+    transition: box-shadow 0.3s, border 0.3s, background-color 0.3s, color 0.3s;
     white-space: nowrap;
 }
 
 .site-header .site-nav a:hover {
-    border: 5px solid #000;
-    box-shadow: 5px 5px 0 #000;
-    background-color: #ff4d1e;
-    color: #000;
+    border: var(--border-medium);
+    box-shadow: var(--box-shadow-small);
+    background-color: var(--color-orange-accent);
+    color: var(--color-black);
 }
 
-.hire-me {
+.hire-me { /* Mantido !important como no original, revisar se pode ser removido */
     text-decoration: none;
-    color: #000;
+    color: var(--color-black);
     font-weight: 600;
-    padding: 0.5rem;
-    font-family: 'Ubuntu Sans Mono', monospace;
+    padding: var(--spacing-xs);
+    font-family: var(--font-secondary);
     font-size: 1.2rem;
-    border: 5px solid #000 !important;
-    background-color: #9723C9 !important;
-
+    border: var(--border-medium) !important;
+    background-color: var(--color-purple-accent) !important;
 }
 
 .hire-me:hover {
-    box-shadow: 5px 5px 0 #000;
-    background-color: #9723C9 !important;
-    color: #fff !important;
+    box-shadow: var(--box-shadow-small);
+    /* background-color: var(--color-purple-accent) !important; /* Já definido */
+    color: var(--color-white) !important;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #faeee8;
+.site-header .site-nav select {
+    display: none; /* Inicialmente escondido, mostrado em media query */
 }
 
+/* Responsivo do Cabeçalho */
 @media (max-width: 1100px) {
     .site-header .container {
         flex-direction: column;
         align-items: stretch;
+        padding-left: var(--spacing-sm);  /* Ajusta padding para telas menores */
+        padding-right: var(--spacing-sm);
     }
 
     .site-header .site-nav {
@@ -104,135 +161,143 @@ body {
     .site-header .site-nav select {
         display: block;
         width: 100%;
-        font-family: monospace;
+        font-family: var(--font-secondary); /* Monospace como no original */
         font-size: 1.2rem;
-        padding: 0.5rem;
-        border: 5px solid #000;
-        background: #fff;
-        margin-top: 0.5rem;
+        padding: var(--spacing-xs);
+        border: var(--border-medium);
+        background: var(--color-white);
+        margin-top: var(--spacing-xs);
     }
 }
-
-.site-header .site-nav select {
-    display: none;
-}
 /* -------------------*/
-
-
-
-/* CONTENT STYLES */
+/* ESTILOS DO CONTEÚDO */
 main {
+    /* Usa o .container global para max-width, margin, padding horizontal */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem 5rem;
-    gap: 2rem;
+    padding-top: var(--spacing-lg); /* Padding vertical */
+    padding-bottom: var(--spacing-lg);
+    gap: var(--spacing-lg);
 }
 
 .sidebar {
-    width: 320px;
-    min-width: 220px;
-    max-width: 350px;
-    background: #f5f5f5;
-    border: 5px solid #000;
-    border-radius: 20px;
-    box-shadow: 8px 8px 0 #000;
-    padding: 2rem 1.5rem;
-    margin-bottom: 2rem;
-    font-family: 'Ubuntu Sans Mono', monospace;
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-min-width);
+    max-width: var(--sidebar-max-width);
+    background: var(--color-bg-sidebar);
+    border: var(--border-medium);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow-medium);
+    padding: var(--spacing-lg) var(--spacing-md);
+    margin-bottom: var(--spacing-lg); /* Mantido do original */
+    font-family: var(--font-secondary);
 }
 
 .content {
     flex: 1 1 0%;
-    background: #fff;
-    border: 5px solid #000;
-    border-radius: 0px;
-    box-shadow: 15px 15px 0 #000;
-    padding: 2rem 2rem;
-    min-width: 0;
+    background: var(--color-bg-content);
+    border: var(--border-medium);
+    border-radius: 0px; /* Explicitamente 0 como no original */
+    box-shadow: var(--box-shadow-large);
+    padding: var(--spacing-lg);
+    min-width: 0; /* Evita overflow do item flex */
 }
 
+/* Responsivo do Conteúdo */
 @media (max-width: 900px) {
+    main.container { /* Garante que o padding do container seja ajustado se necessário */
+        padding-left: var(--spacing-xs);
+        padding-right: var(--spacing-xs);
+    }
     main {
         flex-direction: column;
-        padding: 1rem 0.5rem;
-        gap: 1rem;
+        padding-top: var(--spacing-sm);
+        padding-bottom: var(--spacing-sm);
+        gap: var(--spacing-sm);
     }
     .sidebar {
         width: 100%;
         max-width: 100%;
         margin-bottom: 0;
+        padding: var(--spacing-md) var(--spacing-sm);
     }
     .content {
-        width: 100%;
-        padding: 1.2rem 0.8rem;
+        /* width: 100%; /* flex: 1 irá lidar com isso */
+        padding: var(--spacing-md) var(--spacing-xs);
     }
 }
 /* -------------------*/
-/* HELLO STYLES */
-.main-hello{
+/* ESTILOS DA SEÇÃO HELLO */
+.main-hello { /* Este parece ser um wrapper para a seção .hello */
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
-
+    width: 100%;
 }
 .hello {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
     display: flex;
-    margin: 0;
-    padding: 0;
-    background-color: #fe90e7;
+    padding: 0; /* Se os elementos filhos lidam com o padding */
+    background-color: var(--color-pink-accent);
     box-sizing: border-box;
     align-items: center;
-    flex: 0 0 100vw;
-    border-bottom: 8px solid #000;
-
+    border-bottom: var(--border-strong);
+    box-shadow: var(--box-shadow-large);
+    width: 100%; /* Se .main-hello não restringe */
 }
 
 .profile-image {
-    width: 500px;
+    width: 500px;  /* Considere tornar responsivo ou usar variáveis */
     height: 500px;
     object-fit: cover;
-    border-right: 8px solid #000;
-    margin-right: 2rem;
+    border-right: var(--border-strong);
+    margin-right: var(--spacing-lg);
 }
 
 .hello-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-grow: 1; /* Permite ocupar o espaço restante */
+    padding: var(--spacing-lg); /* Adiciona padding aqui se não estiver em .hello */
 }
 
 .hello-content h1 {
-    color: #000;
-    font-family: 'Lexend Mega', monospace;
-    font-size: 10rem;
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    font-size: 10rem; /* Muito grande, certifique-se que é intencional */
     margin: 0;
+    text-shadow: 8px 8px 0 var(--color-black); /* Sombra específica */
+    text-align: center;
 }
 
 .hello-content h2 {
-    color: #000;
-    font-family: 'Ubuntu Sans Mono', monospace;
+    color: var(--color-black);
+    font-family: var(--font-secondary);
     font-size: 3rem;
-    margin: 0.5rem 0;
+    margin: var(--spacing-xs) 0;
+    text-align: center;
 }
 .hello-content h3 {
-    color: #000;
-    font-family: 'Ubuntu Sans Mono', monospace;
+    color: var(--color-black);
+    font-family: var(--font-secondary);
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.5em; /* Relativo ao pai, que é 3rem para h2, reconsidere */
+    text-align: center;
 }
 /* -------------------*/
-/* ABOUT STYLES */
+/* ESTILOS DA SEÇÃO ABOUT */
 .about {
-    display: flex;
+    display: flex; /* Supondo que possa ter filhos flex, senão não é necessário */
     flex-direction: column;
-    align-items: center;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem 5rem;
-
+    padding: var(--spacing-lg); /* Padding consistente */
+    background-color: var(--color-bg-content);
+    border: var(--border-strong);
+    box-shadow: var(--box-shadow-large);
+    max-width: var(--content-block-max-width);
+    width: 100%; /* Ocupa toda largura até o max-width */
+    margin-left: auto;
+    margin-right: auto;
+    /* Removido padding-top: 0; padding-bottom: 0; pois padding completo parece mais consistente */
 }

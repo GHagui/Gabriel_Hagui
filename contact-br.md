@@ -1,4 +1,4 @@
 ---
-layout: hire
+layout: hire-br
 title: Contato
 ---

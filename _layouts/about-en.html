@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en-US">
 
 <body>
-    {% include header.html %}
+    {% include header-en.html %}
     <main class="main-hello">
         <div class="hello">
             <img src="{{ site.baseurl }}/assets/images/gabriel-hagui.jpg" alt="Gabriel Hagui" class="profile-image">
             <div class="hello-content">
                 <h1>Hello!</h1>
                 <h2>My name is Gabriel Hagui</h2>
-                <h3>I am a IT Engineer and I work with development and IT infrastructure.</h3>
+                <h3>I am an IT engineer working with software development and IT infrastructure.</h3>
             </div>
         </div>
         <div class="about">
-            {{ content }}
+            <h1>{{ page.title }}</h1>
+            <p>{{ content }}</p>
         </div>
     </main>
-    {% include footer.html %}
+    {% include footer-en.html %}
 </body>
 
 </html>

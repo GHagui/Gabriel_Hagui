@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<body>
+    {% include header-br.html %}
+    <main class="main-hello">
+        <div class="hello">
+            <img src="{{ site.baseurl }}/assets/images/gabriel-hagui.jpg" alt="Gabriel Hagui" class="profile-image">
+            <div class="hello-content">
+                <h1>Olá!</h1>
+                <h2>Meu nome é Gabriel Hagui</h2>
+                <h3>Sou engenheiro de TI e trabalho com desenvolvimento e infraestrutura de TI.</h3>
+            </div>
+        </div>
+        <div class="about">
+            <h1>{{ page.title }}</h1>
+            <p>{{ content }}</p>
+        </div>
+    </main>
+    {% include footer-br.html %}
+</body>
+
+</html>
