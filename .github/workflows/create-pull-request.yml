@@ -17,9 +17,8 @@ jobs:
             uses: peter-evans/create-pull-request@v7
             with:
               token: ${{ secrets.GITHUB_TOKEN }}
-              source: develop
-              target: main
+              base: main
+              branch: pr/develop-to-main
               title: 'Merge develop into main'
               body: 'Automated PR to merge changes from develop to main.'
-              branch: 'pr/develop-to-main'
               delete-branch: false
