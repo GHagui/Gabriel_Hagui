@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <body>
     {% include header.html %}
     <main>
+        <div class="sidebar">
+            <h2>Sobre mim</h2>
+            <p>Gabriel Hagui é um desenvolvedor web apaixonado por criar experiências digitais únicas e funcionais. Com
+                uma sólida formação em Engenharia de Software, ele combina habilidades técnicas com uma visão estética
+                para entregar projetos que não apenas atendem às necessidades dos clientes, mas também encantam os
+                usuários.</p>
+        </div>
+        <div class="content">
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.content }}</p>
+        </div>
     </main>
     {% include footer.html %}
 </body>
