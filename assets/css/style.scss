@@ -1,3 +1,8 @@
+---
+---
+
+@import "custom/base";
+
 .site-header {
   border-bottom: 5px solid #000;
   background: #daf5f0;
@@ -18,7 +23,8 @@
   font-weight: 700;
   font-family: monospace;
   font-size: 1.5rem;
-  padding: 1rem 1rem 1rem 0;}
+  padding: 1rem 1rem 1rem 0;
+}
 
 .site-header .site-nav ul {
   list-style: none;
@@ -36,7 +42,7 @@
   font-family: monospace;
   font-size: 1.2rem;
   border: 5px solid transparent;
-  transition: border 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+  transition: box-shadow 0.3s;
 }
 
 .site-header .site-nav a:hover {
@@ -44,8 +50,8 @@
   box-shadow: 5px 5px 0 #000;
   background-color: #ffff00;
   color: #000;
-
 }
+
 .hire-me {
   text-decoration: none;
   color: #000;
@@ -54,8 +60,8 @@
   font-family: monospace;
   font-size: 1.2rem;
   border: 5px solid #000 !important;
-
 }
+
 .hire-me:hover {
   box-shadow: 5px 5px 0 #000;
   background-color: #007bff !important;
@@ -63,6 +69,6 @@
 }
 
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
