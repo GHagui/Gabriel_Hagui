@@ -1,24 +1,155 @@
-name: Create Pull Request from develop to main
+name: Auto Create Pull Request from develop to main
 
 on:
-    workflow_dispatch:
-    push:
-        branches:
-            - develop
+  push:
+    branches:
+      - develop
+  workflow_dispatch: # Permite execução manual
+
+# Permissões explícitas necessárias para criar/editar Pull Requests
+permissions:
+  contents: read
+  pull-requests: write
+  # issues: write # descomente se futuramente for comentar em issues/PRs via API
 
 jobs:
-    create-pull-request:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout repository
-            uses: actions/checkout@v4
+  create-pull-request:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop'
 
-          - name: Create or update Pull Request
-            uses: peter-evans/create-pull-request@v7
-            with:
-              token: ${{ secrets.GITHUB_TOKEN }}
-              base: main
-              branch: pr/develop-to-main
-              title: 'Merge develop into main'
-              body: 'Automated PR to merge changes from develop to main.'
-              delete-branch: false
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Busca todo o histórico para comparar branches
+
+      - name: Setup Git and fetch branches
+        run: |
+          # Configura Git e busca todas as branches
+          git fetch origin
+          git branch -r
+
+          # Verifica se as branches existem
+          if ! git show-ref --verify --quiet refs/remotes/origin/main; then
+            echo "❌ Branch origin/main não encontrada!"
+            exit 1
+          fi
+
+          if ! git show-ref --verify --quiet refs/remotes/origin/develop; then
+            echo "❌ Branch origin/develop não encontrada!"
+            exit 1
+          fi
+
+          echo "✅ Branches verificadas com sucesso"
+
+      - name: Check if PR already exists
+        id: check-pr
+        run: |
+          # Verifica se já existe um PR aberto de develop para main
+          existing_pr=$(gh pr list --base main --head develop --state open --json number --jq '.[0].number')
+          if [ -n "$existing_pr" ]; then
+            echo "pr_exists=true" >> $GITHUB_OUTPUT
+            echo "pr_number=$existing_pr" >> $GITHUB_OUTPUT
+          else
+            echo "pr_exists=false" >> $GITHUB_OUTPUT
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Pull Request
+        if: steps.check-pr.outputs.pr_exists == 'false'
+        run: |
+          # Verifica se há diferenças entre as branches
+          if git diff --quiet origin/main...origin/develop; then
+            echo "⚠️ Não há diferenças entre origin/main e origin/develop"
+            echo "Pulando criação do PR"
+            exit 0
+          fi
+
+          # Obtém informações dos últimos commits usando referências remotas
+          commit_count=$(git rev-list --count origin/main..origin/develop)
+          last_commit_msg=$(git log -1 --pretty=format:"%s" origin/develop)
+
+          # Cria o corpo do PR com informações dos commits
+          pr_body="## 🚀 Automatic Pull Request from develop to main
+
+          Esta é uma solicitação de pull automática criada quando a branch \`develop\` foi atualizada.
+
+          ### 📊 Resumo das alterações:
+          - **Commits à frente de main:** $commit_count
+          - **Último commit:** $last_commit_msg
+
+          ### 📝 Commits incluídos:
+          $(git log origin/main..origin/develop --oneline --max-count=10)
+
+          ### ✅ Checklist:
+          - [ ] Código revisado
+          - [ ] Testes passando
+          - [ ] Documentação atualizada
+          - [ ] Ready para produção
+
+          ---
+          *Este PR foi criado automaticamente pela GitHub Action*"
+
+          # Cria o PR
+          if gh pr create \
+            --base main \
+            --head develop \
+            --title "🔄 Auto-merge: develop → main" \
+            --body "$pr_body"; then
+            echo "✅ PR criado com sucesso!"
+          else
+            echo "❌ Falha ao criar PR automaticamente."
+            echo "Possíveis causas:"
+            echo " - Token sem permissão (ajuste 'Workflow permissions' para Read & Write)."
+            echo " - Falha temporária na API do GitHub."
+            echo " - Branch protection impedindo automação."
+            echo "Sugestão: execute manualmente 'gh pr create --base main --head develop' localmente ou ajuste permissões."
+            exit 1
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update existing Pull Request
+        if: steps.check-pr.outputs.pr_exists == 'true'
+        run: |
+          # Verifica se há diferenças entre as branches
+          if git diff --quiet origin/main...origin/develop; then
+            echo "⚠️ Não há diferenças entre origin/main e origin/develop"
+            echo "Mantendo PR existente sem atualizações"
+            exit 0
+          fi
+
+          # Atualiza o PR existente com novas informações usando referências remotas
+          commit_count=$(git rev-list --count origin/main..origin/develop)
+          last_commit_msg=$(git log -1 --pretty=format:"%s" origin/develop)
+
+          pr_body="## 🚀 Automatic Pull Request from develop to main (Atualizado)
+
+          Esta é uma solicitação de pull automática criada quando a branch \`develop\` foi atualizada.
+
+          ### 📊 Resumo das alterações:
+          - **Commits à frente de main:** $commit_count
+          - **Último commit:** $last_commit_msg
+          - **Última atualização:** $(date)
+
+          ### 📝 Commits incluídos:
+          $(git log origin/main..origin/develop --oneline --max-count=10)
+
+          ### ✅ Checklist:
+          - [ ] Código revisado
+          - [ ] Testes passando
+          - [ ] Documentação atualizada
+          - [ ] Ready para produção
+
+          ---
+          *Este PR foi criado automaticamente pela GitHub Action*"
+
+          if gh pr edit ${{ steps.check-pr.outputs.pr_number }} --body "$pr_body"; then
+            echo "✅ PR #${{ steps.check-pr.outputs.pr_number }} atualizado com sucesso!"
+          else
+            echo "❌ Falha ao atualizar PR #${{ steps.check-pr.outputs.pr_number }}. Verifique permissões de pull-requests."
+            exit 1
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

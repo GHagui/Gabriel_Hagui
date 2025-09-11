@@ -33,7 +33,7 @@ Foi aí que percebi que não queria um NAS pronto, queria controle de verdade. Q
 ### De PC antigo a NAS
 Um pouco antes dessa busca por um NAS pronto, eu havia feito um upgrade no meu setup principal: Troquei o Intel i5 11400F por um Ryzen 9 7900X3D.
 
-A ideia era vender o sistema antigo por uns R$ 1.800, mas aí a ideia veio na hora certa. 
+A ideia era vender o sistema antigo por uns R$ 1.800, mas aí a ideia veio na hora certa.
 
 > [!help] Pensei:
 > *Por que não tentar montar meu próprio NAS com esse sistema Intel?*
@@ -122,7 +122,7 @@ O NAS estava utilizando uma fonte OCZ ATX 500W ModXStream Pro 80 Plus, lançada 
 
 Segundo muitos especialistas em fóruns, capacitores antigos e inativos podem se degradar, aumentando o risco de falha e instabilidade o que poderia prejudicar os discos rígidos a longo prazo.
 
-Para evitar problemas, resolvi investir numa fonte moderna, MSI MPG A1000G, "ready" for RTX 5080, com novo conector 12VHPWR. Essa nova fonte passou a equipar meu PC principal, substituindo a MSI MPG A850GF, que agora está instalada no NAS. 
+Para evitar problemas, resolvi investir numa fonte moderna, MSI MPG A1000G, "ready" for RTX 5080, com novo conector 12VHPWR. Essa nova fonte passou a equipar meu PC principal, substituindo a MSI MPG A850GF, que agora está instalada no NAS.
 
 Agora o NAS está seguro com a fonte moderna.
 #### Resultado
@@ -199,7 +199,7 @@ Instalei um aplicativo (em um container) no TrueNAS que comprime automaticamente
 
 Diferente do Google Fotos, que me força a escolher entre manter tudo sem compressão ou ativar a economia de espaço para tudo, aqui eu tenho controle total e posso decidir caso a caso.
 
-### Batalha final: Comparação entre Google One x meu NAS 
+### Batalha final: Comparação entre Google One x meu NAS
 Em 26 de junho de 2025, a Google oferece um plano mais próximo da capacidade dos meus HDDs. Infelizmente, não existe plano de 4 TB, o máximo é 2 TB, chamado Google AI Pro, que custa R$ 96,99 por mês.
 
 É difícil comparar de forma totalmente justa, pois o plano da Google inclui IA (como o Gemini), e o meu NAS virou um verdadeiro HomeLab, com ferramentas que vão muito além do armazenamento. São propostas bem diferentes.
