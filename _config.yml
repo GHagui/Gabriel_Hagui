@@ -51,6 +51,10 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
+  math_engine: mathjax
+  math_engine_opts:
+    # Allow both $...$ and \(...\) for inline, and $$...$$ / \[...\] for display
+    preview: "TeX"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

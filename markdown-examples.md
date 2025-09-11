@@ -127,9 +127,23 @@ Conteúdo oculto que pode ser revelado clicando no título.
 
 ~~Texto riscado~~ e `código inline`.
 
-## Matemática (se suportado)
+## Matemática
 
-A fórmula quadrática: $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+Agora com suporte a MathJax. Exemplos:
+
+Inline: $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$ dentro de uma frase.
+
+Display:
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+Outro exemplo inline: $e^{i\pi} + 1 = 0$ e um bloco:
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2}\, dx = \sqrt{\pi}
+$$
 
 ## Diagramas (se suportado)
 
