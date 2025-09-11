@@ -17,6 +17,25 @@ jobs:
         with:
           fetch-depth: 0 # Busca todo o histórico para comparar branches
 
+      - name: Setup Git and fetch branches
+        run: |
+          # Configura Git e busca todas as branches
+          git fetch origin
+          git branch -r
+
+          # Verifica se as branches existem
+          if ! git show-ref --verify --quiet refs/remotes/origin/main; then
+            echo "❌ Branch origin/main não encontrada!"
+            exit 1
+          fi
+
+          if ! git show-ref --verify --quiet refs/remotes/origin/develop; then
+            echo "❌ Branch origin/develop não encontrada!"
+            exit 1
+          fi
+
+          echo "✅ Branches verificadas com sucesso"
+
       - name: Check if PR already exists
         id: check-pr
         run: |
@@ -34,9 +53,16 @@ jobs:
       - name: Create Pull Request
         if: steps.check-pr.outputs.pr_exists == 'false'
         run: |
-          # Obtém informações dos últimos commits
-          commit_count=$(git rev-list --count main..develop)
-          last_commit_msg=$(git log -1 --pretty=format:"%s" develop)
+          # Verifica se há diferenças entre as branches
+          if git diff --quiet origin/main...origin/develop; then
+            echo "⚠️ Não há diferenças entre origin/main e origin/develop"
+            echo "Pulando criação do PR"
+            exit 0
+          fi
+
+          # Obtém informações dos últimos commits usando referências remotas
+          commit_count=$(git rev-list --count origin/main..origin/develop)
+          last_commit_msg=$(git log -1 --pretty=format:"%s" origin/develop)
 
           # Cria o corpo do PR com informações dos commits
           pr_body="## 🚀 Automatic Pull Request from develop to main
@@ -48,7 +74,7 @@ jobs:
           - **Último commit:** $last_commit_msg
 
           ### 📝 Commits incluídos:
-          $(git log main..develop --oneline --max-count=10)
+          $(git log origin/main..origin/develop --oneline --max-count=10)
 
           ### ✅ Checklist:
           - [ ] Código revisado
@@ -72,9 +98,16 @@ jobs:
       - name: Update existing Pull Request
         if: steps.check-pr.outputs.pr_exists == 'true'
         run: |
-          # Atualiza o PR existente com novas informações
-          commit_count=$(git rev-list --count main..develop)
-          last_commit_msg=$(git log -1 --pretty=format:"%s" develop)
+          # Verifica se há diferenças entre as branches
+          if git diff --quiet origin/main...origin/develop; then
+            echo "⚠️ Não há diferenças entre origin/main e origin/develop"
+            echo "Mantendo PR existente sem atualizações"
+            exit 0
+          fi
+
+          # Atualiza o PR existente com novas informações usando referências remotas
+          commit_count=$(git rev-list --count origin/main..origin/develop)
+          last_commit_msg=$(git log -1 --pretty=format:"%s" origin/develop)
 
           pr_body="## 🚀 Automatic Pull Request from develop to main (Atualizado)
 
@@ -86,7 +119,7 @@ jobs:
           - **Última atualização:** $(date)
 
           ### 📝 Commits incluídos:
-          $(git log main..develop --oneline --max-count=10)
+          $(git log origin/main..origin/develop --oneline --max-count=10)
 
           ### ✅ Checklist:
           - [ ] Código revisado

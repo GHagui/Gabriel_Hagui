@@ -29,6 +29,25 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Git and fetch branches
+        run: |
+          # Configura Git e busca todas as branches
+          git fetch origin
+          git branch -r
+
+          # Verifica se as branches existem
+          if ! git show-ref --verify --quiet refs/remotes/origin/main; then
+            echo "❌ Branch origin/main não encontrada!"
+            exit 1
+          fi
+
+          if ! git show-ref --verify --quiet refs/remotes/origin/develop; then
+            echo "❌ Branch origin/develop não encontrada!"
+            exit 1
+          fi
+
+          echo "✅ Branches verificadas com sucesso"
+
       - name: Check existing PRs
         id: check-existing
         run: |
@@ -55,14 +74,21 @@ jobs:
       - name: Create new PR
         if: steps.check-existing.outputs.has_existing == 'false' || inputs.force_create == true || inputs.close_existing == true
         run: |
-          commit_count=$(git rev-list --count main..develop)
+          # Verifica se há diferenças entre as branches usando referências remotas
+          if git diff --quiet origin/main...origin/develop; then
+            echo "❌ Não há diferenças entre origin/main e origin/develop"
+            echo "develop está atualizado com main."
+            exit 1
+          fi
+
+          commit_count=$(git rev-list --count origin/main..origin/develop)
 
           if [ $commit_count -eq 0 ]; then
             echo "❌ Não há commits para merge. develop está atualizado com main."
             exit 1
           fi
 
-          last_commit_msg=$(git log -1 --pretty=format:"%s" develop)
+          last_commit_msg=$(git log -1 --pretty=format:"%s" origin/develop)
           triggered_by="${{ github.actor }}"
 
           pr_body="## 🚀 Manual Pull Request from develop to main
@@ -76,7 +102,7 @@ jobs:
           - **Criado por:** @$triggered_by
 
           ### 📝 Últimos commits:
-          $(git log main..develop --oneline --max-count=15)
+          $(git log origin/main..origin/develop --oneline --max-count=15)
 
           ### ✅ Checklist de revisão:
           - [ ] Código revisado e aprovado
@@ -86,7 +112,7 @@ jobs:
           - [ ] Ready para produção
 
           ### 🔍 Arquivos alterados:
-          $(git diff --name-only main..develop | head -20)
+          $(git diff --name-only origin/main..origin/develop | head -20)
 
           ---
           *PR criado manualmente via GitHub Action*"
