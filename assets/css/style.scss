@@ -45,6 +45,23 @@
     --sidebar-min-width: 220px;
     --sidebar-max-width: 350px;
     --content-block-max-width: 1280px; /* Para a seção .about */
+
+    /* Tipografia Fluida (escala modular adaptativa) */
+    /* A lógica: clamp( min, calc( base + variação * vw ), max ) */
+    /* Níveis baseados em uma escala ~1.2 com ajustes para títulos grandes já existentes */
+    --fs-2xs: clamp(0.70rem, 0.66rem + 0.15vw, 0.78rem); /* micro */
+    --fs-xs:  clamp(0.78rem, 0.72rem + 0.25vw, 0.90rem);
+    /* Ajuste de mínimos para melhor leitura em telas < 400px */
+    --fs-sm:  clamp(0.95rem, 0.85rem + 0.35vw, 1.08rem); /* corpo secundário */
+    --fs-base:clamp(1.00rem, 0.95rem + 0.50vw, 1.20rem); /* corpo principal */
+    --fs-md:  clamp(1.12rem, 1.00rem + 0.70vw, 1.35rem);
+    --fs-lg:  clamp(1.25rem, 1.05rem + 1.10vw, 1.70rem);
+    --fs-xl:  clamp(1.55rem, 1.20rem + 1.90vw, 2.30rem);
+    --fs-2xl: clamp(2.00rem, 1.40rem + 3.20vw, 3.20rem);
+    --fs-3xl: clamp(2.60rem, 1.80rem + 4.50vw, 4.50rem);
+    --fs-4xl: clamp(3.20rem, 2.20rem + 6.00vw, 6.00rem);
+    --fs-5xl: clamp(4.00rem, 2.80rem + 8.50vw, 8.50rem);
+    --fs-hero: clamp(5.00rem, 3.20rem + 10.50vw, 10.00rem); /* usado em h1 hero existente */
 }
 
 /* Garantir que width:100% inclua padding e bordas (evita overflow da seção .about) */
@@ -60,6 +77,7 @@ body {
     background-color: var(--color-bg-body);
     font-family: var(--font-secondary); /* Fonte padrão */
     line-height: 1.55; /* Melhora legibilidade especialmente em telas pequenas */
+    font-size: var(--fs-base);
 }
 
 .container {
@@ -95,7 +113,7 @@ body {
     color: var(--color-white);
     font-weight: 900;
     font-family: var(--font-primary);
-    font-size: 1.8rem;
+    font-size: var(--fs-xl);
     padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) 0;
     white-space: nowrap;
 }
@@ -114,7 +132,7 @@ body {
     font-weight: 600;
     padding: var(--spacing-xs);
     font-family: var(--font-secondary);
-    font-size: 1.2rem;
+    font-size: var(--fs-sm);
     border: 5px solid transparent; /* Mantém espessura específica para transição */
     border-radius: var(--border-radius-default);
     transition: box-shadow 0.3s, border 0.3s, background-color 0.3s, color 0.3s;
@@ -134,7 +152,7 @@ body {
     font-weight: 600;
     padding: var(--spacing-xs);
     font-family: var(--font-secondary);
-    font-size: 1.2rem;
+    font-size: var(--fs-sm);
     border: var(--border-medium) !important;
     background-color: var(--color-purple-accent) !important;
 }
@@ -231,19 +249,19 @@ html.js .site-header .site-nav {
     }
 
     .site-header .logo a {
-        font-size: 1.4rem;
+        font-size: var(--fs-lg);
         padding: var(--spacing-xs) 0;
     }
 
     .site-header .site-nav select {
-        font-size: 1rem;
+        font-size: var(--fs-sm);
         padding: var(--spacing-xs);
     }
 }
 
 @media (max-width: 480px) {
     .site-header .logo a {
-        font-size: 1.2rem;
+        font-size: var(--fs-md);
     }
 }
 /* -------------------*/
@@ -447,15 +465,15 @@ main {
     }
 
     .hello-content h1 {
-        font-size: 6rem;
+        font-size: var(--fs-4xl);
     }
 
     .hello-content h2 {
-        font-size: 2rem;
+        font-size: var(--fs-2xl);
     }
 
     .hello-content h3 {
-        font-size: 1.2rem;
+        font-size: var(--fs-sm);
     }
 }
 
@@ -466,16 +484,16 @@ main {
     }
 
     .hello-content h1 {
-        font-size: 4rem;
+        font-size: var(--fs-3xl);
         text-shadow: 4px 4px 0 var(--color-black);
     }
 
     .hello-content h2 {
-        font-size: 1.5rem;
+        font-size: var(--fs-xl);
     }
 
     .hello-content h3 {
-        font-size: 1rem;
+        font-size: var(--fs-sm);
     }
 
     .hello-content {
@@ -490,16 +508,16 @@ main {
     }
 
     .hello-content h1 {
-    font-size: 3.4rem; /* Aumenta legibilidade do título principal */
+    font-size: var(--fs-2xl); /* fluido */
         text-shadow: 3px 3px 0 var(--color-black);
     }
 
     .hello-content h2 {
-    font-size: 1.35rem; /* Levemente maior */
+    font-size: var(--fs-lg); /* fluido */
     }
 
     .hello-content h3 {
-    font-size: 1.05rem; /* Levemente maior */
+    font-size: var(--fs-sm); /* fluido */
     }
 
     .hello-content {
@@ -558,11 +576,19 @@ main {
 
 /* Reforço tipográfico adicional para telas pequenas */
 @media (max-width: 600px) {
-    body { font-size: 17px; }
+    /* +25% sobre os valores anteriores */
+    body { font-size: clamp(1.31rem, 1.25rem + 1.25vw, 1.525rem); }
     .content p,
-    .content li { font-size: 1.05rem; }
+    .content li { font-size: var(--fs-lg); }
     .content p,
-    .content ul li { margin-left: 0; } /* Remove recuo que estreita o texto */
+    .content ul li { margin-left: 0; }
+}
+
+@media (max-width: 380px) {
+    /* +25% adicional sobre a base estreita */
+    body { font-size: clamp(1.375rem, 1.275rem + 1.75vw, 1.60rem); }
+    .content p,
+    .content li { font-size: var(--fs-lg); }
 }
 
 /* Melhorias para touch em mobile */
@@ -605,7 +631,7 @@ th {
     background: var(--color-blue-primary);
     color: var(--color-white);
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: var(--fs-md);
 }
 
 tr:nth-child(even) {
@@ -712,7 +738,7 @@ blockquote[class*="help"] {
     width: 100%;
     border-collapse: collapse;
     background: transparent;
-    font-size: 0.9rem;
+    font-size: var(--fs-sm);
     table-layout: fixed;
 }
 
@@ -901,7 +927,7 @@ figure {
 }
 
 figcaption {
-    font-size: 0.9rem;
+    font-size: var(--fs-sm);
     color: #666;
     margin-top: var(--spacing-xs);
     font-style: italic;
@@ -925,7 +951,7 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
     margin-top: var(--spacing-xl);
     padding-top: var(--spacing-md);
     border-top: 2px solid var(--color-black);
-    font-size: 0.9rem;
+    font-size: var(--fs-sm);
 }
 
 .footnotes ol {
@@ -969,7 +995,7 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
 /* Responsivo para elementos markdown */
 @media (max-width: 1024px) {
     table {
-        font-size: 0.9rem;
+        font-size: var(--fs-sm);
         margin: var(--spacing-sm) 0;
     }
 
@@ -978,7 +1004,7 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
     }
 
     .highlight pre {
-        font-size: 0.8rem;
+        font-size: var(--fs-xs);
         padding: var(--spacing-sm);
     }
 
@@ -993,36 +1019,8 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
 }
 
 @media (max-width: 480px) {
-    table {
-        font-size: 0.8rem;
-    }
-
-    th, td {
-        padding: 0.5rem 0.25rem;
-    }
-
-    .highlight pre {
-        font-size: 0.75rem;
-        padding: var(--spacing-xs);
-    }
-
-    blockquote {
-        padding: var(--spacing-xs);
-        font-size: 0.9rem;
-    }
-}
-
-/* Overrides adicionais para melhor legibilidade em telas muito pequenas */
-@media (max-width: 600px) {
-    body { font-size: 20px; line-height: 1.65; }
-    .content p,
-    .content li { font-size: 1.15rem; line-height: 1.7; }
-    .content p,
-    .content ul li { margin-left: 0; }
-    .hello-content h1 { font-size: 4.5rem; }
-    .hello-content h2 { font-size: 1.75rem; }
-    .hello-content h3 { font-size: 1.35rem; }
-    table, th, td { font-size: 1rem; }
-    .highlight pre { font-size: 0.95rem; }
-    blockquote { font-size: 1rem; }
+    table { font-size: var(--fs-xs); }
+    th, td { padding: 0.5rem 0.25rem; }
+    .highlight pre { font-size: var(--fs-2xs); padding: var(--spacing-xs); }
+    blockquote { padding: var(--spacing-xs); font-size: var(--fs-sm); }
 }
