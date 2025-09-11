@@ -3,6 +3,20 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <script defer src="{{ '/assets/js/menu.js' | relative_url }}"></script>
+    <!-- Mermaid (diagrams) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script defer src="{{ '/assets/js/mermaid-init.js' | relative_url }}"></script>
+        <!-- MathJax (math rendering) -->
+        <script>
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$','$'], ['\\(','\\)']],
+                    displayMath: [['$$','$$'], ['\\[','\\]']]
+                },
+                options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+            };
+        </script>
+        <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
 </head>
 <header class="site-header">
     <div class="container">
