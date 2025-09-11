@@ -1,0 +1,21 @@
+// Code & syntax highlighting
+.highlighter-rouge { background:#101010; }
+.highlighter-rouge > .highlight { margin:0; background:transparent; border:0; box-shadow:none; padding:0; }
+.highlight .rouge-table { width:100%; border-collapse:collapse; background:transparent; font-size: var(--fs-sm); table-layout:fixed; }
+.highlight .rouge-table td { padding:0; margin:0; vertical-align:top; }
+.highlight .rouge-gutter { background:#0c0c0c; width:3.5ch; user-select:none; border-right:1px solid #181818; }
+.highlight .rouge-gutter pre { margin:0; text-align:right; letter-spacing:.5px; color:#555; background:transparent; padding:15px; }
+.highlight .rouge-code { position:relative; background:transparent; }
+.highlight .rouge-code pre { margin:0; padding:15px; background:transparent!important; overflow-x:auto; }
+.highlight .rouge-code pre { @include scrollbars(); }
+
+:not(pre) > code { background: var(--color-bg-sidebar)!important; padding:0.15em 0.45em; border-radius:6px; font-family: var(--font-secondary); font-size:.85em; border:2px solid var(--color-black); }
+pre code { border:none; background:transparent; padding:0; font-size:inherit; }
+
+// Token colors (subset retained to avoid noise) - still matching original palette
+.highlight .k, .highlight .kt, .highlight .kd { color:#5fbaf5; font-weight:600; }
+.highlight .o, .highlight .ow, .highlight .nt { color:#f92672; }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .dl, .highlight .sa, .highlight .sb, .highlight .sc { color:#f5d76e; }
+.highlight .nf, .highlight .nc, .highlight .na, .highlight .nd, .highlight .nx { color:#a6e22e; }
+.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh, .highlight .mb, .highlight .mo { color:#ae81ff; }
+.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs, .highlight .cp { color:#75715e; font-style:italic; }
