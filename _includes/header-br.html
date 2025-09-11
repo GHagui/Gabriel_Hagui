@@ -2,11 +2,17 @@
     <meta charset="UTF-8" />
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <script defer src="{{ '/assets/js/menu.js' | relative_url }}"></script>
 </head>
 <header class="site-header">
     <div class="container">
         <h1 class="logo"><a>Gabriel Hagui</a></h1>
-        <nav class="site-nav">
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="site-nav" id="primary-nav">
             <ul>
                 <li><a href="{{ '/' | relative_url }}">Sobre mim</a></li>
                 <li><a href="{{ '/projects-br' | relative_url }}">Projetos</a></li>

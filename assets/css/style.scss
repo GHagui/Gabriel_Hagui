@@ -71,6 +71,7 @@ body {
     border-bottom: var(--border-strong);
     background: var(--color-blue-primary);
     padding: 0;
+    position: relative; /* needed for absolute mobile nav positioning */
 }
 
 .site-header .container {
@@ -142,34 +143,79 @@ body {
     display: none; /* Inicialmente escondido, mostrado em media query */
 }
 
-/* Responsivo do Cabeçalho */
-@media (max-width: 1100px) {
-    .site-header .container {
-        flex-direction: column;
-        align-items: stretch;
-        padding-left: var(--spacing-sm);
-        padding-right: var(--spacing-sm);
-    }
-
-    .site-header .site-nav {
-        width: 100%;
-    }
-
-    .site-header .site-nav ul {
-        display: none;
-    }
-
-    .site-header .site-nav select {
-        display: block;
-        width: 100%;
-        font-family: var(--font-secondary);
-        font-size: 1.2rem;
-        padding: var(--spacing-xs);
-        border: var(--border-medium);
-        background: var(--color-white);
-        margin-top: var(--spacing-xs);
-    }
+/* Hamburger button */
+.nav-toggle {
+    display: none; /* hidden on desktop */
+    position: relative;
+    width: 52px;
+    height: 52px;
+    margin-left: var(--spacing-sm);
+    background: var(--color-orange-accent);
+    border-radius: var(--border-radius-default);
+    cursor: pointer;
+    box-shadow: var(--box-shadow-small);
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    transition: background .3s, box-shadow .3s;
 }
+
+.nav-toggle:focus-visible { outline: 3px solid var(--color-white); outline-offset: 2px; }
+.nav-toggle:hover { background: var(--color-purple-accent); }
+
+.nav-toggle .bar {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    height: 5px;
+    background: var(--color-black);
+    border-radius: 4px;
+    transition: transform .35s ease, opacity .25s ease;
+}
+.nav-toggle .bar:nth-child(1) { top: 11px; }
+.nav-toggle .bar:nth-child(2) { top: 23px; }
+.nav-toggle .bar:nth-child(3) { top: 35px; }
+
+.nav-toggle.is-active .bar:nth-child(1) { transform: translateY(12px) rotate(45deg); }
+.nav-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+.nav-toggle.is-active .bar:nth-child(3) { transform: translateY(-12px) rotate(-45deg); }
+
+/* Mobile nav hidden by default when JS present */
+html.js .site-header .site-nav {
+    transition: max-height .4s ease, opacity .3s ease;
+}
+@media (max-width: 1100px) {
+    .nav-toggle { display: inline-flex; }
+    .site-header .container { gap: var(--spacing-sm); }
+    html.js .site-header .site-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-blue-primary);
+    border-top: var(--border-strong);
+    border-bottom: var(--border-strong);
+        box-shadow: var(--box-shadow-large);
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+    z-index: 50;
+    }
+    html.js .site-header .site-nav ul {
+        flex-direction: column;
+        padding: var(--spacing-md) var(--spacing-lg);
+        gap: var(--spacing-sm);
+        display: flex; /* override earlier display:none */
+    }
+    html.js .site-header .site-nav.is-open {
+        max-height: 600px; /* large enough */
+        opacity: 1;
+    }
+    html.js .site-header .site-nav.is-open ul { display: flex; }
+    .site-header .site-nav a { display: block; }
+}
+
+/* (Removed legacy select-based nav) */
 
 /* Mobile - Cabeçalho */
 @media (max-width: 768px) {
@@ -448,7 +494,7 @@ main {
 .about {
     display: flex;
     flex-direction: column;
-    padding: var(--spacing-lg);
+    //padding: var(--spacing-lg);
     background-color: var(--color-bg-content);
     border: var(--border-strong);
     box-shadow: var(--box-shadow-large);
