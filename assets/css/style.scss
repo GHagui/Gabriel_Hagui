@@ -62,6 +62,7 @@ body {
     margin-right: auto;
     padding-left: var(--spacing-xl);
     padding-right: var(--spacing-xl);
+
 }
 
 /* -------------------*/
@@ -216,6 +217,8 @@ main {
     padding: var(--spacing-lg) var(--spacing-md);
     margin-bottom: var(--spacing-lg); /* Mantido do original */
     font-family: var(--font-secondary);
+    margin-left: auto;
+    margin-right: 0px;
 }
 
 .content {
@@ -226,6 +229,20 @@ main {
     box-shadow: var(--box-shadow-large);
     padding: var(--spacing-lg);
     min-width: 0; /* Evita overflow do item flex */
+    margin-right: 30px;
+    max-width: var(--content-block-max-width);
+    margin-left: 0px;
+    margin-right: auto;
+}
+
+.content p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 15px;
+}
+
+.content ul li {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 15px;
 }
 
 /* Responsivo do Conteúdo */
@@ -583,10 +600,53 @@ tr:nth-child(even) {
 blockquote {
     margin: var(--spacing-md) 0;
     padding: var(--spacing-md);
-    border-left: 6px solid var(--color-blue-primary);
+    border-left: 6px solid var(--color-blue-primary) !important;
     background: var(--color-bg-sidebar);
     box-shadow: var(--box-shadow-small);
+    border: var(--border-medium);
 }
+
+/* Enhanced Callout structure produced by callouts.js */
+blockquote.callout {
+    position: relative;
+    border: var(--border-medium);
+}
+
+blockquote.callout .callout-title {
+    font-family: var(--font-primary);
+    margin: 0 0 var(--spacing-xs) 0;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+blockquote.callout.callout-cit{
+    font-size:xx-large;
+    padding: var(--spacing-md);
+}
+
+blockquote.callout.callout-cit p{
+    font-size: medium;
+}
+
+blockquote.callout.callout-cit .callout-title{
+    margin: 0;
+}
+
+/* Base type-specific colors */
+blockquote.callout.callout-info { border-left-color: var(--color-blue-primary) !important; }
+blockquote.callout.callout-success { border-left-color: #4caf50 !important; }
+blockquote.callout.callout-warning { border-left-color: #ff9800 !important; }
+blockquote.callout.callout-error { border-left-color: #f44336 !important; }
+blockquote.callout.callout-help { border-left-color: var(--color-purple-accent) !important; }
+
+/* Subtle background tints */
+blockquote.callout.callout-info { background: #e3f2fd; }
+blockquote.callout.callout-success { background: #e8f5e8; }
+blockquote.callout.callout-warning { background: #fff3e0; }
+blockquote.callout.callout-error { background: #ffebee; }
+blockquote.callout.callout-help { background: #f3e5f5; }
+
+/* Remove legacy attribute selectors once migration done */
 
 /* Callouts específicos */
 blockquote[class*="info"] {
@@ -802,7 +862,7 @@ blockquote p {
 }
 
 blockquote p:last-child {
-    margin-bottom: 0;
+    margin-left: 15px;
 }
 
 /* Links */
@@ -832,9 +892,8 @@ figcaption {
 /* Separadores horizontais */
 hr {
     border: none;
-    height: 4px;
+    height: 2px;
     background: var(--color-black);
-    margin: var(--spacing-xl) 0;
     border-radius: 2px;
 }
 

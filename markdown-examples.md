@@ -14,6 +14,7 @@ Este arquivo demonstra todos os formatos markdown suportados pelo tema Neubrutal
 | Dados 1   | Dados 2   | Dados 3   |
 | Dados 4   | Dados 5   | Dados 6   |
 | Dados 7   | Dados 8   | Dados 9   |
+| Dados 10   | Dados 11   | Dados 12   |
 
 ## Callouts/Alertas
 
@@ -88,7 +89,7 @@ for i in range(10):
 ![Imagem de exemplo](https://via.placeholder.com/400x200/0b27ff/ffffff?text=Neubrutalism)
 
 ## Citações
-
+> [!cit] "
 > Esta é uma citação simples em markdown.
 >
 > Pode ter múltiplas linhas e parágrafos.
