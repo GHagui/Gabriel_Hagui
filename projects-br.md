@@ -52,6 +52,7 @@ Especificações do setup Intel inicial:
 | PSU            | OCZ ATX 500W ModXStream Pro     |
 | HDDs           | WD Blue 500 GB, WD Black 500 GB |
 | SSD            | WD Green 120 GB SATA            |
+
 ### Escolhendo o sistema para o NAS
 Comecei a pesquisar qual sistema operacional seria ideal para um NAS caseiro. Nas conversas em fóruns e vídeos que assisti, dois nomes surgiram com frequência: [Unraid](https://unraid.net/) e [TrueNAS](https:/truenas.com/).
 
@@ -140,6 +141,7 @@ Agora, o NAS está consumindo apenas 30W em repouso o que considero excelente pa
 | PSU            | MSI MPG A850GF                  |
 | HDDs           | WD Blue 500 GB, WD Black 500 GB |
 | SSD            | WD Green 120 GB SATA            |
+
 ### Meu NAS à internet
 Certamente, um NAS não consegue competir com a nuvem se só puder ser acessado pela rede local, ou seja, apenas dentro de casa. A grande vantagem da nuvem é justamente a possibilidade de acesso de qualquer lugar, a qualquer hora, desde que haja conexão com a internet.
 
@@ -181,6 +183,7 @@ Teoricamente, o total seria de 8 TB, mas como ativei o RAID-Z1 (espelhamento dos
 Mesmo que um dos HDDs falhe, os dados continuam intactos no outro. Isso traz muito mais segurança para arquivos importantes.
 
 #### Setup atual
+
 | Peça           | Modelo                                                |
 | -------------- | ----------------------------------------------------- |
 | Processador    | Intel Core i5 11400F                                  |
@@ -190,6 +193,7 @@ Mesmo que um dos HDDs falhe, os dados continuam intactos no outro. Isso traz mui
 | PSU            | MSI MPG A850GF                                        |
 | HDDs           | WD Blue 500 GB, WD Black 500 GB,  2x WD Red Plus 4 TB |
 | SSD            | WD Green 120 GB SATA                                  |
+
 Não é simplesmente bater o martelo e dizer que meu NAS virou um HomeLab, como muita gente faz nas redes sociais, especialmente no Reddit, em comunidades como o r/homelab, onde mostram laboratórios domésticos bem robustos, com hardware de servidor de verdade. O meu HomeLab é simples, mas foi além do armazenamento: Montei um servidor virtual usado como laboratório de desenvolvimento e outro servidor que serviu como host para um servidor de Minecraft!
 
 Não vou entrar em detalhes sobre esses dois servidores agora, senão esta página vai ficar muito longa. Vou separar esses assuntos e publicar em uma próxima vez.
