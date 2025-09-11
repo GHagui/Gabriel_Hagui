@@ -490,16 +490,16 @@ main {
     }
 
     .hello-content h1 {
-        font-size: 3rem;
+    font-size: 3.4rem; /* Aumenta legibilidade do título principal */
         text-shadow: 3px 3px 0 var(--color-black);
     }
 
     .hello-content h2 {
-        font-size: 1.2rem;
+    font-size: 1.35rem; /* Levemente maior */
     }
 
     .hello-content h3 {
-        font-size: 0.9rem;
+    font-size: 1.05rem; /* Levemente maior */
     }
 
     .hello-content {
@@ -554,6 +554,15 @@ main {
     }
     .container { padding-left: 0.65rem; padding-right: 0.65rem; }
     h1, h2, h3 { word-wrap: break-word; hyphens: auto; }
+}
+
+/* Reforço tipográfico adicional para telas pequenas */
+@media (max-width: 600px) {
+    body { font-size: 17px; }
+    .content p,
+    .content li { font-size: 1.05rem; }
+    .content p,
+    .content ul li { margin-left: 0; } /* Remove recuo que estreita o texto */
 }
 
 /* Melhorias para touch em mobile */
@@ -1001,4 +1010,19 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
         padding: var(--spacing-xs);
         font-size: 0.9rem;
     }
+}
+
+/* Overrides adicionais para melhor legibilidade em telas muito pequenas */
+@media (max-width: 600px) {
+    body { font-size: 20px; line-height: 1.65; }
+    .content p,
+    .content li { font-size: 1.15rem; line-height: 1.7; }
+    .content p,
+    .content ul li { margin-left: 0; }
+    .hello-content h1 { font-size: 4.5rem; }
+    .hello-content h2 { font-size: 1.75rem; }
+    .hello-content h3 { font-size: 1.35rem; }
+    table, th, td { font-size: 1rem; }
+    .highlight pre { font-size: 0.95rem; }
+    blockquote { font-size: 1rem; }
 }
