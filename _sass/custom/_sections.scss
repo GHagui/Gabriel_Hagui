@@ -1,0 +1,15 @@
+// Section specific styling: hello, about, etc.
+.main-hello { display:flex; flex-direction:column; margin:0; padding:0; width:100%; }
+.hello { display:flex; padding:0; background: var(--color-pink-accent); align-items:center; border-bottom: var(--border-strong); box-shadow: var(--box-shadow-large); width:100%; }
+.profile-image { width:500px; height:500px; max-width:100%; aspect-ratio:1/1; object-fit:cover; border-right: var(--border-strong); margin-right: var(--spacing-lg); }
+.hello-content { display:flex; flex-direction:column; justify-content:center; flex-grow:1; padding: var(--spacing-lg); }
+.hello-content h1 { color:var(--color-white); font-family: var(--font-primary); font-size: clamp(3.2rem, 11vw, 10rem); margin:0; text-shadow:8px 8px 0 var(--color-black); text-align:center; }
+.hello-content h2 { color:var(--color-black); font-family: var(--font-secondary); font-size: clamp(1.4rem, 5vw, 3rem); margin: var(--spacing-xs) 0; text-align:center; }
+.hello-content h3 { color:var(--color-black); font-family: var(--font-secondary); margin:0; font-size: clamp(1rem, 3.2vw, 1.5rem); text-align:center; }
+
+.about { display:flex; flex-direction:column; background: var(--color-bg-content); border: var(--border-strong); box-shadow: var(--box-shadow-large); max-width: var(--content-block-max-width); width:100%; margin-left:auto; margin-right:auto; padding: var(--spacing-sm); }
+
+@media (max-width:1290px){ .hello { flex-direction:column; text-align:center; box-shadow:none; } .profile-image { width:100%; max-width:320px; height:auto; border: var(--border-strong); border-radius: var(--border-radius-default); margin: var(--spacing-lg) auto 0; box-shadow: var(--box-shadow-medium); }
+ .hello-content h1 { font-size: clamp(2.4rem, 9vw, 5.2rem);} .hello-content h2 { font-size: clamp(1.25rem, 5.2vw, 2.2rem);} .hello-content h3 { font-size: clamp(0.95rem, 3.6vw, 1.25rem);} .about { border-radius:0; border-bottom: var(--border-strong)!important; border:0; box-shadow:none; } }
+@media (max-width:1024px){ .profile-image { max-width:280px; } .hello-content h1 { font-size: clamp(2.2rem, 10vw, 4.2rem); text-shadow:4px 4px 0 var(--color-black);} .hello-content h2 { font-size: clamp(1.15rem, 6vw, 1.9rem);} .hello-content h3 { font-size: clamp(0.9rem, 4vw, 1.15rem);} .hello-content { padding: var(--spacing-md);} }
+@media (max-width:480px){ .profile-image { max-width:240px; } .hello-content h1 { font-size: clamp(2.0rem, 11vw, 3.0rem); text-shadow:3px 3px 0 var(--color-black);} .hello-content h2 { font-size: clamp(1.05rem, 7vw, 1.65rem);} .hello-content h3 { font-size: clamp(0.85rem, 4.5vw, 1.00rem);} .hello-content { padding: var(--spacing-sm);} }

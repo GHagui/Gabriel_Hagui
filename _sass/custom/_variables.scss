@@ -1,0 +1,51 @@
+// Variables & CSS custom properties centralization
+// Keep CSS variables in :root to allow runtime override.
+:root {
+  /* Fonts */
+  --font-primary: 'Lexend Mega', monospace;
+  --font-secondary: 'Ubuntu Sans Mono', monospace;
+  /* Colors */
+  --color-black: #000;
+  --color-white: #fff;
+  --color-blue-primary: #0b27ff;
+  --color-orange-accent: #ff4d1e;
+  --color-purple-accent: #9723C9;
+  --color-pink-accent: #fe90e7;
+  --color-bg-body: #faeee8;
+  --color-bg-sidebar: #f5f5f5;
+  --color-bg-content: var(--color-white);
+  /* Borders & Shadows */
+  --border-strong: 8px solid var(--color-black);
+  --border-medium: 5px solid var(--color-black);
+  --border-radius-default: 15px;
+  --border-radius-large: 20px;
+  --box-shadow-small: 5px 5px 0 var(--color-black);
+  --box-shadow-medium: 8px 8px 0 var(--color-black);
+  --box-shadow-large: 15px 15px 0 var(--color-black);
+  /* Spacing Scale */
+  --spacing-unit: 1rem;
+  --spacing-xs: calc(var(--spacing-unit) * 0.5);
+  --spacing-sm: var(--spacing-unit);
+  --spacing-md: calc(var(--spacing-unit) * 1.5);
+  --spacing-lg: calc(var(--spacing-unit) * 2);
+  --spacing-xl: calc(var(--spacing-unit) * 5);
+  /* Layout */
+  --container-max-width: 1280px;
+  --sidebar-width: 320px;
+  --sidebar-min-width: 220px;
+  --sidebar-max-width: 350px;
+  --content-block-max-width: 1280px;
+  /* Fluid Typography */
+  --fs-2xs: clamp(0.70rem, calc(0.66rem + 0.15vw), 0.78rem);
+  --fs-xs:  clamp(0.78rem, calc(0.72rem + 0.25vw), 0.90rem);
+  --fs-sm:  clamp(0.95rem, calc(0.85rem + 0.35vw), 1.08rem);
+  --fs-base:clamp(1.00rem, calc(0.95rem + 0.50vw), 1.20rem);
+  --fs-md:  clamp(1.12rem, calc(1.00rem + 0.70vw), 1.35rem);
+  --fs-lg:  clamp(1.25rem, calc(1.05rem + 1.10vw), 1.70rem);
+  --fs-xl:  clamp(1.55rem, calc(1.20rem + 1.90vw), 2.30rem);
+  --fs-2xl: clamp(2.00rem, calc(1.40rem + 3.20vw), 3.20rem);
+  --fs-3xl: clamp(2.60rem, calc(1.80rem + 4.50vw), 4.50rem);
+  --fs-4xl: clamp(3.20rem, calc(2.20rem + 6.00vw), 6.00rem);
+  --fs-5xl: clamp(4.00rem, calc(2.80rem + 8.50vw), 8.50rem);
+  --fs-hero: clamp(5.00rem, calc(3.20rem + 10.50vw), 10.00rem);
+}

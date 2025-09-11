@@ -1,0 +1,18 @@
+// Reusable mixins & helpers
+@mixin focus-ring($color: var(--color-orange-accent)) {
+  &:focus-visible {
+    outline: 3px solid $color;
+    outline-offset: 2px;
+  }
+}
+
+@mixin fluid-type($min, $vw, $max) {
+  font-size: clamp($min, $vw, $max);
+}
+
+@mixin scrollbars($size: 10px, $thumb: var(--color-orange-accent), $track: #111) {
+  &::-webkit-scrollbar { height: $size; width: $size; }
+  &::-webkit-scrollbar-track { background: $track; }
+  &::-webkit-scrollbar-thumb { background: $thumb; border: 2px solid $track; }
+  &::-webkit-scrollbar-thumb:hover { background: var(--color-purple-accent); }
+}
