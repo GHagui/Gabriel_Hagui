@@ -577,10 +577,7 @@ tr:nth-child(even) {
     background: var(--color-bg-sidebar);
 }
 
-tr:hover {
-    background: var(--color-pink-accent);
-    color: var(--color-black);
-}
+
 
 /* Callouts/Alertas */
 blockquote {
@@ -817,15 +814,6 @@ a {
 
 a:hover {
     color: var(--color-orange-accent);
-}
-
-/* Imagens */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--border-radius-default);
-    box-shadow: var(--box-shadow-small);
-    margin: var(--spacing-sm) 0;
 }
 
 /* Figuras com legendas */
