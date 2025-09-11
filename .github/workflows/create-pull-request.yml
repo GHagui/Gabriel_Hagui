@@ -6,6 +6,12 @@ on:
       - develop
   workflow_dispatch: # Permite execução manual
 
+# Permissões explícitas necessárias para criar/editar Pull Requests
+permissions:
+  contents: read
+  pull-requests: write
+  # issues: write # descomente se futuramente for comentar em issues/PRs via API
+
 jobs:
   create-pull-request:
     runs-on: ubuntu-latest
@@ -86,13 +92,21 @@ jobs:
           *Este PR foi criado automaticamente pela GitHub Action*"
 
           # Cria o PR
-          gh pr create \
+          if gh pr create \
             --base main \
             --head develop \
             --title "🔄 Auto-merge: develop → main" \
-            --body "$pr_body"
-
-          echo "✅ PR criado com sucesso!"
+            --body "$pr_body"; then
+            echo "✅ PR criado com sucesso!"
+          else
+            echo "❌ Falha ao criar PR automaticamente."
+            echo "Possíveis causas:"
+            echo " - Token sem permissão (ajuste 'Workflow permissions' para Read & Write)."
+            echo " - Falha temporária na API do GitHub."
+            echo " - Branch protection impedindo automação."
+            echo "Sugestão: execute manualmente 'gh pr create --base main --head develop' localmente ou ajuste permissões."
+            exit 1
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -131,8 +145,11 @@ jobs:
           ---
           *Este PR foi criado automaticamente pela GitHub Action*"
 
-          gh pr edit ${{ steps.check-pr.outputs.pr_number }} --body "$pr_body"
-
-          echo "✅ PR #${{ steps.check-pr.outputs.pr_number }} atualizado com sucesso!"
+          if gh pr edit ${{ steps.check-pr.outputs.pr_number }} --body "$pr_body"; then
+            echo "✅ PR #${{ steps.check-pr.outputs.pr_number }} atualizado com sucesso!"
+          else
+            echo "❌ Falha ao atualizar PR #${{ steps.check-pr.outputs.pr_number }}. Verifique permissões de pull-requests."
+            exit 1
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
