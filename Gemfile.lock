@@ -129,7 +129,9 @@ DEPENDENCIES
   jekyll (~> 4.2)
   jekyll-feed
   jekyll-timeago (~> 0.13.1)
+  kramdown-parser-gfm
   logger
+  rouge
 
 BUNDLED WITH
    2.6.9

@@ -6,4 +6,6 @@ gem "logger"
 group :jekyll_plugins do
   gem "jekyll-timeago", "~> 0.13.1"
   gem "jekyll-feed"
+  gem "kramdown-parser-gfm"
+  gem "rouge"
 end
