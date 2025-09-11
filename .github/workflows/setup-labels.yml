@@ -1,0 +1,70 @@
+name: Setup Repository Labels
+
+on:
+  workflow_dispatch: # Execução manual apenas
+
+jobs:
+  create-labels:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create Labels for PR Automation
+        run: |
+          echo "🏷️ Criando labels para automação de PRs..."
+
+          # Lista de labels para criar
+          labels=(
+            "auto-generated:#FFA500:Label para PRs criados automaticamente"
+            "merge-candidate:#0E8A16:PR pronto para merge"
+            "manual:#1D76DB:PR criado manualmente"
+            "needs-review:#D93F0B:Necessita revisão"
+            "work-in-progress:#FBCA04:Trabalho em progresso"
+          )
+
+          for label_info in "${labels[@]}"; do
+            IFS=':' read -r name color description <<< "$label_info"
+
+            echo "Criando label: $name"
+
+            # Verifica se a label já existe
+            if gh api repos/:owner/:repo/labels/$name >/dev/null 2>&1; then
+              echo "⚠️ Label '$name' já existe, atualizando..."
+              gh api --method PATCH repos/:owner/:repo/labels/$name \
+                -f name="$name" \
+                -f color="$color" \
+                -f description="$description" || echo "❌ Falha ao atualizar $name"
+            else
+              echo "➕ Criando nova label '$name'..."
+              gh api --method POST repos/:owner/:repo/labels \
+                -f name="$name" \
+                -f color="$color" \
+                -f description="$description" || echo "❌ Falha ao criar $name"
+            fi
+          done
+
+          echo "✅ Setup de labels concluído!"
+          echo ""
+          echo "📋 Labels criadas/atualizadas:"
+          gh api repos/:owner/:repo/labels --jq '.[] | select(.name | startswith("auto-") or startswith("merge-") or startswith("manual") or startswith("needs-") or startswith("work-")) | "- " + .name + " (" + .color + ")"'
+
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update Workflows to Use Labels
+        run: |
+          echo "💡 Para habilitar labels nos workflows:"
+          echo "1. Edite os arquivos .github/workflows/create-pull-request.yml e manual-pr-create.yml"
+          echo "2. Adicione de volta as linhas:"
+          echo "   --label \"auto-generated,merge-candidate\" (para automático)"
+          echo "   --label \"manual,merge-candidate\" (para manual)"
+          echo ""
+          echo "🔧 Ou execute o script abaixo para atualizar automaticamente:"
+
+          # Opcional: descomentar para atualizar automaticamente
+          # sed -i 's/--body "\$pr_body"/--body "\$pr_body" \\\n            --label "auto-generated,merge-candidate"/' .github/workflows/create-pull-request.yml
+          # sed -i 's/--assignee "\${{ github.actor }}"/--assignee "\${{ github.actor }}" \\\n            --label "manual,merge-candidate"/' .github/workflows/manual-pr-create.yml
+
+          echo "✅ Instruções exibidas!"

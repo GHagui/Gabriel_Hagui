@@ -122,7 +122,6 @@ jobs:
             --head develop \
             --title "${{ inputs.pr_title }}" \
             --body "$pr_body" \
-            --label "manual,merge-candidate" \
             --assignee "${{ github.actor }}"
 
           echo "✅ Novo PR criado com sucesso!"

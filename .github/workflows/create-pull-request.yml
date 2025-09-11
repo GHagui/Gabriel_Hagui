@@ -90,8 +90,9 @@ jobs:
             --base main \
             --head develop \
             --title "🔄 Auto-merge: develop → main" \
-            --body "$pr_body" \
-            --label "auto-generated,merge-candidate"
+            --body "$pr_body"
+
+          echo "✅ PR criado com sucesso!"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
