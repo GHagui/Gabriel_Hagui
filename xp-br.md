@@ -1,5 +1,5 @@
 ---
-layout: default-br
+layout: resume-br
 title: Currículo
 ---
 ## **Apresentação**

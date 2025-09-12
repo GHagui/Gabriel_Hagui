@@ -1,4 +1,4 @@
 ---
-layout: default-en
-title: Experiences
+layout: resume-en
+title: Resume
 ---
