@@ -12,8 +12,8 @@
 
 @mixin scrollbars($size: 10px, $thumb: var(--color-orange-accent), $track: #111) {
   &::-webkit-scrollbar {
-    height: $size;
     width: $size;
+    height: $size;
   }
 
   &::-webkit-scrollbar-track {
@@ -21,8 +21,8 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background: $thumb;
     border: 2px solid $track;
+    background: $thumb;
   }
 
   &::-webkit-scrollbar-thumb:hover {

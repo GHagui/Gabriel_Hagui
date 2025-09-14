@@ -25,8 +25,8 @@
     h1,
     h2,
     h3 {
-        word-wrap: break-word;
         hyphens: auto;
+        word-wrap: break-word;
     }
 }
 
@@ -87,10 +87,10 @@
 @media (width <= 1024px) {
     .site-header .site-nav a,
     .hire-me {
-        min-height: 44px;
         display: flex;
         align-items: center;
         justify-content: center;
+        min-height: 44px;
     }
 }
 
@@ -122,7 +122,7 @@ pre,
 @media (width <= 600px) {
     .content,
     .about {
-        box-shadow: none;
         border-width: 5px;
+        box-shadow: none;
     }
 }
