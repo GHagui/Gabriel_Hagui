@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended-scss"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "color-hex-length": "short",
+    "selector-max-id": 0,
+    "no-descending-specificity": null,
+    "order/order": [
+      [
+        "custom-properties",
+        "dollar-variables",
+        { "type": "at-rule", "name": "mixin" },
+        { "type": "at-rule", "name": "include" },
+        "declarations",
+        { "type": "at-rule", "name": "media" },
+        "rules"
+      ],
+      { "unspecified": "bottom" }
+    ],
+    "order/properties-order": [
+      [
+        { "groupName": "positioning", "properties": ["position", "top", "right", "bottom", "left", "z-index"] },
+        { "groupName": "display & box model", "properties": ["display", "flex", "flex-grow", "flex-shrink", "flex-basis", "flex-direction", "flex-wrap", "align-items", "justify-content", "gap", "width", "min-width", "max-width", "height", "min-height", "max-height", "padding", "margin", "box-sizing"] },
+        { "groupName": "border", "properties": ["border", "border-width", "border-style", "border-color", "border-radius"] },
+        { "groupName": "background", "properties": ["background", "background-color", "background-image", "background-size", "background-position", "background-repeat"] },
+        { "groupName": "typography", "properties": ["font", "font-family", "font-size", "font-weight", "line-height", "letter-spacing", "text-align", "text-decoration", "text-transform", "color"] },
+        { "groupName": "effects", "properties": ["box-shadow", "text-shadow", "opacity", "transition", "transform"] },
+        { "groupName": "misc", "properties": ["cursor", "overflow", "overflow-x", "overflow-y"] }
+      ],
+      { "unspecified": "bottomAlphabetical", "severity": "warning" }
+    ]
+  }
+}

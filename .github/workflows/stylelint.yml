@@ -17,7 +17,10 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+          cache-dependency-path: ./package-lock.json
       - name: Install deps
         run: npm ci || npm install
+        working-directory: ./
       - name: Run Stylelint
-        run: npx stylelint 'neubrutalism_theme/**/*.scss'
+        working-directory: ./
+        run: npx stylelint '**/*.scss'

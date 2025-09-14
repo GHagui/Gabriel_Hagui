@@ -1,0 +1,5 @@
+_site/
+vendor/
+node_modules/
+**/*.map
+assets/css/style.scss

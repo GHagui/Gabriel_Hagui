@@ -1,13 +1,128 @@
 // Utility & responsive adjustments
-@media (max-width:1024px){ .site-header { box-shadow:none; } p,li,span { line-height:1.55; } }
-@media (max-width:480px){ :root { --border-strong:4px solid var(--color-black); --border-medium:3px solid var(--color-black); } .container { padding-left:.65rem; padding-right:.65rem; } h1,h2,h3 { word-wrap:break-word; hyphens:auto; } }
-@media (max-width:600px){ body { font-size: clamp(0.80rem, calc(0.75rem + 0.55vw), 0.95rem); } .content p, .content li { font-size: clamp(0.85rem, calc(0.80rem + 0.60vw), 1.00rem); } .hello-content h1 { font-size: clamp(1.6rem,8vw,3.2rem); } .hello-content h2 { font-size: clamp(1.05rem,5.5vw,1.75rem); } .hello-content h3 { font-size: clamp(0.85rem,3.8vw,1.10rem); } .site-header .logo a { font-size: clamp(1.00rem,4.5vw,1.40rem); } }
-@media (max-width:380px){ body { font-size: clamp(0.75rem, calc(0.70rem + 0.70vw), 0.88rem); } .content p, .content li { font-size: clamp(0.80rem, calc(0.75rem + 0.75vw), 0.95rem); } .hello-content h1 { font-size: clamp(1.45rem,9.5vw,2.8rem); } .hello-content h2 { font-size: clamp(0.95rem,6vw,1.55rem); } .hello-content h3 { font-size: clamp(0.78rem,4.2vw,1.00rem); } .site-header .logo a { font-size: clamp(0.90rem,5vw,1.20rem); } }
-@media (max-width:1024px){ .site-header .site-nav a, .hire-me { min-height:44px; display:flex; align-items:center; justify-content:center; } }
+@media (width <= 1024px) {
+    .site-header {
+        box-shadow: none;
+    }
+
+    p,
+    li,
+    span {
+        line-height: 1.55;
+    }
+}
+
+@media (width <= 480px) {
+    :root {
+        --border-strong: 4px solid var(--color-black);
+        --border-medium: 3px solid var(--color-black);
+    }
+
+    .container {
+        padding-left: .65rem;
+        padding-right: .65rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+}
+
+@media (width <= 600px) {
+    body {
+        font-size: clamp(0.80rem, calc(0.75rem + 0.55vw), 0.95rem);
+    }
+
+    .content p,
+    .content li {
+        font-size: clamp(0.85rem, calc(0.80rem + 0.60vw), 1.00rem);
+    }
+
+    .hello-content h1 {
+        font-size: clamp(1.6rem, 8vw, 3.2rem);
+    }
+
+    .hello-content h2 {
+        font-size: clamp(1.05rem, 5.5vw, 1.75rem);
+    }
+
+    .hello-content h3 {
+        font-size: clamp(0.85rem, 3.8vw, 1.10rem);
+    }
+
+    .site-header .logo a {
+        font-size: clamp(1.00rem, 4.5vw, 1.40rem);
+    }
+}
+
+@media (width <= 380px) {
+    body {
+        font-size: clamp(0.75rem, calc(0.70rem + 0.70vw), 0.88rem);
+    }
+
+    .content p,
+    .content li {
+        font-size: clamp(0.80rem, calc(0.75rem + 0.75vw), 0.95rem);
+    }
+
+    .hello-content h1 {
+        font-size: clamp(1.45rem, 9.5vw, 2.8rem);
+    }
+
+    .hello-content h2 {
+        font-size: clamp(0.95rem, 6vw, 1.55rem);
+    }
+
+    .hello-content h3 {
+        font-size: clamp(0.78rem, 4.2vw, 1.00rem);
+    }
+
+    .site-header .logo a {
+        font-size: clamp(0.90rem, 5vw, 1.20rem);
+    }
+}
+
+@media (width <= 1024px) {
+    .site-header .site-nav a,
+    .hire-me {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
 
 // Overflow & wrapping
-.content, .sidebar, .about { overflow-x:hidden; }
-.content p, .content li, .content a { overflow-wrap:anywhere; word-break:break-word; }
-pre, code, .highlighter-rouge { max-width:100%; }
-pre, .highlighter-rouge { overflow-x:auto; }
-@media (max-width:600px){ .content, .about { box-shadow:none; border-width:5px; } }
+.content,
+.sidebar,
+.about {
+    overflow-x: hidden;
+}
+
+.content p,
+.content li,
+.content a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+pre,
+code,
+.highlighter-rouge {
+    max-width: 100%;
+}
+
+pre,
+.highlighter-rouge {
+    overflow-x: auto;
+}
+
+@media (width <= 600px) {
+    .content,
+    .about {
+        box-shadow: none;
+        border-width: 5px;
+    }
+}

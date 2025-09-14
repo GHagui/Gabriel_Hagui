@@ -11,8 +11,21 @@
 }
 
 @mixin scrollbars($size: 10px, $thumb: var(--color-orange-accent), $track: #111) {
-  &::-webkit-scrollbar { height: $size; width: $size; }
-  &::-webkit-scrollbar-track { background: $track; }
-  &::-webkit-scrollbar-thumb { background: $thumb; border: 2px solid $track; }
-  &::-webkit-scrollbar-thumb:hover { background: var(--color-purple-accent); }
+  &::-webkit-scrollbar {
+    height: $size;
+    width: $size;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb;
+    border: 2px solid $track;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--color-purple-accent);
+  }
 }

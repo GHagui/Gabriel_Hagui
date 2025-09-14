@@ -1,22 +1,130 @@
 // Code & syntax highlighting
-.highlighter-rouge { background:#161616; border: var(--border-medium); box-shadow: var(--box-shadow-small); margin: var(--spacing-md) 0; }
-.highlighter-rouge + .highlighter-rouge { margin-top: var(--spacing-lg); }
-.highlighter-rouge > .highlight { margin:0; background:transparent; border:0; box-shadow:none; padding:0; }
-.highlight .rouge-table { width:100%; border-collapse:collapse; background:transparent; font-size: var(--fs-sm); table-layout:fixed; }
-.highlight .rouge-table td { padding:0; margin:0; vertical-align:top; }
-.highlight .rouge-gutter { background:#121212; width:3.5ch; user-select:none; border-right:2px solid #0e0e0e; }
-.highlight .rouge-gutter pre { margin:0; text-align:right; letter-spacing:.5px; color:#6a6a6a; background:transparent; padding:15px 10px 15px 6px; }
-.highlight .rouge-code { position:relative; background:transparent; }
-.highlight .rouge-code pre { margin:0; padding:15px 18px 15px 18px; background:transparent!important; overflow-x:auto; line-height:1.55; }
-.highlight .rouge-code pre { @include scrollbars(); }
+.highlighter-rouge {
+    background: #161616;
+    border: var(--border-medium);
+    box-shadow: var(--box-shadow-small);
+    margin: var(--spacing-md) 0;
+}
 
-:not(pre) > code { background: var(--color-bg-sidebar)!important; padding:0.15em 0.45em; border-radius:6px; font-family: var(--font-secondary); font-size:.85em; border:2px solid var(--color-black); }
-pre code { border:none; background:transparent; padding:0; font-size:inherit; }
+.highlighter-rouge+.highlighter-rouge {
+    margin-top: var(--spacing-lg);
+}
+
+.highlighter-rouge>.highlight {
+    margin: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+.highlight .rouge-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+    font-size: var(--fs-sm);
+    table-layout: fixed;
+}
+
+.highlight .rouge-table td {
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}
+
+.highlight .rouge-gutter {
+    background: #121212;
+    width: 3.5ch;
+    user-select: none;
+    border-right: 2px solid #0e0e0e;
+}
+
+.highlight .rouge-gutter pre {
+    margin: 0;
+    text-align: right;
+    letter-spacing: .5px;
+    color: #6a6a6a;
+    background: transparent;
+    padding: 15px 10px 15px 6px;
+}
+
+.highlight .rouge-code {
+    position: relative;
+    background: transparent;
+}
+
+.highlight .rouge-code pre {
+    @include scrollbars();
+
+    margin: 0;
+    padding: 15px 18px;
+    background: transparent !important;
+    overflow-x: auto;
+    line-height: 1.55;
+}
+
+:not(pre)>code {
+    background: var(--color-bg-sidebar) !important;
+    padding: 0.15em 0.45em;
+    border-radius: 6px;
+    font-family: var(--font-secondary);
+    font-size: .85em;
+    border: 2px solid var(--color-black);
+}
+
+pre code {
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+}
 
 // Improve token contrast on slightly lighter background
-.highlight .k, .highlight .kt, .highlight .kd { color:#63c0ff; font-weight:600; }
-.highlight .o, .highlight .ow, .highlight .nt { color:#ff2e82; }
-.highlight .s, .highlight .s1, .highlight .s2, .highlight .dl, .highlight .sa, .highlight .sb, .highlight .sc { color:#ffe082; }
-.highlight .nf, .highlight .nc, .highlight .na, .highlight .nd, .highlight .nx { color:#b3f24a; }
-.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh, .highlight .mb, .highlight .mo { color:#c1a1ff; }
-.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs, .highlight .cp { color:#8d8d75; font-style:italic; }
+.highlight .k,
+.highlight .kt,
+.highlight .kd {
+    color: #63c0ff;
+    font-weight: 600;
+}
+
+.highlight .o,
+.highlight .ow,
+.highlight .nt {
+    color: #ff2e82;
+}
+
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .dl,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc {
+    color: #ffe082;
+}
+
+.highlight .nf,
+.highlight .nc,
+.highlight .na,
+.highlight .nd,
+.highlight .nx {
+    color: #b3f24a;
+}
+
+.highlight .m,
+.highlight .mi,
+.highlight .mf,
+.highlight .mh,
+.highlight .mb,
+.highlight .mo {
+    color: #c1a1ff;
+}
+
+.highlight .c,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs,
+.highlight .cp {
+    color: #8d8d75;
+    font-style: italic;
+}
