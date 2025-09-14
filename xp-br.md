@@ -4,7 +4,15 @@ title: Currículo
 ---
 ## **Apresentação**
 
-Engenheiro de TI com experiência prática no ecossistema AWS, focado na modernização de sistemas e entrega de valor para o negócio. Possuo habilidades sólidas em **Python, AWS, .NET Core, SQL e Java**, que aplico na resolução analítica de problemas e no desenvolvimento de soluções robustas. Como surdo de nascença, desenvolvi uma comunicação escrita de alta precisão e uma resiliência natural para superar desafios. Busco evoluir para a posição de Pleno na comunidade de Investment Services, com o objetivo de me especializar em desenvolvimento Full-Stack e na aplicação de IA para otimização de processos (DevOps AI).
+Engenheiro de Software com experiência na criação e modernização de sistemas distribuídos em
+larga escala no ecossistema AWS. Sou motivado por desafios complexos e pela oportunidade de
+construir soluções eficientes que impactam o negócio. Minha trajetória no Itaú Unibanco foi
+marcada pela autonomia na condução de projetos críticos de migração para a nuvem e pela
+fundação de uma nova squad cloud-native, onde atuei desde a concepção da arquitetura até a
+entrega em produção. Como surdo de nascença, desenvolvi uma comunicação assíncrona de alta
+precisão e resiliência para resolver problemas de forma criativa. Busco um ambiente dinâmico para
+aplicar e expandir minhas habilidades em arquitetura serverless, Python e automação, colaborando
+com times de alta performance.
 
 ---
 ## **Experiência Profissional**

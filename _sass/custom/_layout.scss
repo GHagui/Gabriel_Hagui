@@ -21,10 +21,11 @@ main {
     margin: 0 auto var(--spacing-lg);
     border: var(--border-medium);
     border-radius: var(--border-radius-large);
-    background: var(--color-bg-sidebar);
+    background-color: var(--color-purple-accent);
     font-family: var(--font-secondary);
     box-shadow: var(--box-shadow-medium);
     margin-left: 0;
+    color: var(--color-white);
 }
 
 .content {
