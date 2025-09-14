@@ -37,12 +37,12 @@
   --content-block-max-width: 1280px;
   /* Fluid Typography */
   --fs-2xs: clamp(0.70rem, calc(0.66rem + 0.15vw), 0.78rem);
-  --fs-xs:  clamp(0.78rem, calc(0.72rem + 0.25vw), 0.90rem);
-  --fs-sm:  clamp(0.95rem, calc(0.85rem + 0.35vw), 1.08rem);
-  --fs-base:clamp(1.00rem, calc(0.95rem + 0.50vw), 1.20rem);
-  --fs-md:  clamp(1.12rem, calc(1.00rem + 0.70vw), 1.35rem);
-  --fs-lg:  clamp(1.25rem, calc(1.05rem + 1.10vw), 1.70rem);
-  --fs-xl:  clamp(1.55rem, calc(1.20rem + 1.90vw), 2.30rem);
+  --fs-xs: clamp(0.78rem, calc(0.72rem + 0.25vw), 0.90rem);
+  --fs-sm: clamp(0.95rem, calc(0.85rem + 0.35vw), 1.08rem);
+  --fs-base: clamp(1.00rem, calc(0.95rem + 0.50vw), 1.20rem);
+  --fs-md: clamp(1.12rem, calc(1.00rem + 0.70vw), 1.35rem);
+  --fs-lg: clamp(1.25rem, calc(1.05rem + 1.10vw), 1.70rem);
+  --fs-xl: clamp(1.55rem, calc(1.20rem + 1.90vw), 2.30rem);
   --fs-2xl: clamp(2.00rem, calc(1.40rem + 3.20vw), 3.20rem);
   --fs-3xl: clamp(2.60rem, calc(1.80rem + 4.50vw), 4.50rem);
   --fs-4xl: clamp(3.20rem, calc(2.20rem + 6.00vw), 6.00rem);

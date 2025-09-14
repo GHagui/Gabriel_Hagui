@@ -1,25 +1,46 @@
 ---
 permalink: /404.html
-layout: default
+layout: resume-br
 ---
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <style>
+    .content {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  </style>
+</head>
 
-<div class="container">
-  <h1>404</h1>
+<body>
+  <style type="text/css" media="screen">
+    main .container {
+      margin: 10px auto;
+      max-width: 600px;
+      text-align: center;
+    }
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+    main h1 {
+      margin: 30px 0;
+      font-size: 4em;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+  </style>
+
+  <div class="container">
+    <h1>Oops! :(</h1>
+    <h1>404</h1>
+    <p><strong>Page not found</strong></p>
+    <p>The requested page could not be found.</p>
+  </div>
+</body>
+
+</html>
