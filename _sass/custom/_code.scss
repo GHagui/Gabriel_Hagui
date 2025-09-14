@@ -1,9 +1,9 @@
 // Code & syntax highlighting
 .highlighter-rouge {
-    background: #161616;
-    border: var(--border-medium);
-    box-shadow: var(--box-shadow-small);
     margin: var(--spacing-md) 0;
+    border: var(--border-medium);
+    background: #161616;
+    box-shadow: var(--box-shadow-small);
 }
 
 .highlighter-rouge+.highlighter-rouge {
@@ -11,18 +11,18 @@
 }
 
 .highlighter-rouge>.highlight {
-    margin: 0;
-    background: transparent;
-    border: 0;
-    box-shadow: none;
     padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
 }
 
 .highlight .rouge-table {
     width: 100%;
-    border-collapse: collapse;
     background: transparent;
     font-size: var(--fs-sm);
+    border-collapse: collapse;
     table-layout: fixed;
 }
 
@@ -33,19 +33,19 @@
 }
 
 .highlight .rouge-gutter {
-    background: #121212;
     width: 3.5ch;
-    user-select: none;
+    background: #121212;
     border-right: 2px solid #0e0e0e;
+    user-select: none;
 }
 
 .highlight .rouge-gutter pre {
-    margin: 0;
-    text-align: right;
-    letter-spacing: .5px;
-    color: #6a6a6a;
-    background: transparent;
     padding: 15px 10px 15px 6px;
+    margin: 0;
+    background: transparent;
+    letter-spacing: .5px;
+    text-align: right;
+    color: #6a6a6a;
 }
 
 .highlight .rouge-code {
@@ -56,26 +56,26 @@
 .highlight .rouge-code pre {
     @include scrollbars();
 
-    margin: 0;
     padding: 15px 18px;
+    margin: 0;
     background: transparent !important;
-    overflow-x: auto;
     line-height: 1.55;
+    overflow-x: auto;
 }
 
 :not(pre)>code {
-    background: var(--color-bg-sidebar) !important;
     padding: 0.15em 0.45em;
+    border: 2px solid var(--color-black);
     border-radius: 6px;
+    background: var(--color-bg-sidebar) !important;
     font-family: var(--font-secondary);
     font-size: .85em;
-    border: 2px solid var(--color-black);
 }
 
 pre code {
+    padding: 0;
     border: none;
     background: transparent;
-    padding: 0;
     font-size: inherit;
 }
 
@@ -83,8 +83,8 @@ pre code {
 .highlight .k,
 .highlight .kt,
 .highlight .kd {
-    color: #63c0ff;
     font-weight: 600;
+    color: #63c0ff;
 }
 
 .highlight .o,

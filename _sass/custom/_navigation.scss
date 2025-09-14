@@ -1,63 +1,63 @@
 // Primary navigation & mobile toggle
 .site-header .site-nav ul {
-    list-style: none;
     display: flex;
     gap: var(--spacing-lg);
-    margin: 0;
     padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .site-header .site-nav a {
-    text-decoration: none;
-    color: var(--color-white);
-    font-weight: 600;
     padding: var(--spacing-xs);
-    font-family: var(--font-secondary);
-    font-size: var(--fs-sm);
     border: 5px solid transparent;
     border-radius: var(--border-radius-default);
+    font-family: var(--font-secondary);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-white);
     transition: box-shadow .3s, border .3s, background-color .3s, color .3s;
     white-space: nowrap;
 }
 
 .site-header .site-nav a:hover {
     border: var(--border-medium);
-    box-shadow: var(--box-shadow-small);
     background: var(--color-orange-accent);
     color: var(--color-black);
+    box-shadow: var(--box-shadow-small);
 }
 
 .hire-me {
-    text-decoration: none;
-    color: var(--color-black);
-    font-weight: 600;
     padding: var(--spacing-xs);
-    font-family: var(--font-secondary);
-    font-size: var(--fs-sm);
     border: var(--border-medium) !important;
     background: var(--color-purple-accent) !important;
+    font-family: var(--font-secondary);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-black);
 }
 
 .hire-me:hover {
-    box-shadow: var(--box-shadow-small);
     color: var(--color-white) !important;
+    box-shadow: var(--box-shadow-small);
 }
 
 .nav-toggle {
-    display: none;
     position: relative;
-    width: 52px;
-    height: 52px;
-    margin-left: var(--spacing-sm);
-    background: var(--color-orange-accent);
-    border-radius: var(--border-radius-default);
-    cursor: pointer;
-    box-shadow: var(--box-shadow-small);
-    padding: 0;
+    display: none;
     align-items: center;
     justify-content: center;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border: var(--border-medium);
+    border-radius: var(--border-radius-default);
+    background: var(--color-orange-accent);
+    box-shadow: var(--box-shadow-small);
     transition: background .3s, box-shadow .3s;
-    border: var(--border-medium)
+    cursor: pointer;
+    margin-left: var(--spacing-sm)
 }
 
 .nav-toggle:hover {
@@ -71,12 +71,12 @@
 
 .nav-toggle .bar {
     position: absolute;
-    left: 10px;
-    right: 10px;
-    height: 5px;
-    background: var(--color-black);
-    border-radius: 4px;
     top: 45%;
+    right: 10px;
+    left: 10px;
+    height: 5px;
+    border-radius: 4px;
+    background: var(--color-black);
 
     /* Centralizamos pelo meio e distribuímos via translate para evitar desalinhamento com bordas */
     transition: transform .35s ease, opacity .25s ease;
@@ -121,23 +121,23 @@ html.js .site-header .site-nav {
     html.js .site-header .site-nav {
         position: absolute;
         top: 100%;
-        left: 0;
         right: 0;
-        background: var(--color-blue-primary);
-        border-top: var(--border-strong);
-        border-bottom: var(--border-strong);
-        box-shadow: var(--box-shadow-large);
-        overflow: hidden;
-        max-height: 0;
-        opacity: 0;
+        left: 0;
         z-index: 50;
+        max-height: 0;
+        background: var(--color-blue-primary);
+        box-shadow: var(--box-shadow-large);
+        opacity: 0;
+        overflow: hidden;
+        border-bottom: var(--border-strong);
+        border-top: var(--border-strong);
     }
 
     html.js .site-header .site-nav ul {
-        flex-direction: column;
-        padding: var(--spacing-md) var(--spacing-lg);
-        gap: var(--spacing-sm);
         display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-md) var(--spacing-lg);
     }
 
     html.js .site-header .site-nav.is-open {

@@ -11,8 +11,8 @@ li {
 }
 
 a {
-  color: var(--color-blue-primary);
   text-decoration: underline;
+  color: var(--color-blue-primary);
   transition: color .3s;
 }
 
@@ -21,12 +21,12 @@ a:hover {
 }
 
 blockquote {
-  margin: var(--spacing-md) 0;
   padding: var(--spacing-md);
-  border-left: 6px solid var(--color-blue-primary) !important;
+  margin: var(--spacing-md) 0;
+  border: var(--border-medium);
   background: var(--color-bg-sidebar);
   box-shadow: var(--box-shadow-small);
-  border: var(--border-medium);
+  border-left: 6px solid var(--color-blue-primary) !important;
 }
 
 // Restored callouts structure
@@ -37,44 +37,44 @@ blockquote.callout {
 }
 
 blockquote.callout .callout-title {
-  font-family: var(--font-primary);
-  margin: 0 0 var(--spacing-xs);
   display: inline-block;
+  margin: 0 0 var(--spacing-xs);
+  font-family: var(--font-primary);
+  font-size: var(--fs-sm);
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-size: var(--fs-sm);
 }
 
 // Variants
 blockquote.callout.callout-info {
-  border-left-color: var(--color-blue-primary) !important;
   background: #e3f2fd;
+  border-left-color: var(--color-blue-primary) !important;
 }
 
 blockquote.callout.callout-success {
-  border-left-color: #4caf50 !important;
   background: #e8f5e8;
+  border-left-color: #4caf50 !important;
 }
 
 blockquote.callout.callout-warning {
-  border-left-color: #ff9800 !important;
   background: #fff3e0;
+  border-left-color: #ff9800 !important;
 }
 
 blockquote.callout.callout-error {
-  border-left-color: #f44336 !important;
   background: #ffebee;
+  border-left-color: #f44336 !important;
 }
 
 blockquote.callout.callout-help {
-  border-left-color: var(--color-purple-accent) !important;
   background: #f3e5f5;
+  border-left-color: var(--color-purple-accent) !important;
 }
 
 // Compact citation style
 blockquote.callout.callout-cit {
-  font-size: var(--fs-lg);
   padding: var(--spacing-md);
+  font-size: var(--fs-lg);
 }
 
 blockquote.callout.callout-cit p {
@@ -84,27 +84,27 @@ blockquote.callout.callout-cit p {
 // Tables restored
 table {
   width: 100%;
-  border-collapse: collapse;
   margin: var(--spacing-md) 0;
-  background: var(--color-bg-content);
   border: var(--border-medium);
+  background: var(--color-bg-content);
   box-shadow: var(--box-shadow-small);
+  border-collapse: collapse;
   table-layout: fixed;
 }
 
 th,
 td {
   padding: var(--spacing-sm);
+  font-family: var(--font-secondary);
   text-align: left;
   border-bottom: 2px solid var(--color-black);
-  font-family: var(--font-secondary);
 }
 
 th {
   background: var(--color-blue-primary);
-  color: var(--color-white);
-  font-weight: 600;
   font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-white);
 }
 
 tr:nth-child(even) {
@@ -126,18 +126,18 @@ tr:nth-child(even) {
 }
 
 .toc {
-  background: var(--color-bg-sidebar);
-  border: var(--border-medium);
-  border-radius: var(--border-radius-default);
   padding: var(--spacing-md);
   margin: var(--spacing-md) 0;
+  border: var(--border-medium);
+  border-radius: var(--border-radius-default);
+  background: var(--color-bg-sidebar);
   box-shadow: var(--box-shadow-small);
 }
 
 .toc ul {
+  margin: 0;
   list-style: none;
   padding-left: 0;
-  margin: 0;
 }
 
 .toc li {
@@ -145,9 +145,9 @@ tr:nth-child(even) {
 }
 
 .toc a {
+  font-weight: 500;
   text-decoration: none;
   color: var(--color-black);
-  font-weight: 500;
 }
 
 .toc a:hover {
@@ -155,10 +155,10 @@ tr:nth-child(even) {
 }
 
 .footnotes {
+  font-size: var(--fs-sm);
+  border-top: 2px solid var(--color-black);
   margin-top: var(--spacing-xl);
   padding-top: var(--spacing-md);
-  border-top: 2px solid var(--color-black);
-  font-size: var(--fs-sm);
 }
 
 .footnotes ol {
@@ -181,7 +181,7 @@ tr:nth-child(even) {
 }
 
 .task-list-item input[type="checkbox"] {
+  transform: scale(1.2);
   margin-right: var(--spacing-xs);
   margin-top: 0.2em;
-  transform: scale(1.2);
 }

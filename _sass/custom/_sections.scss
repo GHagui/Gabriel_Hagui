@@ -2,75 +2,75 @@
 .main-hello {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .hello {
     display: flex;
+    align-items: center;
+    width: 100%;
     padding: 0;
     background: var(--color-pink-accent);
-    align-items: center;
-    border-bottom: var(--border-strong);
     box-shadow: var(--box-shadow-large);
-    width: 100%;
+    border-bottom: var(--border-strong);
 }
 
 .profile-image {
     width: 500px;
-    height: 500px;
     max-width: 100%;
+    height: 500px;
     aspect-ratio: 1/1;
-    object-fit: cover;
     border-right: var(--border-strong);
     margin-right: var(--spacing-lg);
+    object-fit: cover;
 }
 
 .hello-content {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: center;
-    flex-grow: 1;
     padding: var(--spacing-lg);
 }
 
 .hello-content h1 {
-    color: var(--color-white);
+    margin: 0;
     font-family: var(--font-primary);
     font-size: clamp(3.2rem, 11vw, 10rem);
-    margin: 0;
-    text-shadow: 8px 8px 0 var(--color-black);
     text-align: center;
+    color: var(--color-white);
+    text-shadow: 8px 8px 0 var(--color-black);
 }
 
 .hello-content h2 {
-    color: var(--color-black);
+    margin: var(--spacing-xs) 0;
     font-family: var(--font-secondary);
     font-size: clamp(1.4rem, 5vw, 3rem);
-    margin: var(--spacing-xs) 0;
     text-align: center;
+    color: var(--color-black);
 }
 
 .hello-content h3 {
-    color: var(--color-black);
-    font-family: var(--font-secondary);
     margin: 0;
+    font-family: var(--font-secondary);
     font-size: clamp(1rem, 3.2vw, 1.5rem);
     text-align: center;
+    color: var(--color-black);
 }
 
 .about {
     display: flex;
     flex-direction: column;
-    background: var(--color-bg-content);
-    border: var(--border-strong);
-    box-shadow: var(--box-shadow-large);
-    max-width: var(--content-block-max-width);
     width: 100%;
+    max-width: var(--content-block-max-width);
+    padding: var(--spacing-sm);
+    border: var(--border-strong);
+    background: var(--color-bg-content);
+    box-shadow: var(--box-shadow-large);
     margin-left: auto;
     margin-right: auto;
-    padding: var(--spacing-sm);
 }
 
 @media (width <= 1290px) {
@@ -84,9 +84,9 @@
         width: 100%;
         max-width: 320px;
         height: auto;
+        margin: var(--spacing-lg) auto 0;
         border: var(--border-strong);
         border-radius: var(--border-radius-default);
-        margin: var(--spacing-lg) auto 0;
         box-shadow: var(--box-shadow-medium);
     }
 
@@ -103,10 +103,10 @@
     }
 
     .about {
-        border-radius: 0;
-        border-bottom: var(--border-strong) !important;
         border: 0;
+        border-radius: 0;
         box-shadow: none;
+        border-bottom: var(--border-strong) !important;
     }
 }
 

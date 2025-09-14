@@ -1,11 +1,11 @@
 // Site header & branding
 .site-header {
-    border-bottom: var(--border-strong);
-    background: var(--color-blue-primary);
-    padding: 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 0;
+    background: var(--color-blue-primary);
+    border-bottom: var(--border-strong);
 }
 
 .site-header .container {
@@ -16,12 +16,12 @@
 }
 
 .site-header .logo a {
-    text-decoration: none;
-    color: var(--color-white);
-    font-weight: 900;
+    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) 0;
     font-family: var(--font-primary);
     font-size: var(--fs-xl);
-    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) 0;
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--color-white);
     white-space: nowrap;
 }
 
@@ -31,8 +31,8 @@
     }
 
     .site-header .logo a {
-        font-size: var(--fs-lg);
         padding: var(--spacing-xs) 0;
+        font-size: var(--fs-lg);
     }
 }
 
