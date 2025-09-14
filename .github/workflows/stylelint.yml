@@ -19,5 +19,7 @@ jobs:
           cache: 'npm'
       - name: Install deps
         run: npm ci || npm install
+        working-directory: ./
       - name: Run Stylelint
-        run: npx stylelint 'neubrutalism_theme/**/*.scss'
+        working-directory: ./
+        run: npx stylelint '**/*.scss'

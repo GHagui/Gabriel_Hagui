@@ -112,7 +112,7 @@ tr:nth-child(even) {
 }
 
 // Responsive tables: allow horizontal scroll on narrow screens
-@media (max-width: 760px) {
+@media (width <= 760px) {
   table {
     /* keep native table layout to avoid collapse/gap */
     table-layout: auto;

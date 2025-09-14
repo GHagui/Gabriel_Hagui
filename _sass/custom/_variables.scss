@@ -4,6 +4,7 @@
   /* Fonts */
   --font-primary: 'Lexend Mega', monospace;
   --font-secondary: 'Ubuntu Sans Mono', monospace;
+
   /* Colors */
   --color-black: #000;
   --color-white: #fff;
@@ -14,6 +15,7 @@
   --color-bg-body: #faeee8;
   --color-bg-sidebar: #f5f5f5;
   --color-bg-content: var(--color-white);
+
   /* Borders & Shadows */
   --border-strong: 8px solid var(--color-black);
   --border-medium: 5px solid var(--color-black);
@@ -22,6 +24,7 @@
   --box-shadow-small: 5px 5px 0 var(--color-black);
   --box-shadow-medium: 8px 8px 0 var(--color-black);
   --box-shadow-large: 15px 15px 0 var(--color-black);
+
   /* Spacing Scale */
   --spacing-unit: 1rem;
   --spacing-xs: calc(var(--spacing-unit) * 0.5);
@@ -29,12 +32,14 @@
   --spacing-md: calc(var(--spacing-unit) * 1.5);
   --spacing-lg: calc(var(--spacing-unit) * 2);
   --spacing-xl: calc(var(--spacing-unit) * 5);
+
   /* Layout */
   --container-max-width: 1280px;
   --sidebar-width: 320px;
   --sidebar-min-width: 220px;
   --sidebar-max-width: 350px;
   --content-block-max-width: 1280px;
+
   /* Fluid Typography */
   --fs-2xs: clamp(0.70rem, calc(0.66rem + 0.15vw), 0.78rem);
   --fs-xs: clamp(0.78rem, calc(0.72rem + 0.25vw), 0.90rem);

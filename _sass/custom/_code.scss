@@ -54,15 +54,13 @@
 }
 
 .highlight .rouge-code pre {
+    @include scrollbars();
+
     margin: 0;
-    padding: 15px 18px 15px 18px;
+    padding: 15px 18px;
     background: transparent !important;
     overflow-x: auto;
     line-height: 1.55;
-}
-
-.highlight .rouge-code pre {
-    @include scrollbars();
 }
 
 :not(pre)>code {

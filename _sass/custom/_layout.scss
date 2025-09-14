@@ -45,7 +45,7 @@ main {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media (max-width:1290px) {
+@media (width <= 1290px) {
     main {
         flex-direction: column;
         padding: 0;
@@ -72,7 +72,7 @@ main {
     }
 }
 
-@media (max-width:1024px) {
+@media (width <= 1024px) {
     .container {
         padding: 0 var(--spacing-xs);
     }
@@ -90,7 +90,7 @@ main {
     }
 }
 
-@media (max-width:480px) {
+@media (width <= 480px) {
     .container {
         padding: 0 0.5rem;
     }

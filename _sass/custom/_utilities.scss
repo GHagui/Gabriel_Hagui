@@ -1,5 +1,5 @@
 // Utility & responsive adjustments
-@media (max-width:1024px) {
+@media (width <= 1024px) {
     .site-header {
         box-shadow: none;
     }
@@ -11,7 +11,7 @@
     }
 }
 
-@media (max-width:480px) {
+@media (width <= 480px) {
     :root {
         --border-strong: 4px solid var(--color-black);
         --border-medium: 3px solid var(--color-black);
@@ -30,7 +30,7 @@
     }
 }
 
-@media (max-width:600px) {
+@media (width <= 600px) {
     body {
         font-size: clamp(0.80rem, calc(0.75rem + 0.55vw), 0.95rem);
     }
@@ -57,7 +57,7 @@
     }
 }
 
-@media (max-width:380px) {
+@media (width <= 380px) {
     body {
         font-size: clamp(0.75rem, calc(0.70rem + 0.70vw), 0.88rem);
     }
@@ -84,8 +84,7 @@
     }
 }
 
-@media (max-width:1024px) {
-
+@media (width <= 1024px) {
     .site-header .site-nav a,
     .hire-me {
         min-height: 44px;
@@ -120,8 +119,7 @@ pre,
     overflow-x: auto;
 }
 
-@media (max-width:600px) {
-
+@media (width <= 600px) {
     .content,
     .about {
         box-shadow: none;
