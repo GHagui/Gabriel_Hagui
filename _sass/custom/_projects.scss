@@ -19,6 +19,7 @@
     box-shadow: var(--box-shadow-medium);
     transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease;
     overflow: hidden;
+    background-color: var(--color-bg-body);
 }
 
 .project-card-link {

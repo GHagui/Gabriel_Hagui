@@ -1,0 +1,23 @@
+{% assign items = include.posts | default: page.projects | default: site.projects %}
+<div class="projects-grid" aria-label="Lista de projetos">
+  {% for p in items %}
+  <article class="project-card">
+    <a class="project-card-link" href="{{ p.url | relative_url }}">
+      <div class="project-card-image-wrapper">
+        {% if p.image %}
+          <img class="project-card-image" src="{{ p.image | relative_url }}" alt="Capa do projeto {{ p.title }}" loading="lazy" decoding="async" />
+        {% else %}
+          <div class="project-card-placeholder" aria-hidden="true">SEM IMAGEM</div>
+        {% endif %}
+      </div>
+      <div class="project-card-body">
+        <h3 class="project-card-title">{{ p.title }}</h3>
+        {% if p.description %}
+          <p class="project-card-description">{{ p.description }}</p>
+        {% endif %}
+        <span class="project-card-cta">Ver detalhes →</span>
+      </div>
+    </a>
+  </article>
+  {% endfor %}
+</div>

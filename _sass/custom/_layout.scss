@@ -5,6 +5,15 @@
     margin: 0 auto;
 }
 
+details {
+    margin: var(--spacing-md) 0;
+    padding: var(--spacing-sm);
+    border: var(--border-medium);
+    border-radius: var(--border-radius-default);
+    background: var(--color-bg-sidebar);
+    box-shadow: var(--box-shadow-small);
+}
+
 main {
     display: flex;
     flex-direction: row;

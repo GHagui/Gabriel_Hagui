@@ -4,6 +4,7 @@
     border: 0;
     background: transparent;
     color: var(--color-white);
+    padding-right: 8px;
 }
 
 p .highlighter-rouge{
@@ -12,6 +13,10 @@ p .highlighter-rouge{
 
 .highlighter-rouge+.highlighter-rouge {
     margin-top: 0;
+}
+
+.highlight {
+    box-shadow: var(--box-shadow-medium) !important;
 }
 
 .highlighter-rouge>.highlight {
@@ -39,7 +44,7 @@ p .highlighter-rouge{
 
 .highlight .rouge-gutter {
     width: 3.5ch;
-    background: #121212;
+    background: #1f1f1f;
     border-right: 2px solid #0e0e0e;
     user-select: none;
 }
@@ -50,12 +55,12 @@ p .highlighter-rouge{
     background: transparent;
     letter-spacing: .5px;
     text-align: right;
-    color: #6a6a6a;
+    color: #8f8f8f;
 }
 
 .highlight .rouge-code {
     position: relative;
-    background: #161616;
+    background: #1f1f1f;
 }
 
 .highlight .rouge-code pre {
