@@ -23,9 +23,9 @@ main {
     border-radius: var(--border-radius-large);
     background-color: var(--color-purple-accent);
     font-family: var(--font-secondary);
+    color: var(--color-white);
     box-shadow: var(--box-shadow-medium);
     margin-left: 0;
-    color: var(--color-white);
 }
 
 .content {
@@ -61,12 +61,12 @@ main {
         width: 100%;
         max-width: 100%;
         padding: var(--spacing-md) var(--spacing-sm);
-        border-top: var(--border-medium);
-        border-left: 0;
-        border-right: 0;
-        border-bottom: var(--border-medium);
         border-radius: 0;
         box-shadow: none;
+        border-bottom: var(--border-medium);
+        border-left: 0;
+        border-right: 0;
+        border-top: var(--border-medium);
         margin-bottom: 0;
     }
 
@@ -86,7 +86,7 @@ main {
     }
 
     main {
-        padding: 0 0 0;
+        padding: 0;
     }
 
     .sidebar {

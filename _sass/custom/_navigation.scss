@@ -8,6 +8,8 @@
 }
 
 .site-header .site-nav a {
+    /* Tornamos inline-block para que transform crie deslocamento visível independente do fluxo inline */
+    display: inline-block;
     padding: var(--spacing-xs);
     border: 5px solid transparent;
     border-radius: var(--border-radius-default);
@@ -16,8 +18,6 @@
     font-weight: 600;
     text-decoration: none;
     color: var(--color-white);
-    /* Tornamos inline-block para que transform crie deslocamento visível independente do fluxo inline */
-    display: inline-block;
     transition: box-shadow .3s, border .3s, background-color .3s, transform .3s ease;
     white-space: nowrap;
 }

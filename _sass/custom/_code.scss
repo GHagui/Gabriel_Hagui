@@ -24,11 +24,11 @@ p .highlighter-rouge{
 
 .highlight .rouge-table {
     width: 100%;
+    margin: 0;
     background: transparent;
     font-size: var(--fs-sm);
     border-collapse: collapse;
     table-layout: fixed;
-    margin: 0;
 }
 
 .highlight .rouge-table td {
