@@ -1,22 +1,21 @@
 <head>
     <meta charset="UTF-8" />
     <title>{{ page.title }}</title>
+    <!-- Basic CSP: adjust if adding other external assets -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net 'sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei' 'sha384-fGOpyux4znQZ+n4tUrYReB2Ulu6K1MtBxIkbHauU09YM1hvCyA5oX9JUc1hRkDEr'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; object-src 'none'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <script defer src="{{ '/assets/js/menu.js' | relative_url }}"></script>
-    <!-- Mermaid (diagrams) -->
-    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <!-- Mermaid (diagrams) pinned version with SRI -->
+    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.4/dist/mermaid.min.js"
+        integrity="sha384-fGOpyux4znQZ+n4tUrYReB2Ulu6K1MtBxIkbHauU09YM1hvCyA5oX9JUc1hRkDEr"
+        crossorigin="anonymous"></script>
     <script defer src="{{ '/assets/js/mermaid-init.js' | relative_url }}"></script>
-        <!-- MathJax (math rendering) -->
-        <script>
-            window.MathJax = {
-                tex: {
-                    inlineMath: [['$','$'], ['\\(','\\)']],
-                    displayMath: [['$$','$$'], ['\\[','\\]']]
-                },
-                options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
-            };
-        </script>
-        <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+        <!-- MathJax (math rendering) config externalized for CSP compliance -->
+        <script defer src="{{ '/assets/js/mathjax-config.js' | relative_url }}"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
+                integrity="sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei"
+                crossorigin="anonymous"
+                id="MathJax-script"></script>
 </head>
 <header class="site-header">
     <div class="container">

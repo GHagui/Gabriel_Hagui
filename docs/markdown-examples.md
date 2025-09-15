@@ -9,6 +9,13 @@ permalink: /markdown-examples
 
 Este arquivo demonstra todos os formatos markdown suportados pelo tema Neubrutalism.
 
+# Título de nível 1
+## Título de nível 2
+### Título de nível 3
+#### Título de nível 4
+##### Título de nível 5
+###### Título de nível 6
+
 ## Tabelas
 
 | Coluna 1 | Coluna 2 | Coluna 3 |
