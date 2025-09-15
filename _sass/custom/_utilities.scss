@@ -35,6 +35,10 @@
         font-size: clamp(0.80rem, calc(0.75rem + 0.55vw), 0.95rem);
     }
 
+    .sidebar {
+        margin-top: var(--spacing-md);
+    }
+
     .content p,
     .content li {
         font-size: clamp(0.85rem, calc(0.80rem + 0.60vw), 1.00rem);

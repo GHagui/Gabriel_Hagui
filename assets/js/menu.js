@@ -15,7 +15,7 @@
       if(!expanded) {
         // Focus first link when opening
         const firstLink = nav.querySelector('a');
-        firstLink && firstLink.focus();
+        firstLink?.focus();
       } else {
         toggle.focus();
       }

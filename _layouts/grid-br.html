@@ -6,9 +6,6 @@
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
     <title>{{ page.title | default: site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <style>
-        .content { margin-left: auto !important; margin-right: auto !important; }
-    </style>
 </head>
 
 <body>
@@ -18,10 +15,16 @@
             <h1>{{ page.title }}</h1>
             {{ content }}
         </div>
+        <div class="sidebar">
+            <h2>Sobre mim</h2>
+            <p>Gabriel Hagui é um desenvolvedor web apaixonado por criar experiências digitais únicas e funcionais. Com
+                uma sólida formação em Engenharia de Software, ele combina habilidades técnicas com uma visão estética
+                para entregar projetos que não apenas atendem às necessidades dos clientes, mas também encantam os
+                usuários.</p>
+        </div>
     </main>
     {% include footer-br.html %}
     <script src="{{ '/assets/js/callouts.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/contact-cards.js' | relative_url }}" defer></script>
 </body>
 
 </html>

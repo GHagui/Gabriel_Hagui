@@ -21,8 +21,9 @@ main {
     margin: 0 auto var(--spacing-lg);
     border: var(--border-medium);
     border-radius: var(--border-radius-large);
-    background: var(--color-bg-sidebar);
+    background-color: var(--color-purple-accent);
     font-family: var(--font-secondary);
+    color: var(--color-white);
     box-shadow: var(--box-shadow-medium);
     margin-left: 0;
 }
@@ -52,13 +53,20 @@ main {
         padding: 0;
     }
 
+    body {
+        background-color: var(--color-white);
+    }
+
     .sidebar {
         width: 100%;
         max-width: 100%;
         padding: var(--spacing-md) var(--spacing-sm);
-        border: none;
         border-radius: 0;
         box-shadow: none;
+        border-bottom: var(--border-medium);
+        border-left: 0;
+        border-right: 0;
+        border-top: var(--border-medium);
         margin-bottom: 0;
     }
 
@@ -78,7 +86,7 @@ main {
     }
 
     main {
-        padding: 0 0 var(--spacing-xs);
+        padding: 0;
     }
 
     .sidebar {

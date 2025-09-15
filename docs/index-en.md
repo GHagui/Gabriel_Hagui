@@ -1,6 +1,7 @@
 ---
 layout: about-en
 title: Home Page
+permalink: /index-en
 ---
 
 # Welcome to my website

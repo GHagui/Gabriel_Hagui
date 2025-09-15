@@ -19,14 +19,20 @@ jobs:
 
       - name: PR Opened Notification
         if: github.event.action == 'opened'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
         run: |
           echo "🎉 Novo PR criado: develop → main"
-          echo "📋 PR #${{ github.event.number }}: ${{ github.event.pull_request.title }}"
-          echo "👤 Criado por: @${{ github.event.pull_request.user.login }}"
-          echo "🔗 URL: ${{ github.event.pull_request.html_url }}"
+          echo "📋 PR #${PR_NUMBER}: ${PR_TITLE}"
+          echo "👤 Criado por: @${PR_AUTHOR}"
+          echo "🔗 URL: ${PR_URL}"
 
-          # Adicionar comentário automático com instruções
-          gh pr comment ${{ github.event.number }} --body "## 🤖 Auto-generated comment
+          # Adicionar comentário automático com instruções (usando vars seguras)
+          gh pr comment "${PR_NUMBER}" --body "## 🤖 Auto-generated comment
 
           ### 📋 Checklist de merge:
           - [ ] Code review completo
@@ -40,40 +46,53 @@ jobs:
           3. Use **Squash and merge** ou **Merge commit** conforme preferência do projeto
 
           *Este comentário foi gerado automaticamente*"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: PR Updated Notification
         if: github.event.action == 'synchronize'
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_SENDER: ${{ github.event.sender.login }}
         run: |
           echo "🔄 PR atualizado: develop → main"
-          echo "📋 PR #${{ github.event.number }}: ${{ github.event.pull_request.title }}"
-          echo "👤 Atualizado por: @${{ github.event.sender.login }}"
+          echo "📋 PR #${PR_NUMBER}: ${PR_TITLE}"
+          echo "👤 Atualizado por: @${PR_SENDER}"
 
       - name: PR Merged Notification
         if: github.event.action == 'closed' && github.event.pull_request.merged == true
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_MERGED_BY: ${{ github.event.pull_request.merged_by.login }}
         run: |
           echo "✅ PR merged com sucesso!"
-          echo "📋 PR #${{ github.event.number }}: ${{ github.event.pull_request.title }}"
-          echo "👤 Merged por: @${{ github.event.pull_request.merged_by.login }}"
+          echo "📋 PR #${PR_NUMBER}: ${PR_TITLE}"
+          echo "👤 Merged por: @${PR_MERGED_BY}"
 
           # Opcional: criar tag de release
           echo "🏷️ Considerando criar uma tag de release..."
 
       - name: PR Closed Without Merge
         if: github.event.action == 'closed' && github.event.pull_request.merged == false
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_SENDER: ${{ github.event.sender.login }}
         run: |
           echo "❌ PR fechado sem merge"
-          echo "📋 PR #${{ github.event.number }}: ${{ github.event.pull_request.title }}"
-          echo "👤 Fechado por: @${{ github.event.sender.login }}"
+          echo "📋 PR #${PR_NUMBER}: ${PR_TITLE}"
+          echo "👤 Fechado por: @${PR_SENDER}"
 
       - name: Review Submitted
         if: github.event_name == 'pull_request_review'
+        env:
+          REVIEWER: ${{ github.event.review.user.login }}
+          REVIEW_STATE: ${{ github.event.review.state }}
         run: |
-          echo "📝 Review submetido por @${{ github.event.review.user.login }}"
-          echo "🎯 Estado: ${{ github.event.review.state }}"
-          if [ "${{ github.event.review.state }}" = "approved" ]; then
+          echo "📝 Review submetido por @${REVIEWER}"
+          echo "🎯 Estado: ${REVIEW_STATE}"
+          if [ "${REVIEW_STATE}" = "approved" ]; then
             echo "✅ PR aprovado!"
-          elif [ "${{ github.event.review.state }}" = "changes_requested" ]; then
+          elif [ "${REVIEW_STATE}" = "changes_requested" ]; then
             echo "⚠️ Mudanças solicitadas"
           fi
