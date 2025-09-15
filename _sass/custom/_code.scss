@@ -1,13 +1,17 @@
 // Code & syntax highlighting
 .highlighter-rouge {
-    margin: var(--spacing-md) 0;
-    border: var(--border-medium);
-    background: #161616;
-    box-shadow: var(--box-shadow-small);
+    margin: 0;
+    border: 0;
+    background: transparent;
+    color: var(--color-white);
+}
+
+p .highlighter-rouge{
+    border: var(--border-small);
 }
 
 .highlighter-rouge+.highlighter-rouge {
-    margin-top: var(--spacing-lg);
+    margin-top: 0;
 }
 
 .highlighter-rouge>.highlight {
@@ -24,6 +28,7 @@
     font-size: var(--fs-sm);
     border-collapse: collapse;
     table-layout: fixed;
+    margin: 0;
 }
 
 .highlight .rouge-table td {
@@ -50,7 +55,7 @@
 
 .highlight .rouge-code {
     position: relative;
-    background: transparent;
+    background: #161616;
 }
 
 .highlight .rouge-code pre {
@@ -70,6 +75,7 @@
     background: var(--color-bg-sidebar) !important;
     font-family: var(--font-secondary);
     font-size: .85em;
+    color: var(--color-black) !important
 }
 
 pre code {

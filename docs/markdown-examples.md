@@ -1,8 +1,10 @@
 ---
 layout: default-br
 title: Exemplos de Markdown
+permalink: /markdown-examples
 ---
 
+{% comment %} Conteúdo original mantido {% endcomment %}
 # Exemplos de Markdown Avançado
 
 Este arquivo demonstra todos os formatos markdown suportados pelo tema Neubrutalism.

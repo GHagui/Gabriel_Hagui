@@ -1,6 +1,7 @@
 ---
 layout: hire-br
 title: Contato
+permalink: /contact-br
 ---
 Precisa falar comigo? Aqui estão os canais mais rápidos. Fique à vontade para usar o que for mais confortável, respondo normalmente em poucas horas.
 

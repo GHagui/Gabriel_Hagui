@@ -1,8 +1,9 @@
 ---
 layout: default-br
 title: De um simples NAS a um homelab completo, sem querer querendo
+permalink: /truenas
 ---
-# Pré-NAS
+## Pré-NAS
 Quando a gente começa a tirar fotos importantes, salvar documentos pessoais, trabalhar com vídeos e outros arquivos valiosos, a primeira coisa que vem à mente é: **Guardar tudo com segurança, com backup**. E normalmente, a primeira solução que pensamos é a nuvem.
 
 Foi exatamente o que eu fiz.
@@ -19,8 +20,8 @@ Além disso, embora pareça improvável, nada impede que um dia o Google simples
 > ***Quão seguro é depender 100% de um serviço que não está sob meu controle?***
 
 Percebi que isso não é o que quero pra minha vida digital. Foi aí que comecei a pensar em **montar uma NAS**.
-# NAS
-### A busca por um NAS
+## NAS
+###### A busca por um NAS
 Pra começar, fui procurar um NAS pronto na internet. O que mais me interessou foi o WD My Cloud Expert Series EX2 Ultra(https://westerndigital.com/products/network-attached-storage/wd-my-cloud-expert-series-ex2-ultra?sku=WDBVBZ0000NCH-NESN), bonito, compacto e com certa reputação no mercado.
 
 Mas aí veio o balde de água fria: Custava cerca de **R$ 3.000, sem os dois HDs incluídos**. E o pior: O **sistema era fechado e proprietário** da Western Digital.
@@ -30,7 +31,7 @@ A ficha caiu de novo. Eu estaria apenas **trocando a dependência da Google pela
 Além disso, o modelo estava começando a sumir do mercado, dando aquela sensação de produto que pode ser descontinuado a qualquer momento. E se a empresa deixar de dar suporte? Ou pior, se o sistema parar de funcionar ou exigir alguma conta online da WD (o que já aconteceu com outros dispositivos)?
 
 Foi aí que percebi que **não queria um NAS pronto, queria controle de verdade**. Queria montar o meu.
-### De PC antigo a NAS
+###### De PC antigo a NAS
 Um pouco antes dessa busca por um NAS pronto, eu havia feito um upgrade no meu setup principal: Troquei o Intel i5 11400F por um Ryzen 9 7900X3D.
 
 A ideia era vender o sistema antigo por uns R$ 1.800, mas aí a ideia veio na hora certa.
@@ -53,7 +54,7 @@ Especificações do setup Intel inicial:
 | **HDDs** | WD Blue 500 GB, WD Black 500 GB |
 | **SSD** | WD Green 120 GB SATA |
 
-### Escolhendo o sistema para o NAS
+###### Escolhendo o sistema para o NAS
 Comecei a pesquisar qual sistema operacional seria ideal para um NAS caseiro. Nas conversas em fóruns e vídeos que assisti, dois nomes surgiram com frequência: Unraid(https://unraid.net/) e TrueNAS(https:/truenas.com/).
 
 O Unraid parecia interessante, mas exige licença paga. Já o TrueNAS chamou ainda mais minha atenção, principalmente a versão **TrueNAS Scale**, que é **baseada em Linux** com o qual me familiarizo (ao contrário da versão Core, que usa FreeBSD) e, melhor ainda: **É gratuito!**
@@ -61,7 +62,7 @@ O Unraid parecia interessante, mas exige licença paga. Já o TrueNAS chamou ain
 Li que o TrueNAS pode ser mais difícil de configurar, especialmente para quem está começando. Mas encarei isso como um desafio técnico interessante. Afinal, montar um NAS próprio já era um projeto de aprendizado.
 
 E foi assim que decidi: **Vou instalar o TrueNAS Scale e fazer meu NAS do zero.**
-### TrueNAS
+###### TrueNAS
 Após a instalação, percebi que o TrueNAS não é tão difícil quanto parece, pelo menos não para mim, que já tenho certa experiência com Linux (e um bom histórico de distro hopping).
 
 A primeira tela exibida é simples: Um terminal com o endereço IP do servidor e algumas opções básicas de configuração. Acessei o dashboard diretamente por esse IP.
@@ -94,7 +95,7 @@ Ao contrário dos serviços de armazenamento em nuvem, onde preciso usar o naveg
 No Google Drive e no Google Fotos, por exemplo, vídeos grandes demoram para carregar, e muitas vezes só são exibidos em baixa resolução. Isso acaba obrigando o download completo do arquivo caso eu queira assistir com qualidade nativa em vez de pré-visualização.
 
 Com o SMB, consigo **mover, copiar e abrir arquivos como se estivessem armazenados localmente**, com muito mais agilidade e controle.
-### Preocupação com boleto de luz
+###### Preocupação com boleto de luz
 Qualquer equipamento ligado 24/7 inevitavelmente levanta uma preocupação: **O consumo de energia** e, claro, o impacto no boleto da luz.
 
 Muitos PCs, especialmente os que não são embutidos nem portáteis, têm baixa eficiência energética em modo ocioso (IDLE). Para contornar isso, realizei várias otimizações no BIOS, buscando reduzir ao máximo o consumo do meu NAS:
@@ -108,14 +109,14 @@ Muitos PCs, especialmente os que não são embutidos nem portáteis, têm baixa 
 > A **redução de TDP afeta negativamente a performance da CPU**, mas isso não é um problema aqui, a carga de trabalho no processador é baixa, já que o NAS foi montado essencialmente para armazenamento de dados.
 
 - ⚡️ Configurei a BIOS para **sempre ligar o PC quando receber energia**, o que não é exatamente economia de energia, mas é útil para ligar o PC automaticamente após uma falha de energia.
-#### Medida extrema: Headless
+######## Medida extrema: Headless
 Tomei uma decisão mais drástica: **removi a GPU GTX 750 da placa-mãe**. Agora o NAS está rodando em modo **headless** (sem interface gráfica ou monitor).
 
 > [!info] Informação
 > O TrueNAS não exige uma GPU para funcionar. A presença da GPU pode ser útil para tarefas como interface gráfica em VMs ou streaming de vídeos, mas não preciso disso no meu uso atual.
 
 Com todas essas otimizações, o consumo em IDLE **caiu de 60W para 35W**.
-#### Fonte "bomba"
+######## Fonte "bomba"
 O NAS estava utilizando uma fonte **OCZ ATX 500W ModXStream Pro 80 Plus, lançada em 2010!** Ela estava guardada há anos, coberta de pó na prateleira.
 
 Segundo muitos especialistas em fóruns, **capacitores antigos e inativos podem se degradar**, aumentando o risco de falha e instabilidade o que poderia prejudicar os discos rígidos a longo prazo.
@@ -123,11 +124,11 @@ Segundo muitos especialistas em fóruns, **capacitores antigos e inativos podem 
 Para evitar problemas, resolvi investir numa fonte moderna, **MSI MPG A1000G**, "ready" for RTX 5080, com novo conector 12VHPWR. Essa nova fonte passou a equipar meu PC principal, substituindo a **MSI MPG A850GF**, que agora está instalada no NAS.
 
 Agora o NAS está seguro com a fonte moderna.
-#### Resultado
+######## Resultado
 Após a troca da fonte, tive uma grata surpresa: **O consumo caiu mais 5 watts**. Isso era esperado, já que a fonte antiga tinha selo 80 Plus comum, e a nova é **80 Plus Gold**, com melhor eficiência energética, especialmente em cargas baixas como o IDLE.
 
 Agora, o NAS está consumindo **apenas 30W em repouso** o que considero excelente para o que ele entrega.
-#### Setup atualizado
+######## Setup atualizado
 
 | Peça | Modelo |
 | :--- | :--- |
@@ -139,7 +140,7 @@ Agora, o NAS está consumindo **apenas 30W em repouso** o que considero excelent
 | **HDDs** | WD Blue 500 GB, WD Black 500 GB |
 | **SSD** | WD Green 120 GB SATA |
 
-### Meu NAS à internet
+###### Meu NAS à internet
 Certamente, um NAS não consegue competir com a nuvem se só puder ser acessado pela rede local, ou seja, apenas dentro de casa. A grande vantagem da nuvem é justamente a possibilidade de **acesso de qualquer lugar, a qualquer hora**, desde que haja conexão com a internet.
 
 Eu já tinha algum conhecimento sobre como expor o NAS à internet, mas também sabia dos riscos de segurança envolvidos em abrir portas diretamente no roteador. Então fui atrás de uma solução que permitisse **acessar meu NAS remotamente, mas com segurança**.
@@ -151,7 +152,7 @@ Optei por usar o **Tailscale**, por ser **fácil de configurar** ainda com WireG
 Instalei o Tailscale na loja do dashboard do TrueNAS, que é baseada nos containers prontos do **Docker** e **Kubernetes**. Foi fácil configurar, confesso que tive dúvidas e fiquei confuso, mas só pesquisei na internet, assisti no Youtube e perguntei no ChatGPT, o que já resolveu.
 
 Também instalei o Tailscale no meu celular e fiz o login lá. Magicamente acessa à rede local com `subnet routing` ativado mesmo conectado com 5G, como se estivesse em casa.
-### Gerenciador de arquivos para Android
+###### Gerenciador de arquivos para Android
 Com o NAS na palma de mão, posso acessar de qualquer lugar desde que tenha internet, **chegou no nivel de nuvem!**
 
 O aplicativo nativo da OneUI, Meus Arquivos, até suporta acesso ao NAS via rede, mas me incomodava o fato de **não ter pré-visualização de fotos e vídeos**.
@@ -160,7 +161,7 @@ Procurei uma alternativa, de preferência **FOSS** (código aberto). Achei um ap
 
 Ele suporta SMB e **tem pré-visualização de fotos e vídeos!**
 E o melhor de tudo: **Sem anúncios!**
-# HomeLab
+## HomeLab
 Comecei a gostar bastante desse caminho, que é muito promissor e me permite ter **controle total dos meus dados importantes**, acessando tudo na palma da mão, **sem depender de ninguém**.
 
 Se um dia a iXsystems parar de dar suporte ao TrueNAS, ou se ele deixar de ser gratuito, não seria um problema.
@@ -179,7 +180,7 @@ Teoricamente, o total seria de 8 TB, mas como ativei o **RAID-Z1 (espelhamento d
 > [!success] Redundância ativada
 > Mesmo que um dos HDDs falhe, **os dados continuam intactos no outro**. Isso traz muito mais segurança para arquivos importantes.
 
-#### Setup atual
+######## Setup atual
 
 | Peça | Modelo |
 | :--- | :--- |
@@ -195,12 +196,12 @@ Não é simplesmente bater o martelo e dizer que meu NAS virou um **HomeLab**, c
 
 Não vou entrar em detalhes sobre esses dois servidores agora, senão esta página vai ficar muito longa. Vou separar esses assuntos e publicar em uma próxima vez.
 
-### Automatização da compressão de vídeos com base em pastas
+###### Automatização da compressão de vídeos com base em pastas
 Instalei um aplicativo (em um container) no TrueNAS que **comprime automaticamente os vídeos ao serem movidos para uma pasta específica**, com o objetivo de economizar espaço de forma inteligente. Funciona assim: Se os vídeos forem importantes ou marcantes, eu os coloco em outra pasta que nunca será comprimida, preservando a qualidade máxima. Por outro lado, se forem vídeos simples, em que a compressão é aceitável, eu os envio para a pasta que o aplicativo monitora e comprime automaticamente.
 
 Diferente do Google Fotos, que me força a escolher entre manter tudo sem compressão ou ativar a economia de espaço para tudo, **aqui eu tenho controle total e posso decidir caso a caso**.
 
-### Batalha final: Comparação entre Google One x meu NAS
+###### Batalha final: Comparação entre Google One x meu NAS
 Em 26 de junho de 2025, a Google oferece um plano mais próximo da capacidade dos meus HDDs. Infelizmente, não existe plano de 4 TB, o máximo é 2 TB, chamado **Google AI Pro**, que custa **R$ 96,99 por mês**.
 
 É difícil comparar de forma totalmente justa, pois o plano da Google inclui IA (como o Gemini), e o meu NAS virou um verdadeiro HomeLab, com ferramentas que vão muito além do armazenamento. São propostas bem diferentes.
@@ -231,7 +232,7 @@ E se considerarmos o dobro da capacidade (4 TB vs 2 TB), usando dois planos Goog
 
 Nesse caso, a **economia sobe para 81%!**
 
-### Conclusão
+###### Conclusão
 Montar meu próprio NAS foi mais do que uma escolha técnica, foi uma **decisão de independência digital**. Comecei apenas querendo resolver o problema de espaço e backup, mas acabei mergulhando em um universo que me deu **controle total sobre meus dados, flexibilidade extrema e verdadeira autonomia** diante dos modelos centralizados das grandes empresas de tecnologia.
 
 Descobri que soluções prontas, como Google One ou NASs proprietários, embora pareçam práticas à primeira vista, carregam limitações, dependências e custos recorrentes. Ao investir no meu próprio HomeLab, ganhei muito mais do que armazenamento: **Conquistei liberdade**.

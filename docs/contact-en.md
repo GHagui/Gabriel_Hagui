@@ -1,6 +1,7 @@
 ---
 layout: hire-en
 title: Contact
+permalink: /contact-en
 ---
 Need to reach out? Pick any of the channels below, I usually reply within a few hours.
 

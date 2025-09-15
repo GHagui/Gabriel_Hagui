@@ -1,6 +1,7 @@
 ---
 layout: resume-br
 title: Currículo
+permalink: /xp-br
 ---
 ## **Apresentação**
 

@@ -1,6 +1,7 @@
 ---
 layout: default-br
 title: O Everything vai mudar sua vida! Confia em mim, não é clickbait
+permalink: /everything
 ---
 Sabe aquele momento em que você precisa encontrar um PDF, um documento do Word ou uma imagem... Mas simplesmente não lembra onde salvou?
 Aí, como último recurso, você apela pro velho amigo Windows Search, aquela barrinha da pesquisa no Windows Explorer que nunca foi lá muito confiável.
@@ -22,7 +23,7 @@ Sim, instantaneamente mesmo. Nada de esperar barra verde, indexação lerda ou p
 ### Como o Everything é mais rápido que o próprio Windows?
 O Windows Search Indexer é notoriamente mal otimizado: Ele faz varreduras periódicas e limita a indexação a apenas algumas pastas (como Documentos, Imagens, etc), e ainda assim, de forma lenta e pesada.
 
-Já o Everything funciona de outro jeito: Ele aproveita um recurso do sistema de arquivos NTFS, que mantém uma estrutura chamada MFT (Master File Table), uma espécie de "catálogo" de todos os arquivos e diretórios.
+Já o Everything funciona de outro jeito: Ele aproveita um recurso do sistema de arquivos NTFS, que mantém uma estrutura chamado MFT (Master File Table), uma espécie de "catálogo" de todos os arquivos e diretórios.
 
 O Everything acessa diretamente essa MFT e monitora eventos do sistema de arquivos. Sempre que um novo arquivo é criado, movido ou deletado, o Everything recebe essa informação em tempo real e atualiza seu banco de dados imediatamente.
 
