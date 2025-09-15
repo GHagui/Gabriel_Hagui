@@ -19,6 +19,8 @@
     box-shadow: var(--box-shadow-medium);
     transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease;
     overflow: hidden;
+    background-color: var(--color-bg-body);
+    margin-right: 8px;
 }
 
 .project-card-link {
@@ -50,7 +52,8 @@
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    padding: var(--spacing-sm);
 }
 
 .project-card-placeholder {

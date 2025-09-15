@@ -61,16 +61,20 @@
 }
 
 .about {
-    display: flex;
     flex-direction: column;
     width: 100%;
     max-width: var(--content-block-max-width);
-    padding: var(--spacing-sm);
+    padding: var(--spacing-lg);
     border: var(--border-strong);
     background: var(--color-bg-content);
     box-shadow: var(--box-shadow-large);
     margin-left: auto;
     margin-right: auto;
+}
+
+.about p, li {
+    line-height: normal;
+    font-family: "Open Sans", sans-serif
 }
 
 @media (width <= 1290px) {
