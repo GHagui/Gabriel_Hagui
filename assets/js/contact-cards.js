@@ -1,9 +1,9 @@
 (function(){
   function initContactCards(){
-    var cards = document.querySelectorAll('.contact-card');
+    const cards = document.querySelectorAll('.contact-card');
     cards.forEach(function(card){
       if(card.dataset.enhanced) return;
-      var firstLink = card.querySelector('.contact-link');
+      const firstLink = card.querySelector('.contact-link');
       if(!firstLink) return;
       card.setAttribute('tabindex','0');
       card.setAttribute('role','group');
