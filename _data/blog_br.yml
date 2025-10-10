@@ -2,3 +2,7 @@
   url: "/everything"
   image: "/assets/images/projects/everything.png"
   description: "Organize e encontre qualquer arquivo em segundos usando Everything Search."
+- title: "Estruturando Prompts com YAML"
+  url: "/prompt_yaml"
+  image: "/assets/images/projects/yaml.png"
+  description: "Uma abordagem estruturada para definir, gerenciar e escalar seus prompts de LLM usando YAML."
