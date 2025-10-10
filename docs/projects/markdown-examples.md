@@ -95,7 +95,7 @@ for i in range(10):
 
 [Link para o GitHub](https://github.com)
 
-![Imagem de exemplo](https://via.placeholder.com/400x200/0b27ff/ffffff?text=Neubrutalism)
+![Imagem de exemplo](https://placehold.co/600x400?text=Neubrutalism)
 
 ## Citações
 > [!cit] "

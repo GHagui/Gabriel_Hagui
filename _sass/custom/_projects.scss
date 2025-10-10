@@ -54,6 +54,9 @@
     height: 100%;
     object-fit: contain;
     padding: var(--spacing-sm);
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 .project-card-placeholder {
