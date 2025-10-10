@@ -126,7 +126,7 @@ Ele foi desenvolvido por computador, analisando a frequência das letras na lín
 2.  **Reduzir o movimento desconfortável dos dedos**: Movimentos estranhos e o uso excessivo do dedo mínimo são minimizados. As cargas de digitação são distribuídas de forma mais equilibrada entre os dedos mais fortes.
 3.  **Facilitar a transição**: Diferente de outras alternativas como o Dvorak, o Colemak mantém a maioria das teclas de atalho (como `Ctrl+Z`, `Ctrl+X`, `Ctrl+C`, `Ctrl+V`) nos mesmos lugares do QWERTY, tornando a adaptação muito menos dolorosa.
 
-![Comparação QWERTY vs Dvorak]({{ site.baseurl }}/docs/blogs/images/qwerty/qwerty-vs-dvorak-comparison.webp)
+![Comparação QWERTY vs Dvorak]({{ site.baseurl }}/docs/blogs/images/qwerty/aoun1wrmj8z71.webp)
 
 Colemak é a solução de "software" para a maldição herdada. Ele corrige o mapa, colocando os destinos mais importantes bem no centro da cidade.
 
@@ -142,6 +142,7 @@ Este design ataca diretamente as duas falhas ergonômicas do teclado tradicional
 ![Teclado split]({{ site.baseurl }}/docs/blogs/images/qwerty/split.svg)
 2.  **Colunar (Columnar Stagger / Ortholinear):** As teclas são alinhadas em colunas retas, espelhando o movimento natural dos seus dedos para frente e para trás. Acabaram-se os movimentos diagonais desajeitados. Cada dedo tem sua própria coluna, e o movimento para alcançar as teclas `Q`, `A` e `Z` (por exemplo) é um simples esticar e retrair.
 ![Teclado ergonômico split e colunar]({{ site.baseurl }}/docs/blogs/images/qwerty/emk2-main.jpg)
+
 Um teclado dividido e colunar é o que acontece quando perguntamos: "Se fôssemos inventar o teclado hoje, para o corpo humano, como ele seria?". Ele é a antítese da maldição herdada.
 
 ## Único problema? Subestimado pelo mercado
@@ -163,7 +164,7 @@ E o que o mercado de massa nos oferece para "resolver" esse problema? Uma perigo
 > [!help] Pesquisa Rápida
 > Vá ao seu buscador favorito e digite "teclado ergonômico". Você provavelmente verá imagens de teclados como este:
 >
-> ![Teclado ergonômico falso]({{ site.baseurl }}/docs/blogs/images/qwerty/t1-d5c084.jpg)
+> ![Teclado ergonômico falso]({{ site.baseurl }}/docs/blogs/images/qwerty/png80-t3-scale100.webp)
 >
 > Ele parece confortável, mas, na verdade, é o que podemos chamar de **falso ergonômico**.
 

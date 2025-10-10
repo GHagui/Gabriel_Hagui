@@ -59,7 +59,10 @@ Para organizar os próximos conteúdos, dividi o roadmap em temas. A casa está 
 - [x] Everything: A Ferramenta Definitiva para Busca de Arquivos no Windows
 - [ ] **Análise:** Flow Launcher como Alternativa ao PowerToys Run
 - [ ] **Acessibilidade:** Como uso TTS Live para comunicação em reuniões remotas
-- [ ] **Ergonomia:** A Migração para um Teclado Dividido (QWERTY vs. Colemak)
+- [x] **Ergonomia:** A Migração para um Teclado Dividido (QWERTY vs. Colemak)
+- [ ] **Experiência:** Usando o Corne V4 como Teclado Principal
+- [x] **Uso do YAML:** Melhorando engenharia de prompts para IA
+- [ ] **Coleção dos prompts:** Minhas melhores receitas para ChatGPT e outros
 
 **Hardware & Análises**
 - [ ] **Projeto:** "Steam Deck" Caseiro com Tablet, Moonlight e Wake on LAN

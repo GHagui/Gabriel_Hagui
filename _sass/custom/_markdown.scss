@@ -25,8 +25,14 @@ blockquote {
   margin: var(--spacing-md) 0;
   border: var(--border-medium);
   background: var(--color-bg-sidebar);
-  box-shadow: var(--box-shadow-small);
+  box-shadow: var(--box-shadow-medium);
   border-left: 6px solid var(--color-blue-primary) !important;
+}
+
+@media(width <= 1024px){
+  blockquote {
+    box-shadow: var(--box-shadow-small);
+  }
 }
 
 // Restored callouts structure
@@ -87,9 +93,10 @@ table {
   margin: var(--spacing-md) 0;
   border: var(--border-medium);
   background: var(--color-bg-content);
-  box-shadow: var(--box-shadow-small);
+  box-shadow: var(--box-shadow-medium);
   border-collapse: collapse;
   table-layout: fixed;
+  transition: box-shadow 0.3s;
 }
 
 th,
@@ -109,6 +116,11 @@ th {
 
 tr:nth-child(even) {
   background: var(--color-bg-sidebar);
+}
+
+@media (width <= 1024px){
+  table {
+    box-shadow: var(--box-shadow-small);  }
 }
 
 // Responsive tables: allow horizontal scroll on narrow screens

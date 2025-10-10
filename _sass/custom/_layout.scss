@@ -55,6 +55,16 @@ main {
     font-family: "Open Sans", sans-serif
 }
 
+.content img {
+    margin: var(--spacing-md) auto;
+    border: var(--border-medium);
+    border-radius: var(--border-radius-default);
+    box-shadow: var(--box-shadow-medium);
+    background-color: white;
+    transition: box-shadow 0.3s;
+}
+
+
 @media (width <= 1290px) {
     main {
         flex-direction: column;
@@ -104,6 +114,10 @@ main {
 
     .content {
         padding: var(--spacing-sm);
+    }
+
+    .content img {
+        box-shadow: var(--box-shadow-small);
     }
 }
 
