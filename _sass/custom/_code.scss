@@ -30,10 +30,12 @@ p .highlighter-rouge{
 .highlight .rouge-table {
     width: 100%;
     margin: 0;
-    background: transparent;
+    background: #1f1f1f;
     font-size: var(--fs-sm);
     border-collapse: collapse;
     table-layout: fixed;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .highlight .rouge-table td {
@@ -47,6 +49,7 @@ p .highlighter-rouge{
     background: #1f1f1f;
     border-right: 2px solid #0e0e0e;
     user-select: none;
+    display: none;
 }
 
 .highlight .rouge-gutter pre {
@@ -71,6 +74,9 @@ p .highlighter-rouge{
     background: transparent !important;
     line-height: 1.55;
     overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 :not(pre)>code {
@@ -88,6 +94,7 @@ pre code {
     border: none;
     background: transparent;
     font-size: inherit;
+    white-space: inherit;
 }
 
 // Improve token contrast on slightly lighter background

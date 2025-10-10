@@ -200,7 +200,7 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
 main, .content, .sidebar, .about { max-width:100%; }
     table { font-size: var(--fs-sm); margin: var(--spacing-sm) 0; width:100%; border-collapse: collapse; }
     th, td { padding: var(--spacing-xs); white-space: normal; word-break: break-word; }
-    .highlight pre { font-size: var(--fs-xs); padding: var(--spacing-sm); }
+    .highlight pre { font-size: var(--fs-xs); padding: 0; }
     blockquote { padding: var(--spacing-sm); margin: var(--spacing-sm) 0; }
     .toc { padding: var(--spacing-sm); }
 }
@@ -209,7 +209,7 @@ main, .content, .sidebar, .about { max-width:100%; }
 main, .content, .sidebar, .about { max-width:100%; }
     table { font-size: var(--fs-xs); }
     th, td { padding: 0.5rem 0.25rem; }
-    .highlight pre { font-size: var(--fs-2xs); padding: var(--spacing-xs); }
+    .highlight pre { font-size: var(--fs-2xs); padding: 0; }
     blockquote { padding: var(--spacing-xs); font-size: var(--fs-sm); }
 }
 /* Narrower phones: enable horizontal scroll & nowrap to preserve structure */

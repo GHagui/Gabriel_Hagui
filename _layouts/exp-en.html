@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <style>
+        .content { margin-left: auto !important; margin-right: auto !important; }
+    </style>
+</head>
+
+<body>
+    {% include header-en.html %}
+    <main>
+        <div class="content">
+            <h1>{{ page.title }}</h1>
+            {{ content }}
+        </div>
+    </main>
+    {% include footer-en.html %}
+    <script src="{{ '/assets/js/callouts.js' | relative_url }}"></script>
+</body>
+
+</html>
