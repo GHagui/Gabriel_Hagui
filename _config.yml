@@ -18,20 +18,62 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Gabriel Hagui - Software Engineer & DevOps
+email: gabriel@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Engenharia de Software sem ruído. Cloud AWS, Serverless, automação e arquitetura limpa.
+  Documentação técnica, projetos open source e experimentos com design neubrutalist.
 baseurl: "/Gabriel_Hagui" # Required for GitHub Pages
 url: "https://ghagui.github.io" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: ghagui
+github_username: GHagui
+linkedin_username: gabriel-hagui
+
+# Author information
+author:
+  name: Gabriel Hagui
+  email: gabriel@example.com
+  twitter: ghagui
+
+# SEO Settings
+lang: pt-BR
+timezone: America/Sao_Paulo
+
+# Social media
+social:
+  name: Gabriel Hagui
+  links:
+    - https://github.com/GHagui
+    - https://www.linkedin.com/in/gabriel-hagui
+
+# Logo and images
+logo: /assets/images/gabriel-hagui.jpg
+social_image_path: /assets/images/gabriel-hagui.jpg
+
+# Twitter Card settings
+twitter:
+  username: ghagui
+  card: summary_large_image
+
+# Facebook/Open Graph settings
+facebook:
+  app_id:
+  publisher:
+  admins:
+
+# Webmaster verification (uncomment and add your codes when ready)
+# webmaster_verifications:
+#   google:
+#   bing:
+#   alexa:
+#   yandex:
+#   baidu:
 
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Markdown settings
 markdown: kramdown
