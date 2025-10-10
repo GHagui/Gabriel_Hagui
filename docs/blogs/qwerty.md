@@ -104,6 +104,7 @@ Esse design herdado força nossas mãos e dedos a trabalharem de uma forma total
 *   **Fazer movimentos diagonais ineficientes:** Em vez de simplesmente esticar um dedo para frente, você precisa movê-lo para frente *e* para o lado.
 *   **Torcer o pulso para o lado:** Para alinhar os dedos com as colunas tortas, muitos de nós adotamos uma postura de "desvio ulnar", torcendo os pulsos para fora. Essa é uma das principais causas de dores e Lesões por Esforço Repetitivo (LER).
 *   **Digitar com menos precisão:** O desalinhamento confunde a memória muscular, tornando mais fácil errar a tecla que está "logo acima".
+
 ### A Dupla do Mal
 
 Agora a imagem está completa. O QWERTY e o Staggered são os dois lados da mesma moeda amaldiçoada:
