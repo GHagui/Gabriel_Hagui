@@ -18,22 +18,22 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Gabriel Hagui - Software Engineer & DevOps
-email: gabriel@example.com
+title: Gabriel Hagui dos Santos - Software Engineer & DevOps
+# email: example@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Engenharia de Software sem ruído. Cloud AWS, Serverless, automação e arquitetura limpa.
   Documentação técnica, projetos open source e experimentos com design neubrutalist.
 baseurl: "/Gabriel_Hagui" # Required for GitHub Pages
 url: "https://ghagui.github.io" # the base hostname & protocol for your site
-twitter_username: ghagui
+# twitter_username: ghagui
 github_username: GHagui
 linkedin_username: gabriel-hagui
 
 # Author information
 author:
-  name: Gabriel Hagui
-  email: gabriel@example.com
-  twitter: ghagui
+  name: Gabriel Hagui dos Santos
+#  email: example@example.com
+#  twitter: ghagui
 
 # SEO Settings
 lang: pt-BR
@@ -41,10 +41,11 @@ timezone: America/Sao_Paulo
 
 # Social media
 social:
-  name: Gabriel Hagui
+  name: Gabriel Hagui dos Santos
   links:
     - https://github.com/GHagui
     - https://www.linkedin.com/in/gabriel-hagui
+    - https://t.me/g_hagui
 
 # Logo and images
 logo: /assets/images/gabriel-hagui.jpg
@@ -52,14 +53,14 @@ social_image_path: /assets/images/gabriel-hagui.jpg
 
 # Twitter Card settings
 twitter:
-  username: ghagui
+#  username: ghagui
   card: summary_large_image
 
 # Facebook/Open Graph settings
-facebook:
-  app_id:
-  publisher:
-  admins:
+#facebook:
+#  app_id:
+#  publisher:
+#  admins:
 
 # Webmaster verification (uncomment and add your codes when ready)
 # webmaster_verifications:

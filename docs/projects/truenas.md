@@ -1,9 +1,16 @@
 ---
 layout: default-br
-title: De um simples NAS a um homelab completo, sem querer querendo
+title: "Como Montei um NAS Caseiro com TrueNAS: A Alternativa ao Google Drive"
+description: "Aprenda como construir um NAS caseiro com TrueNAS e se livrar da dependência de serviços como o Google Drive. Veja o setup, custos e vantagens."
+date: 2025-09-14
+author: Gabriel Hagui dos Santos
+image: /assets/images/projects/truenas.webp
+lang: pt-BR
+tags: [NAS, HomeLab, TrueNAS, Servidor Caseiro, ZFS, Backup, Auto-hospedagem, Google Drive]
+categories: [Hardware, DevOps, Tutoriais]
 permalink: /truenas
 ---
-# Pré-NAS
+## Pré-NAS
 Quando a gente começa a tirar fotos importantes, salvar documentos pessoais, trabalhar com vídeos e outros arquivos valiosos, a primeira coisa que vem à mente é: **Guardar tudo com segurança, com backup**. E normalmente, a primeira solução que pensamos é a nuvem.
 
 Foi exatamente o que eu fiz.
@@ -20,7 +27,7 @@ Além disso, embora pareça improvável, nada impede que um dia o Google simples
 > ***Quão seguro é depender 100% de um serviço que não está sob meu controle?***
 
 Percebi que isso não é o que quero pra minha vida digital. Foi aí que comecei a pensar em **montar uma NAS**.
-# NAS
+## NAS
 ### A busca por um NAS
 Pra começar, fui procurar um NAS pronto na internet. O que mais me interessou foi o [WD My Cloud Expert Series EX2 Ultra](https://westerndigital.com/products/network-attached-storage/wd-my-cloud-expert-series-ex2-ultra?sku=WDBVBZ0000NCH-NESN), bonito, compacto e com certa reputação no mercado.
 
@@ -161,7 +168,7 @@ Procurei uma alternativa, de preferência **FOSS** (código aberto). Achei um ap
 
 Ele suporta SMB e **tem pré-visualização de fotos e vídeos!**
 E o melhor de tudo: **Sem anúncios!**
-# HomeLab
+## HomeLab
 Comecei a gostar bastante desse caminho, que é muito promissor e me permite ter **controle total dos meus dados importantes**, acessando tudo na palma da mão, **sem depender de ninguém**.
 
 Se um dia a iXsystems parar de dar suporte ao TrueNAS, ou se ele deixar de ser gratuito, não seria um problema.
@@ -232,7 +239,7 @@ E se considerarmos o dobro da capacidade (4 TB vs 2 TB), usando dois planos Goog
 
 Nesse caso, a **economia sobe para 81%!**
 
-### Conclusão
+## Conclusão
 Montar meu próprio NAS foi mais do que uma escolha técnica, foi uma **decisão de independência digital**. Comecei apenas querendo resolver o problema de espaço e backup, mas acabei mergulhando em um universo que me deu **controle total sobre meus dados, flexibilidade extrema e verdadeira autonomia** diante dos modelos centralizados das grandes empresas de tecnologia.
 
 Descobri que soluções prontas, como Google One ou NASs proprietários, embora pareçam práticas à primeira vista, carregam limitações, dependências e custos recorrentes. Ao investir no meu próprio HomeLab, ganhei muito mais do que armazenamento: **Conquistei liberdade**.

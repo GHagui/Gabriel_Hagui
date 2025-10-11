@@ -1,6 +1,6 @@
 ---
 layout: exp-br
-title: Trajetória & Projetos - Gabriel Hagui
+title: Trajetória & Projetos - Gabriel Hagui dos Santos
 description: Experiência profissional em Engenharia de Software, DevOps AWS, arquitetura serverless e modernização de sistemas distribuídos.
 image: /assets/images/gabriel-hagui.jpg
 lang: pt-BR
