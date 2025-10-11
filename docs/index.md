@@ -2,7 +2,7 @@
 layout: about-br
 title: Gabriel Hagui - Engenheiro de Software & DevOps AWS
 description: Engenharia de Software sem ruído. Cloud AWS, Serverless, automação e arquitetura limpa com design neubrutalist.
-image: /assets/images/gabriel-hagui.jpg
+image: /assets/images/gabriel-hagui.webp
 lang: pt-BR
 permalink: /
 ---

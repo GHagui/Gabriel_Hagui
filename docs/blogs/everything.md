@@ -5,7 +5,7 @@ description: "Cansado da lentidão do Windows Search? Conheça o Everything, a f
 permalink: /everything
 date: 2025-09-14
 author: Gabriel Hagui dos Santos
-image: /assets/images/projects/everything.png
+image: /assets/images/projects/everything.webp
 lang: pt-BR
 tags: [Windows, Software, Produtividade, Ferramentas, Otimização, PC]
 categories: [Software, Tutoriais]

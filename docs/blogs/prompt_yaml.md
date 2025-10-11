@@ -5,7 +5,7 @@ description: "Aprenda a usar YAML para estruturar seus prompts de IA. Uma técni
 permalink: /engenharia-prompt-yaml
 date: 2025-10-10
 author: Gabriel Hagui dos Santos
-image: /assets/images/projects/yaml.png
+image: /assets/images/projects/yaml.webp
 lang: pt-BR
 tags: [Engenharia de Prompt, YAML, ChatGPT, IA Generativa, LLM, Desenvolvimento, Automação]
 categories: [Inteligência Artificial, Tutoriais]
