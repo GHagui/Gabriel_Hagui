@@ -2,7 +2,7 @@
 layout: default-br
 title: "Engenharia de Prompt com YAML: A Técnica para Prompts Profissionais e Reutilizáveis"
 description: "Aprenda a usar YAML para estruturar seus prompts de IA. Uma técnica de engenharia de prompt avançada para criar instruções claras, reutilizáveis e versionáveis para LLMs."
-permalink: /engenharia-prompt-yaml
+permalink: /prompt_yaml
 date: 2025-10-10
 author: Gabriel Hagui dos Santos
 image: /assets/images/projects/yaml.webp
