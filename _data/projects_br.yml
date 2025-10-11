@@ -4,5 +4,5 @@
   description: "Construindo um homelab partindo de um simples servidor de arquivos usando TrueNAS."
 - title: "Theme Jekyll Neubrutalism"
   url: "/markdown-examples"
-  image: "/assets/images/projects/neubrutalism.png"
+  image: "/assets/images/projects/neubrutalism.webp"
   description: "Um tema Jekyll inspirado no neubrutalismo."

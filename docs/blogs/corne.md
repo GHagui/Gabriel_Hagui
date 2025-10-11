@@ -5,12 +5,12 @@ description: "Review do Corne V4. Descubra como um teclado mecânico ergonômico
 permalink: /corne
 date: 2025-10-10
 author: Gabriel Hagui dos Santos
-image: /docs/blogs/images/corne/corne.jpg
+image: /docs/blogs/images/corne/corne.webp
 lang: pt-BR
 tags: [Teclado Mecânico, Ergonomia, Corne Keyboard, Colemak, Produtividade, DIY, Hardware]
 categories: [Hardware, Produtividade]
 ---
-![Dois teclados Corne V4]({{ site.baseurl }}/docs/blogs/images/corne/corne.jpg)
+![Dois teclados Corne V4]({{ site.baseurl }}/docs/blogs/images/corne/corne.webp)
 
 > [!info] Aviso
 > Esta página está em construção. Volte mais tarde para ver o conteúdo completo.

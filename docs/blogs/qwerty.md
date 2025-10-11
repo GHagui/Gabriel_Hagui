@@ -5,12 +5,12 @@ description: "Descubra por que o layout QWERTY e Staggered são uma 'maldição 
 permalink: /qwerty
 date: 2025-10-10
 author: Gabriel Hagui dos Santos
-image: /docs/blogs/images/qwerty/qwerty.png
+image: /docs/blogs/images/qwerty/qwerty.webp
 lang: pt-BR
 tags: [QWERTY, Ergonomia, Teclado Mecânico, Colemak, Produtividade, História da Tecnologia, Staggered, Escalonado, Desalinhado]
 categories: [Tecnologia, Ergonomia]
 ---
-![Ilustração de uma antiga máquina de escrever, enferrujada e com teias de aranha, conectada a um teclado de computador moderno por correntes de energia azul brilhante. A cena simboliza a 'maldição herdada', onde o design obsoleto da máquina de escrever ainda influencia os teclados atuais.]({{ site.baseurl }}/docs/blogs/images/qwerty/qwerty.png)
+![Ilustração de uma antiga máquina de escrever, enferrujada e com teias de aranha, conectada a um teclado de computador moderno por correntes de energia azul brilhante. A cena simboliza a 'maldição herdada', onde o design obsoleto da máquina de escrever ainda influencia os teclados atuais.]({{ site.baseurl }}/docs/blogs/images/qwerty/qwerty.webp)
 
 > [!info] **Esta página consiste na opinião e experiências do autor, acompanhadas de alguns fatos científicos e históricos**
 
@@ -40,7 +40,7 @@ Primeiro, vamos entender quais problemas o **QWERTY** tentou resolver.
 
 As máquinas de escrever da época eram totalmente mecânicas, não havia chip, nem eletrônica para ajudar. Cada tecla tinha uma haste de metal que se levantava e batia na fita com tinta para marcar a letra no papel.
 
-![Animação mostrando as hastes mecânicas de uma máquina de escrever se chocando, ilustrando a causa do travamento.]({{ site.baseurl }}/docs/blogs/images/qwerty/17516671276315765749147184139455.gif)
+![Animação mostrando as hastes mecânicas de uma máquina de escrever se chocando, ilustrando a causa do travamento.]({{ site.baseurl }}/docs/blogs/images/qwerty/17516671276315765749147184139455.webp)
 
 Parece simples, mas na prática era bem complexo: se duas hastes vizinhas fossem acionadas quase ao mesmo tempo, elas podiam se chocar e travar a máquina. Por exemplo, "TH" em inglês são duas letras muito usadas; se essas teclas fossem próximas, haveria uma alta frequência de travamento.
 
@@ -79,7 +79,7 @@ Se você achava que o QWERTY era o único vilão da ergonomia, prepare-se para c
 
 A resposta é um sonoro não. Como você pode ver, o teclado é todo "torto".
 
-![Teclado com layout Staggered e linhas coloridas mostrando o movimento diagonal e não natural de cada dedo.]({{ site.baseurl }}/docs/blogs/images/qwerty/small-alpha-slanted-painted.jpg)
+![Teclado com layout Staggered e linhas coloridas mostrando o movimento diagonal e não natural de cada dedo.]({{ site.baseurl }}/docs/blogs/images/qwerty/small-alpha-slanted-painted.webp)
 
 Observe as linhas coloridas na imagem acima, que mostram o caminho que cada dedo deveria seguir. Vermelho para o indicador, verde para o médio, azul para o anelar e amarelo para o mínimo. Fica óbvio que as colunas são diagonais, não retas.
 
@@ -97,7 +97,7 @@ Mas por que isso é assim? A resposta, mais uma vez, é uma **maldição herdada
 
 Assim como o QWERTY foi uma solução para evitar que as *letras* se chocassem, o layout **Staggered** foi a solução para evitar que as *hastes mecânicas* se chocassem.
 
-![Detalhe das hastes mecânicas internas de uma máquina de escrever, mostrando por que o layout Staggered foi necessário.]({{ site.baseurl }}/docs/blogs/images/qwerty/g22332_158755_1709738524.jpg)
+![Detalhe das hastes mecânicas internas de uma máquina de escrever, mostrando por que o layout Staggered foi necessário.]({{ site.baseurl }}/docs/blogs/images/qwerty/g22332_158755_1709738524.webp)
 
 Na máquina de escrever, cada tecla precisava de uma barra de metal para atingir o papel. Para que essas barras não batessem umas nas outras dentro do corpo da máquina, os engenheiros precisaram desalinhá-las fisicamente. O layout "torto" das teclas é um reflexo direto dessa necessidade mecânica.
 
@@ -148,7 +148,7 @@ Este design ataca diretamente as duas falhas ergonômicas do teclado tradicional
 1.  **Dividido (Split):** O teclado é separado em duas metades. Isso permite que você posicione cada metade diretamente na frente dos seus ombros. Seus pulsos não precisam mais torcer para dentro ou para fora (adeus, desvio ulnar!). Eles ficam perfeitamente retos, em uma posição neutra e relaxada.
 ![Teclado split]({{ site.baseurl }}/docs/blogs/images/qwerty/split.svg)
 2.  **Colunar (Columnar Stagger / Ortholinear):** As teclas são alinhadas em colunas retas, espelhando o movimento natural dos seus dedos para frente e para trás. Acabaram-se os movimentos diagonais desajeitados. Cada dedo tem sua própria coluna, e o movimento para alcançar as teclas `Q`, `A` e `Z` (por exemplo) é um simples esticar e retrair.
-![Exemplo de um teclado ergonômico moderno, o Corne V4, que é dividido e possui layout colunar.]({{ site.baseurl }}/docs/blogs/images/qwerty/emk2-main.jpg)
+![Exemplo de um teclado ergonômico moderno, o Corne V4, que é dividido e possui layout colunar.]({{ site.baseurl }}/docs/blogs/images/qwerty/emk2-main.webp)
 
 Um teclado dividido e colunar é o que acontece quando perguntamos: "Se fôssemos inventar o teclado hoje, para o corpo humano, como ele seria?". Ele é a antítese da maldição herdada.
 
