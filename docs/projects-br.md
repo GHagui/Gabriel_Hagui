@@ -1,6 +1,9 @@
 ---
 layout: grid-br
-title: Projetos
+title: Projetos - Gabriel Hagui
+description: Projetos open source, experimentos e trabalhos práticos em Cloud AWS, automação, homelab e desenvolvimento de software.
+image: /assets/images/gabriel-hagui.jpg
+lang: pt-BR
 permalink: /projects-br
 ---
 

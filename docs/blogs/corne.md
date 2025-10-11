@@ -1,7 +1,14 @@
 ---
 layout: default-br
-title: "Corne V4: Minha Saída da Matrix"
+title: "Teclado Corne V4: Como um Teclado Ergonômico Split Mudou Minha Produtividade"
+description: "Review do Corne V4. Descubra como um teclado mecânico ergonômico, split e colunar, junto com o layout Colemak, me ajudou a sair da 'matrix' do QWERTY."
 permalink: /corne
+date: 2025-10-10
+author: Gabriel Hagui dos Santos
+image: /docs/blogs/images/corne/corne.jpg
+lang: pt-BR
+tags: [Teclado Mecânico, Ergonomia, Corne Keyboard, Colemak, Produtividade, DIY, Hardware]
+categories: [Hardware, Produtividade]
 ---
 ![Dois teclados Corne V4]({{ site.baseurl }}/docs/blogs/images/corne/corne.jpg)
 

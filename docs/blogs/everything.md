@@ -1,7 +1,14 @@
 ---
 layout: default-br
-title: O Everything vai mudar sua vida! Confia em mim, não é clickbait
+title: "Everything: Pesquise Arquivos no Windows Instantaneamente (Alternativa Gratuita)"
+description: "Cansado da lentidão do Windows Search? Conheça o Everything, a ferramenta gratuita que encontra qualquer arquivo no seu PC instantaneamente usando o MFT do NTFS."
 permalink: /everything
+date: 2025-09-14
+author: Gabriel Hagui dos Santos
+image: /assets/images/projects/everything.png
+lang: pt-BR
+tags: [Windows, Software, Produtividade, Ferramentas, Otimização, PC]
+categories: [Software, Tutoriais]
 ---
 Sabe aquele momento em que você precisa encontrar um PDF, um documento do Word ou uma imagem... Mas simplesmente não lembra onde salvou?
 Aí, como último recurso, você apela pro velho amigo Windows Search, aquela barrinha da pesquisa no Windows Explorer que nunca foi lá muito confiável.

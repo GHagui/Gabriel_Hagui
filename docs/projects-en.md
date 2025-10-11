@@ -1,5 +1,8 @@
 ---
 layout: default-en
-title: Projects
+title: Projects - Gabriel Hagui
+description: Open source projects, experiments and practical work in AWS Cloud, automation, homelab and software development.
+image: /assets/images/gabriel-hagui.jpg
+lang: en-US
 permalink: /projects-en
 ---

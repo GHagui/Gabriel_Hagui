@@ -1,6 +1,9 @@
 ---
 layout: hire-br
-title: Contato
+title: Contato - Gabriel Hagui
+description: Entre em contato para oportunidades profissionais, colaborações em projetos ou consultoria em AWS, DevOps e arquitetura de software.
+image: /assets/images/gabriel-hagui.jpg
+lang: pt-BR
 permalink: /contact-br
 ---
 Precisa falar comigo? Aqui estão os canais mais rápidos. Fique à vontade para usar o que for mais confortável, respondo normalmente em poucas horas.

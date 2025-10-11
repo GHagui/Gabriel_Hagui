@@ -1,7 +1,14 @@
 ---
 layout: default-br
-title: Estruturando Prompts com YAML
-permalink: /prompt_yaml
+title: "Engenharia de Prompt com YAML: A Técnica para Prompts Profissionais e Reutilizáveis"
+description: "Aprenda a usar YAML para estruturar seus prompts de IA. Uma técnica de engenharia de prompt avançada para criar instruções claras, reutilizáveis e versionáveis para LLMs."
+permalink: /engenharia-prompt-yaml
+date: 2025-10-10
+author: Gabriel Hagui dos Santos
+image: /assets/images/projects/yaml.png
+lang: pt-BR
+tags: [Engenharia de Prompt, YAML, ChatGPT, IA Generativa, LLM, Desenvolvimento, Automação]
+categories: [Inteligência Artificial, Tutoriais]
 ---
 Os Modelos de Linguagem de Grande Escala (LLMs), como ChatGPT e Gemini, tornaram-se ferramentas amplamente conhecidas e utilizadas no Brasil. [Uma pesquisa de 2024 da Ipsos com o Google revelou que 54% dos brasileiros já utilizam IA generativa, uma taxa superior à média global de 48%.](https://softex.br/estudo-revela-que-brasileiros-estao-acima-da-media-global-na-adocao-da-ia/)
 

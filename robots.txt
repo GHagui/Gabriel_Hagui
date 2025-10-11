@@ -1,0 +1,13 @@
+# robots.txt for https://ghagui.github.io/Gabriel_Hagui/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ghagui.github.io/Gabriel_Hagui/sitemap.xml
+
+# Disallow files and directories that shouldn't be indexed
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /_site/
+Disallow: /vendor/
