@@ -1,0 +1,132 @@
+---
+layout: null
+sitemap:
+  exclude: 'yes'
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- English Homepage -->
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/index-en</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Pages -->
+  {% for page in site.pages %}
+    {% unless page.sitemap.exclude == "yes" or page.name == "404.html" %}
+    <url>
+      <loc>{{ site.url }}{{ site.baseurl }}{{ page.url | remove: "index.html" }}</loc>
+      {% if page.date %}
+        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      {% if page.changefreq %}
+        <changefreq>{{ page.changefreq }}</changefreq>
+      {% else %}
+        <changefreq>monthly</changefreq>
+      {% endif %}
+      {% if page.priority %}
+        <priority>{{ page.priority }}</priority>
+      {% else %}
+        <priority>0.8</priority>
+      {% endif %}
+    </url>
+    {% endunless %}
+  {% endfor %}
+
+  <!-- Blog Posts (Portuguese) -->
+  {% for post in site.data.blog_br %}
+    <url>
+      <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
+      {% if post.date %}
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  {% endfor %}
+
+  <!-- Projects (Portuguese) -->
+  {% for project in site.data.projects_br %}
+    <url>
+      <loc>{{ site.url }}{{ site.baseurl }}{{ project.url }}</loc>
+      {% if project.date %}
+        <lastmod>{{ project.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  {% endfor %}
+
+  <!-- Static Pages -->
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/blog-br</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/blog-en</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/projects-br</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/projects-en</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/contact-br</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/contact-en</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/xp-br</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/xp-en</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
