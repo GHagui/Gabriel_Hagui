@@ -142,7 +142,7 @@ Fiz um teste simples e irrefutável: fotografei exatamente o mesmo cenário, no 
 
 As duas imagens que você verá a seguir estão **absolutamente sem edição**. É o arquivo puro, exatamente como saiu de cada aparelho. O único cuidado foi tentar manter o enquadramento o mais próximo possível.
 
-Agora, observe e tire suas próprias conclusões. **Arraste o slider no círculo de vermelho** para comparar com:
+Agora, observe e tire suas próprias conclusões. **Arraste o slider no círculo de vermelho** para comparar:
 
 <div class="img-comp-container">
     <div class="img-comp-img">
