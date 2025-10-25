@@ -5,12 +5,11 @@ description: "Reflexões práticas sobre como recuperar um olhar autoral na foto
 permalink: /blogs/desinstagramar-nossa-visao-de-fotografia/
 date: 2025-10-25
 author: "Gabriel Hagui dos Santos"
-image: /docs/blogs/images/corne/capa_desinstagramar.jpg
+image: assets/images/projects/capa_desinstagramar.jpg
 lang: pt-BR
 tags: [fotografia, autoral, reflexao]
 categories: [blog]
 ---
-![Imagem comparada]({{ site.baseurl }}/docs/blogs/images/corne/capa_desinstagramar.jpg)
 > [!info]
 **Esta página consiste na opinião e experiências do autor**
 
