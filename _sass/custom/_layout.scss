@@ -6,8 +6,8 @@
 }
 
 details {
-    margin: var(--spacing-md) 0;
     padding: var(--spacing-sm);
+    margin: var(--spacing-md) 0;
     border: var(--border-medium);
     border-radius: var(--border-radius-default);
     background: var(--color-bg-sidebar);
@@ -56,13 +56,13 @@ main {
 }
 
 .content img {
+    max-height: 860px;
     margin: var(--spacing-md) auto;
     border: var(--border-medium);
     border-radius: var(--border-radius-default);
-    box-shadow: var(--box-shadow-medium);
     background-color: white;
+    box-shadow: var(--box-shadow-medium);
     transition: box-shadow 0.3s;
-    max-height: 860px;
 }
 
 
@@ -118,8 +118,8 @@ main {
     }
 
     .content img {
-        box-shadow: var(--box-shadow-small);
         max-width: 100%;
+        box-shadow: var(--box-shadow-small);
     }
 }
 

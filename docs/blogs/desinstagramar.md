@@ -147,7 +147,7 @@ Agora, observe e tire suas próprias conclusões. **Arraste o slider no círculo
 {% compare_images {{ site.baseurl }}/docs/images/desinstagramar-nossa-visao-de-fotografia/r50_c.webp |  {{ site.baseurl }}/docs/images/desinstagramar-nossa-visao-de-fotografia/s23_c.webp %}
 
 <div style="text-align: center; margin-top: 0px; font-size: 0.9rem; color: #666;">
-  <strong>← Samsung Galaxy S23 | Canon EOS R50 →</strong> (Direita)
+  <strong>← Samsung Galaxy S23 | Canon EOS R50 →</strong>
 </div>
 
 
