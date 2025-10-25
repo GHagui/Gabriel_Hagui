@@ -1,0 +1,92 @@
+// Image Comparison Slider Styles
+
+* {
+  box-sizing: border-box;
+}
+
+
+.img-comp-container {
+  position: relative;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: var(--border-radius-default);
+  background: transparent;
+  box-shadow: none;
+  overflow: hidden;
+  user-select: none;
+
+  @media (width <= 768px) {
+    margin: 1rem auto;
+  }
+}
+
+.img-comp-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.img-comp-img:first-child {
+  position: relative;
+}
+
+.img-comp-img img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--color-border, #000);
+  border-radius: 50%;
+  background-color: var(--color-accent, #f00);
+  box-shadow: 0 0 0 2px var(--color-bg, #fff),
+              0 0 0 4px var(--color-border, #000);
+  opacity: 0.9;
+  transition: transform 0.1s ease;
+  cursor: ew-resize;
+
+  @media (width <= 768px) {
+    width: 20px;
+    height: 20px;
+
+    &::before,
+    &::after {
+      border-width: 6px 8px 6px 0;
+    }
+
+    &::after {
+      border-width: 6px 0 6px 8px;
+    }
+  }
+}
+
+// Vertical divider line
+.img-comp-slider::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  background-color: var(--color-border, #000);
+  transform: translate(-50%, -50%);
+  content: '';
+  pointer-events: none;
+}

@@ -33,9 +33,9 @@ p .highlighter-rouge{
     background: #1f1f1f;
     font-size: var(--fs-sm);
     border-collapse: collapse;
+    overflow-wrap: anywhere;
     table-layout: fixed;
     word-break: break-word;
-    overflow-wrap: anywhere;
 }
 
 .highlight .rouge-table td {
@@ -45,11 +45,11 @@ p .highlighter-rouge{
 }
 
 .highlight .rouge-gutter {
+    display: none;
     width: 3.5ch;
     background: #1f1f1f;
     border-right: 2px solid #0e0e0e;
     user-select: none;
-    display: none;
 }
 
 .highlight .rouge-gutter pre {
@@ -74,9 +74,9 @@ p .highlighter-rouge{
     background: transparent !important;
     line-height: 1.55;
     overflow-x: auto;
+    overflow-wrap: anywhere;
     white-space: pre-wrap;
     word-break: break-word;
-    overflow-wrap: anywhere;
 }
 
 :not(pre)>code {

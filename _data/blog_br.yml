@@ -14,3 +14,7 @@
   url: "/corne"
   image: "/assets/images/projects/corne.webp"
   description: "Eu sai do mundo Matrix! Minha jornada com o teclado mecânico dividido Corne V4, desde a construção até a adaptação ao layout Colemak."
+- title: "Desinstagramar nossa visão de fotografia"
+  url: "/blogs/desinstagramar-nossa-visao-de-fotografia/"
+  image: "/docs/images/desinstagramar-nossa-visao-de-fotografia/cover.webp"
+  description: "Reflexões práticas sobre como recuperar um olhar autoral na fotografia fora de métricas de vaidade."

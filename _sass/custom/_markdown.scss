@@ -94,9 +94,9 @@ table {
   border: var(--border-medium);
   background: var(--color-bg-content);
   box-shadow: var(--box-shadow-medium);
+  transition: box-shadow 0.3s;
   border-collapse: collapse;
   table-layout: fixed;
-  transition: box-shadow 0.3s;
 }
 
 th,
@@ -196,4 +196,27 @@ tr:nth-child(even) {
   transform: scale(1.2);
   margin-right: var(--spacing-xs);
   margin-top: 0.2em;
+}
+
+.inline-gallery {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.inline-gallery-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inline-gallery a {
+  display: block;
+}
+
+.inline-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
