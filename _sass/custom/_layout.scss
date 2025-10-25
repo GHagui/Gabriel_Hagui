@@ -62,6 +62,7 @@ main {
     box-shadow: var(--box-shadow-medium);
     background-color: white;
     transition: box-shadow 0.3s;
+    max-height: 860px;
 }
 
 
@@ -118,6 +119,7 @@ main {
 
     .content img {
         box-shadow: var(--box-shadow-small);
+        max-width: 100%;
     }
 }
 

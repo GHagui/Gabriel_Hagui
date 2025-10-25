@@ -1,0 +1,26 @@
+<!--
+  Image Comparison Slider Include
+
+  Usage:
+  {% include comparison-slider.html
+     image1="/path/to/before.jpg"
+     image2="/path/to/after.jpg"
+     height="500"
+  %}
+
+  Parameters:
+  - image1: Path to the first image (before)
+  - image2: Path to the second image (after)
+  - height: (optional) Height in pixels, default is auto
+-->
+
+{% assign slider_height = include.height | default: "auto" %}
+
+<div class="img-comp-container" style="height: {% if slider_height == "auto" %}auto{% else %}{{ slider_height }}px{% endif %};">
+  <div class="img-comp-img">
+    <img src="{{ include.image1 }}" alt="Imagem original">
+  </div>
+  <div class="img-comp-img img-comp-overlay">
+    <img src="{{ include.image2 }}" alt="Imagem comparada">
+  </div>
+</div>
