@@ -1,101 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/projects-br</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/blog-br</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/xp-br</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/contact-br</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/index-en</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/truenas</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/markdown-examples</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/everything</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/prompt_yaml</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/qwerty</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/corne</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/blogs/desinstagramar-nossa-visao-de-fotografia/</loc>
-  <lastmod>2025-10-25T00:00:00+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/projects-en</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/blog-en</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/xp-en</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/contact-en</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/result_simple</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://ghagui.github.io/Gabriel_Hagui/result_yaml</loc>
-  <lastmod>2025-10-13T00:59:20+00:00</lastmod>
+  <lastmod>2025-10-25T05:42:06+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 
