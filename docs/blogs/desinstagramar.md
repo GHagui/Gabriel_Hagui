@@ -10,7 +10,6 @@ lang: pt-BR
 tags: [fotografia, autoral, reflexao]
 categories: [blog]
 ---
-![Imagem comparada]({{ site.baseurl }}/assets/images/projects/capa_desinstagramar.jpg)
 > [!info]
 **Esta página consiste na opinião e experiências do autor**
 
