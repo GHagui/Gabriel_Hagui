@@ -144,7 +144,12 @@ As duas imagens que você verá a seguir estão **absolutamente sem edição**. 
 
 Agora, observe e tire suas próprias conclusões. **Arraste o slider no círculo de vermelho** para comparar com:
 
-{% compare_images {{ site.baseurl }}/docs/images/desinstagramar-nossa-visao-de-fotografia/r50_c.webp |  {{ site.baseurl }}/docs/images/desinstagramar-nossa-visao-de-fotografia/s23_c.webp %}
+{% assign image_before = site.baseurl | append: "/docs/images/desinstagramar-nossa-visao-de-fotografia/r50_c.webp" %}
+{% assign image_after = site.baseurl | append: "/docs/images/desinstagramar-nossa-visao-de-fotografia/s23_c.webp" %}
+{% include comparison-slider.html
+    image1=image_before
+    image2=image_after
+%}
 
 <div style="text-align: center; margin-top: 0px; font-size: 0.9rem; color: #666;">
   <strong>← Samsung Galaxy S23 | Canon EOS R50 →</strong>
