@@ -70,6 +70,10 @@ twitter:
 #   yandex:
 #   baidu:
 
+# Make sure static verification files are copied to the build output
+include:
+  - BingSiteAuth.xml
+
 # Build settings
 plugins:
   - jekyll-feed
