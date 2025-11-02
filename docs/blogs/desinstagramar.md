@@ -104,13 +104,13 @@ Isso revela uma verdade **desconfortável**: nossa liberdade fotográfica foi se
 
 Por um tempo, achei que essa sensação de desconexo com as fotos do celular era uma inquietação apenas minha. Então, descobri que não estava sozinho. Na verdade, uma geração inteira estava começando a sentir o mesmo.
 
-Em 2023, uma onda de notícias começou a pipocar, confirmando essa suspeita. [Uma reportagem do G1, por exemplo,](https://g1.globo.com/tecnologia/noticia/2023/04/05/mil-vezes-melhor-que-celular-por-que-as-cameras-cyber-shot-estao-saindo-da-gaveta-direto-para-o-role-dos-jovens.ghtml) revelou um fenômeno surpreendente: Jovens estavam resgatando as velhas câmeras digitais **Cyber-shot** da gaveta ou comprando modelos usados em massa, a busca por elas na OLX havia crescido 563% em 2025.
+Em 2023, uma onda de cyber-shot começou a pipocar, confirmando essa suspeita. [Uma reportagem do G1, por exemplo,](https://g1.globo.com/tecnologia/noticia/2025/04/05/mil-vezes-melhor-que-celular-por-que-as-cameras-cyber-shot-estao-saindo-da-gaveta-direto-para-o-role-dos-jovens.ghtml) revelou um fenômeno surpreendente: Jovens estavam resgatando as velhas câmeras digitais **Cyber-shot** da gaveta ou comprando modelos usados em massa, a busca por elas na OLX havia crescido 563% em 2025.
 
 O motivo? Além da nostalgia, eles buscavam exatamente o que eu havia perdido: **Fotos mais naturais**. A Geração Z, que cresceu com a perfeição artificial dos smartphones, estava conscientemente rejeitando o processamento exagerado e a "beleza" fabricada pela inteligência artificial. Eles começaram a valorizar a imperfeição, o grão, o flash estourado, os elementos "errados" que a IA se esforça tanto para corrigir, mas que, no fundo, são o que nos conecta emocionalmente a uma imagem.
 
 A explicação de um especialista na própria matéria do G1 resume perfeitamente o problema:
 
-> "Quando você abre a câmera do celular, a imagem parece natural. Mas, ao apertar o botão, o aparelho processa tudo para aumentar a nitidez e reduzir o ruído, e a IA piorou isso. Às vezes, o resultado fica exagerado. Nas Cyber-shots, nada disso acontece - a imagem é bem mais natural", explica [Paulo Barba no G1](https://g1.globo.com/tecnologia/noticia/2023/04/05/mil-vezes-melhor-que-celular-por-que-as-cameras-cyber-shot-estao-saindo-da-gaveta-direto-para-o-role-dos-jovens.ghtml).
+> "Quando você abre a câmera do celular, a imagem parece natural. Mas, ao apertar o botão, o aparelho processa tudo para aumentar a nitidez e reduzir o ruído, e a IA piorou isso. Às vezes, o resultado fica exagerado. Nas Cyber-shots, nada disso acontece - a imagem é bem mais natural", explica [Paulo Barba no G1](https://g1.globo.com/tecnologia/noticia/2025/04/05/mil-vezes-melhor-que-celular-por-que-as-cameras-cyber-shot-estao-saindo-da-gaveta-direto-para-o-role-dos-jovens.ghtml).
 
 Ficou claro para mim. A busca pela "fotografia honesta" não era um delírio meu. Era uma reação cultural à era da perfeição forçada.
 
