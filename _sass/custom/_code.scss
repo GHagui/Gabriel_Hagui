@@ -81,12 +81,13 @@ p .highlighter-rouge{
 
 :not(pre)>code {
     padding: 0.15em 0.45em;
-    border: 2px solid var(--color-black);
+    border: 2px solid var(--color-ink);
     border-radius: 6px;
     background: var(--color-bg-sidebar) !important;
     font-family: var(--font-secondary);
     font-size: .85em;
-    color: var(--color-black) !important
+    /* --color-ink tracks the current theme's readable-on-bg-sidebar tone */
+    color: var(--color-ink) !important
 }
 
 pre code {

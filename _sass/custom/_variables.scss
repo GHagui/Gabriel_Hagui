@@ -2,29 +2,43 @@
 // Keep CSS variables in :root to allow runtime override.
 :root {
   /* Fonts */
-  --font-primary: 'Lexend Mega', monospace;
+  --font-primary: 'Big Shoulders Display', sans-serif;
   --font-secondary: 'Ubuntu Sans Mono', monospace;
+  --font-body: 'Public Sans', sans-serif;
 
-  /* Colors */
+  /* Colors — Maximalist Light palette.
+     Variable names kept stable; values no longer literally match old names.
+     Contrast pre-checked per accent (some need white text, some need black —
+     NOT uniform, see comment on each consumer): */
   --color-black: #000;
   --color-white: #fff;
-  --color-blue-primary: #0b27ff;
-  --color-orange-accent: #ff4d1e;
-  --color-purple-accent: #9723C9;
-  --color-pink-accent: #fe90e7;
-  --color-bg-body: #faeee8;
-  --color-bg-sidebar: #faeee8;
-  --color-bg-content: var(--color-white);
+  --color-blue-primary: #1B03FF;   /* Electric Blue — needs WHITE text on it */
+  --color-orange-accent: #FF3300;  /* Hot Vermilion — needs BLACK text on it */
+  --color-purple-accent: #9E00E0;  /* Electric Violet — needs WHITE text on it */
+  --color-pink-accent: #FF0099;    /* Hot Magenta — needs BLACK text on it (hero) */
+  --color-bg-body: #E9E2F5;        /* Soft Lilac — cool pastel, ties to the Electric Violet accent */
+  --color-bg-sidebar: #E9E2F5;
+  --color-bg-content: #FFFFFF;     /* pure white cards */
+
+  /* Structural "ink": dark, used for borders/shadows/default text against
+     the light ground. Aliased to --color-black — kept as a separate token
+     since consumers reference it by name; do not pair with an accent
+     background needing white text (Electric Blue / Electric Violet). */
+  --color-ink: var(--color-black);
 
   /* Borders & Shadows */
-  --border-strong: 8px solid var(--color-black);
-  --border-medium: 5px solid var(--color-black);
-  --border-small: 2px solid var(--color-black);
+  --border-strong: 8px solid var(--color-ink);
+  --border-medium: 5px solid var(--color-ink);
+  --border-small: 2px solid var(--color-ink);
   --border-radius-default: 15px;
   --border-radius-large: 20px;
-  --box-shadow-small: 5px 5px 0 var(--color-black);
-  --box-shadow-medium: 10px 10px 0 var(--color-black);
-  --box-shadow-large: 15px 15px 0 var(--color-black);
+  --box-shadow-xs: 3px 3px 0 var(--color-ink);
+  --box-shadow-small: 5px 5px 0 var(--color-ink);
+  --box-shadow-medium: 10px 10px 0 var(--color-ink);
+  --box-shadow-large: 15px 15px 0 var(--color-ink);
+
+  /* Lede/secondary text — dark warm grey, ground is light again */
+  --color-muted: #3A3330;
 
   /* Spacing Scale */
   --spacing-unit: 1rem;
@@ -36,6 +50,7 @@
 
   /* Layout */
   --container-max-width: 1280px;
+  --measure: 68ch; /* readable line length for body copy */
   --sidebar-width: 320px;
   --sidebar-min-width: 220px;
   --sidebar-max-width: 350px;

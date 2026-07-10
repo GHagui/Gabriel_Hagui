@@ -12,7 +12,7 @@ Engenharia de Software sem ruído. Um espaço sobre Cloud AWS, Serverless e auto
 Sou um engenheiro de software especialista no ecossistema Amazon AWS, focado em criar soluções que resolvem problemas reais. Como surdo de nascença, minha comunicação é, por necessidade, clara e assíncrona. Este site segue os mesmos princípios: objetividade, contraste e conteúdo funcional.
 
 ---
-### **Propósito**
+## **Propósito**
 Este site é meu centro de operações. Ele existe para:
 
 - **Registrar experiências:** Documentar projetos, aprendizados e desafios da minha jornada.
@@ -23,7 +23,7 @@ Este site é meu centro de operações. Ele existe para:
 - **Conectar:** Disponibilizar meu currículo e facilitar o contato para oportunidades.
 
 ---
-### **Conteúdo**
+## **Conteúdo**
 - Artigos técnicos
 - Relatos práticos (homelab, storage)
 - Experimentos e tecnologias
@@ -32,11 +32,11 @@ Este site é meu centro de operações. Ele existe para:
 - Trajetória profissional
 
 ---
-### **Sobre o design**
+## **Sobre o design**
 A estética *neubrutalista* é uma escolha funcional: contraste forte, bordas marcadas e tipografia direta para focar no conteúdo. Sem camadas decorativas, a leitura é mais rápida e acessível.
 
 ---
-### **Contato**
+## **Contato**
 Se quiser colaborar, propor um projeto ou trocar ideias, acesse a página de **[Contato](./contact-br)**.
 
 > *Soluções reais, documentação honesta, execução simples.*

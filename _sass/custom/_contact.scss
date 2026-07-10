@@ -30,8 +30,16 @@
 .contact-card:focus,
 .contact-card:hover {
     background: var(--color-orange-accent);
-    box-shadow: 9px 9px 0 var(--color-black);
+    box-shadow: 9px 9px 0 var(--color-ink);
     transform: translate(-4px, -4px);
+}
+
+.contact-card:focus-within h3,
+.contact-card:focus h3,
+.contact-card:hover h3 {
+    /* h3 inherits body's light ink text by default; hover bg is Amber
+       (bright) so it needs black instead */
+    color: var(--color-black);
 }
 
 .contact-card svg {

@@ -12,8 +12,17 @@ body {
 }
 
 body {
-    background: var(--color-bg-body);
-    font-family: var(--font-secondary);
+    background-color: var(--color-bg-body);
+    /* Scattered outline shapes — neubrutalist "sticker confetti" texture.
+       Solid black strokes, not a faint tint. Only visible in the gutter
+       around opaque panels/cards, never behind text. Stroke color is
+       hardcoded (data URIs can't read CSS custom properties) — revisit if
+       the ground ever goes dark again. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Cg fill='none' stroke='%23000000' stroke-width='3'%3E%3Crect x='38' y='54' width='34' height='34'/%3E%3Ccircle cx='182' cy='38' r='19'/%3E%3Cpath d='M296 84 h30 M311 69 v30'/%3E%3Crect x='338' y='196' width='30' height='30' transform='rotate(14 353 211)'/%3E%3Ccircle cx='58' cy='224' r='16'/%3E%3Cpath d='M146 258 h28 M160 244 v28'/%3E%3Crect x='226' y='316' width='36' height='36' transform='rotate(-9 244 334)'/%3E%3Ccircle cx='378' cy='332' r='22'/%3E%3Cpath d='M36 372 h26 M49 359 v26'/%3E%3Ccircle cx='250' cy='150' r='14'/%3E%3Crect x='100' y='330' width='24' height='24' transform='rotate(20 112 342)'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 420px 420px;
+    color: var(--color-ink);
+    font-family: var(--font-body);
     font-size: var(--fs-base);
     line-height: 1.55;
 }

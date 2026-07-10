@@ -17,6 +17,7 @@
     font-size: var(--fs-sm);
     font-weight: 600;
     text-decoration: none;
+    /* header bg (blue-primary slot) is now Electric Blue — dark, needs white */
     color: var(--color-white);
     transition: box-shadow .3s, border .3s, background-color .3s, transform .3s ease;
     white-space: nowrap;
@@ -38,7 +39,8 @@
     font-size: var(--fs-sm);
     font-weight: 600;
     text-decoration: none;
-    color: var(--color-black);
+    /* purple-accent slot is now Electric Violet — dark, needs white */
+    color: var(--color-white);
 }
 
 .hire-me:hover {
@@ -68,6 +70,8 @@
 }
 
 .nav-toggle:hover .bar {
+    /* container bg goes purple-accent (now Electric Violet) on hover —
+       dark, needs white bars */
     background: var(--color-white);
     transition: background .3s, transform .35s ease, opacity .3s ease;
 }
