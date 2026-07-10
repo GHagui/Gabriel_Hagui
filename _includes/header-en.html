@@ -28,11 +28,11 @@
         </button>
         <nav class="site-nav" id="primary-nav">
             <ul>
-                <li><a href="{{ '/index-en' | relative_url }}">About me</a></li>
-                <li><a href="{{ '/projects-en' | relative_url }}">Projects</a></li>
-                <li><a href="{{ '/blog-en' | relative_url }}">Blog</a></li>
-                <li><a href="{{ '/xp-en' | relative_url }}">Experience</a></li>
-                <li><a href="{{ '/contact-en' | relative_url }}" class="hire-me">Contact</a></li>
+                <li><a href="{{ '/index-en' | relative_url }}" class="{% if page.url == '/index-en' %}nav-active{% endif %}">About me</a></li>
+                <li><a href="{{ '/projects-en' | relative_url }}" class="{% if page.url == '/projects-en' %}nav-active{% endif %}">Projects</a></li>
+                <li><a href="{{ '/blog-en' | relative_url }}" class="{% if page.url == '/blog-en' %}nav-active{% endif %}">Blog</a></li>
+                <li><a href="{{ '/xp-en' | relative_url }}" class="{% if page.url == '/xp-en' %}nav-active{% endif %}">Experience</a></li>
+                <li><a href="{{ '/contact-en' | relative_url }}" class="{% if page.url == '/contact-en' %}nav-active{% endif %}">Contact</a></li>
                 <li><a href="{{ '/' | relative_url }}">pt-BR</a></li>
             </ul>
         </nav>

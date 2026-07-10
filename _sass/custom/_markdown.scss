@@ -276,6 +276,19 @@ tr:nth-child(even) {
   margin-left: 0;
 }
 
+// Content heading uses the same display face as the hero/section-tabs —
+// was silently falling back to body's Public Sans, the one spot where a
+// 3rd font family snuck in. Rule: display for h1/h2, mono for labels/nav,
+// one sans for body — no ad-hoc exceptions.
+.content > h1,
+.about > h1 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: var(--fs-2xl);
+  line-height: 0.98;
+  letter-spacing: .3px;
+}
+
 .content > img,
 .content > table,
 .content > pre,
@@ -307,7 +320,9 @@ tr:nth-child(even) {
 .about h2 {
   display: inline-block;
   padding: var(--spacing-xs) var(--spacing-sm);
-  margin: var(--spacing-xl) 0 var(--spacing-md);
+  /* was --spacing-xl (~80px) top — stacked on the lede's own margin, left
+     a ~110px dead gap before the first badge */
+  margin: var(--spacing-lg) 0 var(--spacing-md);
   font-family: var(--font-primary);
   font-size: var(--fs-md);
   letter-spacing: .5px;
