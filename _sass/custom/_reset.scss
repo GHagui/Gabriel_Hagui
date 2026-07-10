@@ -13,16 +13,17 @@ body {
 
 body {
     background-color: var(--color-bg-body);
+
     /* Single repeating plus-sign, evenly spaced grid. Colors are
        hardcoded (data URIs can't read CSS custom properties) — revisit if
        the ground ever goes dark again. */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='3' d='M22 35 L48 35 M35 22 L35 48'/%3E%3C/svg%3E");
-    background-repeat: repeat;
     background-size: 70px 70px;
-    color: var(--color-ink);
+    background-repeat: repeat;
     font-family: var(--font-body);
     font-size: var(--fs-base);
     line-height: 1.55;
+    color: var(--color-ink);
 }
 
 img {

@@ -17,6 +17,7 @@
     font-size: var(--fs-sm);
     font-weight: 600;
     text-decoration: none;
+
     /* header bg (blue-primary slot) is now Electric Blue — dark, needs white */
     color: var(--color-white);
     transition: box-shadow .3s, border .3s, background-color .3s, transform .3s ease;
@@ -43,6 +44,7 @@
     font-size: var(--fs-sm);
     font-weight: 600;
     text-decoration: none;
+
     /* purple-accent slot is now Electric Violet — dark, needs white */
     color: var(--color-white);
 }

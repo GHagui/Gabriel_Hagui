@@ -13,12 +13,12 @@
   --color-black: #000;
   --color-white: #fff;
   --color-blue-primary: #1B03FF;   /* Electric Blue — needs WHITE text on it */
-  --color-orange-accent: #FF3300;  /* Hot Vermilion — needs BLACK text on it */
+  --color-orange-accent: #F30;     /* Hot Vermilion — needs BLACK text on it */
   --color-purple-accent: #9E00E0;  /* Electric Violet — needs WHITE text on it */
-  --color-pink-accent: #FF0099;    /* Hot Magenta — needs BLACK text on it (hero) */
+  --color-pink-accent: #F09;       /* Hot Magenta — needs BLACK text on it (hero) */
   --color-bg-body: #E9E2F5;        /* Soft Lilac — cool pastel, ties to the Electric Violet accent */
   --color-bg-sidebar: #E9E2F5;
-  --color-bg-content: #FFFFFF;     /* pure white cards */
+  --color-bg-content: #FFF;        /* pure white cards */
 
   /* Structural "ink": dark, used for borders/shadows/default text against
      the light ground. Aliased to --color-black — kept as a separate token

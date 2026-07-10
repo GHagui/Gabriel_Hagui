@@ -55,32 +55,32 @@ blockquote.callout .callout-title {
 // theme, so text must stay black even though the page default is now light.
 blockquote.callout.callout-info {
   background: #e3f2fd;
-  border-left-color: var(--color-blue-primary) !important;
   color: var(--color-black);
+  border-left-color: var(--color-blue-primary) !important;
 }
 
 blockquote.callout.callout-success {
   background: #e8f5e8;
-  border-left-color: #4caf50 !important;
   color: var(--color-black);
+  border-left-color: #4caf50 !important;
 }
 
 blockquote.callout.callout-warning {
   background: #fff3e0;
-  border-left-color: #ff9800 !important;
   color: var(--color-black);
+  border-left-color: #ff9800 !important;
 }
 
 blockquote.callout.callout-error {
   background: #ffebee;
-  border-left-color: #f44336 !important;
   color: var(--color-black);
+  border-left-color: #f44336 !important;
 }
 
 blockquote.callout.callout-help {
   background: #f3e5f5;
-  border-left-color: var(--color-purple-accent) !important;
   color: var(--color-black);
+  border-left-color: var(--color-purple-accent) !important;
 }
 
 // Compact citation style
@@ -117,6 +117,7 @@ th {
   background: var(--color-blue-primary);
   font-size: var(--fs-sm);
   font-weight: 600;
+
   /* blue-primary slot is now Electric Blue — dark, needs white */
   color: var(--color-white);
 }
@@ -166,6 +167,7 @@ tr:nth-child(even) {
 .toc a {
   font-weight: 500;
   text-decoration: none;
+
   /* --color-ink tracks the current theme's readable-on-bg-sidebar tone */
   color: var(--color-ink);
 }
@@ -190,19 +192,19 @@ tr:nth-child(even) {
 }
 
 .task-list {
-  list-style: none;
-  padding-left: 0;
   display: grid;
   gap: var(--spacing-xs);
   max-width: var(--measure);
+  list-style: none;
+  padding-left: 0;
 }
 
 .task-list-item {
   display: flex;
-  gap: var(--spacing-sm);
   align-items: center;
-  margin: 0;
+  gap: var(--spacing-sm);
   padding: var(--spacing-xs) var(--spacing-sm);
+  margin: 0;
   border: var(--border-small);
   background: var(--color-bg-body);
   box-shadow: var(--box-shadow-xs);
@@ -214,17 +216,16 @@ tr:nth-child(even) {
 }
 
 .task-list-item input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
+  display: grid;
   flex: 0 0 auto;
   width: 1.4rem;
   height: 1.4rem;
   margin: 0;
   border: var(--border-small);
   background: var(--color-white);
-  display: grid;
-  place-items: center;
   cursor: default;
+  appearance: none;
+  place-items: center;
 }
 
 .task-list-item input[type="checkbox"]:checked {
@@ -232,12 +233,12 @@ tr:nth-child(even) {
 }
 
 .task-list-item input[type="checkbox"]:checked::after {
-  content: "\2713";
   font-family: var(--font-secondary);
-  font-weight: 700;
   font-size: 1rem;
+  font-weight: 700;
   line-height: 1;
   color: var(--color-black);
+  content: "\2713";
 }
 
 // -----------------------------------------------------------------
@@ -283,8 +284,8 @@ tr:nth-child(even) {
 .content > h1,
 .about > h1 {
   font-family: var(--font-primary);
-  font-weight: 700;
   font-size: var(--fs-2xl);
+  font-weight: 700;
   line-height: 0.98;
   letter-spacing: .3px;
 }
@@ -308,9 +309,9 @@ tr:nth-child(even) {
   font-size: var(--fs-md);
   line-height: 1.5;
   color: var(--color-muted);
-  padding-bottom: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
   border-bottom: var(--border-medium);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
 }
 
 // 3) Section tabs — h2 becomes a bold colored block that anchors each
@@ -320,40 +321,44 @@ tr:nth-child(even) {
 .about h2 {
   display: inline-block;
   padding: var(--spacing-xs) var(--spacing-sm);
+
   /* was --spacing-xl (~80px) top — stacked on the lede's own margin, left
      a ~110px dead gap before the first badge */
   margin: var(--spacing-lg) 0 var(--spacing-md);
+  border: var(--border-small);
+  background: var(--color-blue-primary);
   font-family: var(--font-primary);
   font-size: var(--fs-md);
   letter-spacing: .5px;
   text-transform: uppercase;
+
   /* blue-primary slot is now Electric Blue — dark, needs white */
   color: var(--color-white);
-  background: var(--color-blue-primary);
-  border: var(--border-small);
   box-shadow: var(--box-shadow-xs);
 }
 
 .content h2:nth-of-type(3n + 2),
 .about h2:nth-of-type(3n + 2) {
+  background: var(--color-orange-accent);
+
   /* orange-accent slot is now Hot Vermilion — bright, needs black */
   color: var(--color-black);
-  background: var(--color-orange-accent);
 }
 
 .content h2:nth-of-type(3n),
 .about h2:nth-of-type(3n) {
+  background: var(--color-purple-accent);
+
   /* purple-accent slot is now Electric Violet — dark, needs white */
   color: var(--color-white);
-  background: var(--color-purple-accent);
 }
 
 // h3 stays quiet but gets a small accent tick so it reads as a subhead.
 .content h3,
 .about h3 {
-  padding-left: var(--spacing-sm);
   border-left: var(--border-medium);
   margin-top: var(--spacing-lg);
+  padding-left: var(--spacing-sm);
 }
 
 .inline-gallery {

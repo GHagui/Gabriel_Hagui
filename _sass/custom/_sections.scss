@@ -40,6 +40,7 @@
     font-family: var(--font-primary);
     font-size: clamp(3.2rem, 11vw, 10rem);
     text-align: center;
+
     /* hero bg (pink-accent slot) is now Hot Magenta — bright enough that
        black text passes AA (5.71:1); shadow is white so it stays visible
        behind black text */
@@ -71,9 +72,8 @@
     border: var(--border-strong);
     background: var(--color-bg-content);
     box-shadow: var(--box-shadow-large);
-    /* flush-left to x=0 — same structural edge as .hello's full-bleed
-       orange block, instead of centering (which drifts with viewport
-       width and never actually lines up with anything) */
+
+    /* centered under the full-bleed hero */
     margin-left: auto;
     margin-right: auto;
 }
