@@ -34,8 +34,15 @@
 .project-card:focus-within,
 .project-card:hover {
     background-color: var(--color-orange-accent);
-    box-shadow: 12px 12px 0 var(--color-black);
+    box-shadow: 12px 12px 0 var(--color-ink);
     transform: translate(-4px, -4px);
+}
+
+/* orange-accent slot is now Hot Vermilion — bright enough that black
+   text passes AA (5.73:1); white would not */
+.project-card:focus-within .project-card-body,
+.project-card:hover .project-card-body {
+    color: var(--color-black);
 }
 
 .project-card-image-wrapper {
@@ -72,7 +79,9 @@
     flex-direction: column;
     gap: var(--spacing-sm);
     padding: var(--spacing-md);
-    color: var(--color-black)
+
+    /* --color-ink tracks the current theme's readable-on-card tone */
+    color: var(--color-ink)
 }
 
 .project-card-title {

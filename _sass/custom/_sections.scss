@@ -40,8 +40,12 @@
     font-family: var(--font-primary);
     font-size: clamp(3.2rem, 11vw, 10rem);
     text-align: center;
-    color: var(--color-white);
-    text-shadow: 8px 8px 0 var(--color-black);
+
+    /* hero bg (pink-accent slot) is now Hot Magenta — bright enough that
+       black text passes AA (5.71:1); shadow is white so it stays visible
+       behind black text */
+    color: var(--color-black);
+    text-shadow: 8px 8px 0 var(--color-white);
 }
 
 .hello-content h2 {
@@ -68,12 +72,14 @@
     border: var(--border-strong);
     background: var(--color-bg-content);
     box-shadow: var(--box-shadow-large);
+
+    /* centered under the full-bleed hero */
     margin-left: auto;
     margin-right: auto;
 }
 
 .about p, li {
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--font-body);
     line-height: normal;
 }
 
@@ -121,7 +127,7 @@
 
     .hello-content h1 {
         font-size: clamp(2.2rem, 10vw, 4.2rem);
-        text-shadow: 4px 4px 0 var(--color-black);
+        text-shadow: 4px 4px 0 var(--color-white);
     }
 
     .hello-content h2 {
@@ -144,7 +150,7 @@
 
     .hello-content h1 {
         font-size: clamp(2.0rem, 11vw, 3.0rem);
-        text-shadow: 3px 3px 0 var(--color-black);
+        text-shadow: 3px 3px 0 var(--color-white);
     }
 
     .hello-content h2 {

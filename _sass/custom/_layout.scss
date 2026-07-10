@@ -32,6 +32,8 @@ main {
     border-radius: var(--border-radius-large);
     background-color: var(--color-purple-accent);
     font-family: var(--font-secondary);
+
+    /* purple-accent slot is now Electric Violet — dark, needs white */
     color: var(--color-white);
     box-shadow: var(--box-shadow-medium);
     margin-left: 0;
@@ -52,7 +54,7 @@ main {
 
 .content p,
 .content ul li {
-    font-family: "Open Sans", sans-serif
+    font-family: var(--font-body);
 }
 
 .content img {
@@ -74,7 +76,10 @@ main {
     }
 
     body {
-        background-color: var(--color-white);
+        /* was forced to literal white for the old light theme's mobile
+           stacked layout — must stay on-theme now, else mobile reverts
+           to a white page while everything else goes dark */
+        background-color: var(--color-bg-body);
     }
 
     .sidebar {

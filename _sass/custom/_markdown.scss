@@ -51,29 +51,35 @@ blockquote.callout .callout-title {
   text-transform: uppercase;
 }
 
-// Variants
+// Variants — these keep hardcoded light pastel backgrounds regardless of
+// theme, so text must stay black even though the page default is now light.
 blockquote.callout.callout-info {
   background: #e3f2fd;
+  color: var(--color-black);
   border-left-color: var(--color-blue-primary) !important;
 }
 
 blockquote.callout.callout-success {
   background: #e8f5e8;
+  color: var(--color-black);
   border-left-color: #4caf50 !important;
 }
 
 blockquote.callout.callout-warning {
   background: #fff3e0;
+  color: var(--color-black);
   border-left-color: #ff9800 !important;
 }
 
 blockquote.callout.callout-error {
   background: #ffebee;
+  color: var(--color-black);
   border-left-color: #f44336 !important;
 }
 
 blockquote.callout.callout-help {
   background: #f3e5f5;
+  color: var(--color-black);
   border-left-color: var(--color-purple-accent) !important;
 }
 
@@ -104,13 +110,15 @@ td {
   padding: var(--spacing-sm);
   font-family: var(--font-secondary);
   text-align: left;
-  border-bottom: 2px solid var(--color-black);
+  border-bottom: 2px solid var(--color-ink);
 }
 
 th {
   background: var(--color-blue-primary);
   font-size: var(--fs-sm);
   font-weight: 600;
+
+  /* blue-primary slot is now Electric Blue — dark, needs white */
   color: var(--color-white);
 }
 
@@ -159,7 +167,9 @@ tr:nth-child(even) {
 .toc a {
   font-weight: 500;
   text-decoration: none;
-  color: var(--color-black);
+
+  /* --color-ink tracks the current theme's readable-on-bg-sidebar tone */
+  color: var(--color-ink);
 }
 
 .toc a:hover {
@@ -168,7 +178,7 @@ tr:nth-child(even) {
 
 .footnotes {
   font-size: var(--fs-sm);
-  border-top: 2px solid var(--color-black);
+  border-top: 2px solid var(--color-ink);
   margin-top: var(--spacing-xl);
   padding-top: var(--spacing-md);
 }
@@ -182,20 +192,173 @@ tr:nth-child(even) {
 }
 
 .task-list {
+  display: grid;
+  gap: var(--spacing-xs);
+  max-width: var(--measure);
   list-style: none;
   padding-left: 0;
 }
 
 .task-list-item {
   display: flex;
-  align-items: flex-start;
-  margin: var(--spacing-xs) 0;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  margin: 0;
+  border: var(--border-small);
+  background: var(--color-bg-body);
+  box-shadow: var(--box-shadow-xs);
+}
+
+.task-list-item:has(input:checked) {
+  background: var(--color-white);
+  color: var(--color-black);
 }
 
 .task-list-item input[type="checkbox"] {
-  transform: scale(1.2);
-  margin-right: var(--spacing-xs);
-  margin-top: 0.2em;
+  display: grid;
+  flex: 0 0 auto;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0;
+  border: var(--border-small);
+  background: var(--color-white);
+  cursor: default;
+  appearance: none;
+  place-items: center;
+}
+
+.task-list-item input[type="checkbox"]:checked {
+  background: var(--color-orange-accent);
+}
+
+.task-list-item input[type="checkbox"]:checked::after {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-black);
+  content: "\2713";
+}
+
+// -----------------------------------------------------------------
+// Content activation: constrained measure, editorial lede, section tabs
+// Fills the "empty white block" by giving prose rhythm + color anchors.
+// -----------------------------------------------------------------
+
+// 1) Readable measure — cap text width so lines don't sprawl.
+//    Media (images, tables, code, galleries) stay full width.
+.content > p,
+.content > ul,
+.content > ol,
+.content > h1,
+.content > h2,
+.content > h3,
+.content > h4,
+.content > blockquote,
+.content > hr,
+.content > .task-list,
+.about > p,
+.about > ul,
+.about > ol,
+.about > h1,
+.about > h2,
+.about > h3,
+.about > h4,
+.about > blockquote,
+.about > hr,
+.about > .task-list {
+  max-width: var(--measure);
+}
+
+// hr keeps its left edge aligned with the text column
+.content > hr,
+.about > hr {
+  margin-left: 0;
+}
+
+// Content heading uses the same display face as the hero/section-tabs —
+// was silently falling back to body's Public Sans, the one spot where a
+// 3rd font family snuck in. Rule: display for h1/h2, mono for labels/nav,
+// one sans for body — no ad-hoc exceptions.
+.content > h1,
+.about > h1 {
+  font-family: var(--font-primary);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: .3px;
+}
+
+.content > img,
+.content > table,
+.content > pre,
+.content > .highlight,
+.content > .highlighter-rouge,
+.content > figure,
+.content > .inline-gallery,
+.content > .comparison-slider,
+.about > img,
+.about > .inline-gallery {
+  max-width: 100%;
+}
+
+// 2) Editorial lede — first paragraph after the title carries the voice.
+.content > h1 + p,
+.about > h1 + p {
+  font-size: var(--fs-md);
+  line-height: 1.5;
+  color: var(--color-muted);
+  border-bottom: var(--border-medium);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+}
+
+// 3) Section tabs — h2 becomes a bold colored block that anchors each
+//    section (color cycles blue -> orange -> purple). No numbering:
+//    these sections aren't an ordered sequence.
+.content h2,
+.about h2 {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+
+  /* was --spacing-xl (~80px) top — stacked on the lede's own margin, left
+     a ~110px dead gap before the first badge */
+  margin: var(--spacing-lg) 0 var(--spacing-md);
+  border: var(--border-small);
+  background: var(--color-blue-primary);
+  font-family: var(--font-primary);
+  font-size: var(--fs-md);
+  letter-spacing: .5px;
+  text-transform: uppercase;
+
+  /* blue-primary slot is now Electric Blue — dark, needs white */
+  color: var(--color-white);
+  box-shadow: var(--box-shadow-xs);
+}
+
+.content h2:nth-of-type(3n + 2),
+.about h2:nth-of-type(3n + 2) {
+  background: var(--color-orange-accent);
+
+  /* orange-accent slot is now Hot Vermilion — bright, needs black */
+  color: var(--color-black);
+}
+
+.content h2:nth-of-type(3n),
+.about h2:nth-of-type(3n) {
+  background: var(--color-purple-accent);
+
+  /* purple-accent slot is now Electric Violet — dark, needs white */
+  color: var(--color-white);
+}
+
+// h3 stays quiet but gets a small accent tick so it reads as a subhead.
+.content h3,
+.about h3 {
+  border-left: var(--border-medium);
+  margin-top: var(--spacing-lg);
+  padding-left: var(--spacing-sm);
 }
 
 .inline-gallery {

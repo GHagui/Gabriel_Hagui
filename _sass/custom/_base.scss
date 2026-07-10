@@ -2,6 +2,6 @@ body {
   padding: 0; // Opcional, mas recomendado
   margin: 0; // Adicione esta linha
   background-color: #fefefe;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-body);
   color: #111;
 }

@@ -17,6 +17,8 @@
     font-size: var(--fs-sm);
     font-weight: 600;
     text-decoration: none;
+
+    /* header bg (blue-primary slot) is now Electric Blue — dark, needs white */
     color: var(--color-white);
     transition: box-shadow .3s, border .3s, background-color .3s, transform .3s ease;
     white-space: nowrap;
@@ -30,7 +32,11 @@
     transform: translate(-4px, -4px);
 }
 
-.hire-me {
+// Current-page indicator — was hardcoded on the Contact link only (a
+// permanent CTA that visually impersonated an active-nav state on every
+// other page). Now applied via Liquid per-link in header-*.html, so it
+// only lights up the page you're actually on.
+.nav-active {
     padding: var(--spacing-xs);
     border: var(--border-medium) !important;
     background: var(--color-purple-accent) !important;
@@ -38,10 +44,12 @@
     font-size: var(--fs-sm);
     font-weight: 600;
     text-decoration: none;
-    color: var(--color-black);
+
+    /* purple-accent slot is now Electric Violet — dark, needs white */
+    color: var(--color-white);
 }
 
-.hire-me:hover {
+.nav-active:hover {
     color: var(--color-white) !important;
     box-shadow: var(--box-shadow-small);
 }
@@ -68,6 +76,8 @@
 }
 
 .nav-toggle:hover .bar {
+    /* container bg goes purple-accent (now Electric Violet) on hover —
+       dark, needs white bars */
     background: var(--color-white);
     transition: background .3s, transform .35s ease, opacity .3s ease;
 }

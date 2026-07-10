@@ -1,9 +1,9 @@
 ---
 ---
 // Modular imports only
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 @import "custom/variables";
 @import "custom/mixins";
@@ -69,7 +69,7 @@
     border-radius: 6px;
     font-family: var(--font-secondary);
     font-size: 0.85em;
-    border: 2px solid var(--color-black);
+    border: 2px solid var(--color-ink);
 }
 
 /* Reset de code dentro de blocos para não herdar estilo inline */
@@ -86,22 +86,58 @@ li {
     line-height: 1.6;
 }
 
-/* Lista de tarefas */
+/* Lista de tarefas: cada item vira uma linha brutalista com estado real
+   (concluído = caixa laranja com ✓, pendente = caixa vazia). */
 .task-list {
     list-style: none;
     padding-left: 0;
+    display: grid;
+    gap: var(--spacing-xs);
+    max-width: var(--measure);
 }
 
 .task-list-item {
     display: flex;
-    align-items: flex-start;
-    margin: var(--spacing-xs) 0;
+    gap: var(--spacing-sm);
+    align-items: center;
+    margin: 0;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: var(--border-small);
+    background: var(--color-bg-body);
+    box-shadow: var(--box-shadow-xs);
+}
+
+.task-list-item:has(input:checked) {
+    background: var(--color-white);
+    /* row bg is literal white here (not a theme token) — needs black text */
+    color: var(--color-black);
 }
 
 .task-list-item input[type="checkbox"] {
-    margin-right: var(--spacing-xs);
-    margin-top: 0.2em;
-    transform: scale(1.2);
+    appearance: none;
+    -webkit-appearance: none;
+    flex: 0 0 auto;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin: 0;
+    border: var(--border-small);
+    background: var(--color-white);
+    display: grid;
+    place-items: center;
+    cursor: default;
+}
+
+.task-list-item input[type="checkbox"]:checked {
+    background: var(--color-orange-accent);
+}
+
+.task-list-item input[type="checkbox"]:checked::after {
+    content: "\2713";
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--color-black);
 }
 
 /* Citações */
@@ -141,7 +177,7 @@ figcaption {
 hr {
     border: none;
     height: 2px;
-    background: var(--color-black);
+    background: var(--color-ink);
     border-radius: 2px;
 }
 
@@ -154,7 +190,7 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
 .footnotes {
     margin-top: var(--spacing-xl);
     padding-top: var(--spacing-md);
-    border-top: 2px solid var(--color-black);
+    border-top: 2px solid var(--color-ink);
     font-size: var(--fs-sm);
 }
 
@@ -188,7 +224,8 @@ h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
 
 .toc a {
     text-decoration: none;
-    color: var(--color-black);
+    /* --color-ink tracks the current theme's readable-on-bg-sidebar tone */
+    color: var(--color-ink);
     font-weight: 500;
 }
 
