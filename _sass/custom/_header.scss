@@ -15,16 +15,47 @@
     margin: auto;
 }
 
+// Logo as a brutalist sticker: white block, hard border and shadow,
+// slightly tilted — it straightens up on hover.
+.site-header .logo {
+    margin: var(--spacing-sm) 0;
+}
+
 .site-header .logo a {
-    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) 0;
+    display: inline-block;
+    padding: 2px var(--spacing-sm);
+    border: var(--border-small);
+    background: var(--color-white);
     font-family: var(--font-primary);
     font-size: var(--fs-xl);
     font-weight: 900;
     text-decoration: none;
-
-    /* header bg (blue-primary slot) is now Electric Blue — dark, needs white */
-    color: var(--color-white);
+    text-transform: uppercase;
+    color: var(--color-black);
+    box-shadow: var(--box-shadow-small);
+    transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+    transform: rotate(-2deg);
     white-space: nowrap;
+}
+
+/* Hover inverts the sticker: black block, white text, white shadow. */
+.site-header .logo a:hover,
+.site-header .logo a:focus-visible {
+    background: var(--color-black);
+    color: var(--color-white);
+    box-shadow: 5px 5px 0 var(--color-white);
+    transform: rotate(0deg) translate(-2px, -2px);
+}
+
+// Language switch: same dimensions as other nav links, distinguished
+// by a visible white border instead of transparent.
+.site-header .site-nav a.lang-switch {
+    border-radius: 0;
+}
+
+.site-header .site-nav a.lang-switch:hover {
+    background: var(--color-white);
+    color: var(--color-black);
 }
 
 @media (width <= 1024px) {

@@ -1,46 +1,16 @@
 ---
 permalink: /404.html
 layout: exp-br
+title: "404 — Página não encontrada"
+heading: "404"
 ---
-<!DOCTYPE html>
-<html lang="pt-BR">
+<p>A página que você procurou não existe, mudou de endereço ou o link veio com erro. Sem drama — os caminhos abaixo levam de volta.</p>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
-  <title>{{ page.title | default: site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <style>
-    .content {
-      margin-left: auto !important;
-      margin-right: auto !important;
-    }
-  </style>
-</head>
+<ul>
+    <li><a href="{{ '/' | relative_url }}">Página Inicial</a></li>
+    <li><a href="{{ '/projects-br' | relative_url }}">Projetos</a></li>
+    <li><a href="{{ '/blog-br' | relative_url }}">Blog</a></li>
+    <li><a href="{{ '/contact-br' | relative_url }}">Contato</a></li>
+</ul>
 
-<body>
-  <style type="text/css" media="screen">
-    main .container {
-      margin: 10px auto;
-      max-width: 600px;
-      text-align: center;
-    }
-
-    main h1 {
-      margin: 30px 0;
-      font-size: 4em;
-      line-height: 1;
-      letter-spacing: -1px;
-    }
-  </style>
-
-  <div class="container">
-    <h1>Oops! :(</h1>
-    <h1>404</h1>
-    <p><strong>Page not found</strong></p>
-    <p>The requested page could not be found.</p>
-  </div>
-</body>
-
-</html>
+<p><em>Page not found — the links above will take you back.</em></p>

@@ -1,3 +1,27 @@
+// Skip link: invisible until keyboard-focused, then a brutalist block
+// pinned to the top-left, above everything.
+.skip-link {
+    position: fixed;
+    top: -100px;
+    left: var(--spacing-sm);
+    z-index: 10000;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: var(--border-small);
+    background: var(--color-black);
+    font-family: var(--font-secondary);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-white);
+    box-shadow: var(--box-shadow-small);
+    transition: top .2s ease;
+}
+
+.skip-link:focus-visible {
+    top: var(--spacing-sm);
+}
+
 // Utility & responsive adjustments
 @media (width <= 1024px) {
     .site-header {

@@ -1,0 +1,70 @@
+// Custom cursor: a miniature brutalist card. The pointer is a chunky
+// magenta square with a thick black border; the trailing element is its
+// hard offset shadow — a solid black block that chases the square when
+// moving and settles at the classic 45° box-shadow offset at rest. Over
+// interactive elements the square lifts off its shadow and goes vermilion,
+// exactly what every card and button on the site does on hover.
+// JS (assets/js/cursor.js) only runs on fine pointers and adds
+// .custom-cursor to <html>; without JS the native cursor stays untouched.
+html.custom-cursor,
+html.custom-cursor * {
+  cursor: none;
+}
+
+.cursor-dot,
+.cursor-halo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+// The shadow block: rides slightly down-right of the square (the site's
+// box-shadow offset), lags behind it in motion.
+.cursor-halo {
+  z-index: 9998;
+  width: 20px;
+  height: 20px;
+  margin: 7px 0 0 7px;
+  background: var(--color-black);
+  transition: opacity 0.2s ease;
+}
+
+// The element itself only carries position (JS writes its transform every
+// frame); the visual lives in ::after so the hover lift can transform it
+// without fighting the inline transform.
+.cursor-dot {
+  z-index: 9999;
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.2s ease;
+}
+
+.cursor-dot::after {
+  position: absolute;
+  border: 3px solid var(--color-black);
+  background: var(--color-pink-accent);
+  transition: transform 0.2s ease, background 0.2s ease;
+  content: "";
+  inset: 0;
+}
+
+// Lift off the shadow + vermilion, like every card hover on the site.
+.cursor-dot.is-hover::after {
+  background: var(--color-orange-accent);
+  transform: translate(-4px, -4px);
+}
+
+.cursor-dot.is-visible,
+.cursor-halo.is-visible {
+  opacity: 1;
+}
+
+/* Belt and suspenders beyond the JS pointer guard */
+@media (pointer: coarse) {
+  .cursor-dot,
+  .cursor-halo {
+    display: none;
+  }
+}
