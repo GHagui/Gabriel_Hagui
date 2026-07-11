@@ -1,0 +1,33 @@
+{% assign reading_time = content | number_of_words | divided_by: 180 | plus: 1 %}
+{% assign primary_category = page.categories | first %}
+{% assign title_size = page.title | size %}
+{% assign is_pt = false %}
+{% if page.lang == 'pt-BR' or page.layout == 'default-br' %}{% assign is_pt = true %}{% endif %}
+<section class="article-hero" aria-labelledby="article-title">
+  <div class="inner-shell article-hero-inner">
+    <div class="article-hero-copy">
+      <p class="inner-kicker">{% if primary_category %}{{ primary_category }}{% elsif is_pt %}Caderno técnico{% else %}Technical notebook{% endif %}</p>
+      <h1 id="article-title"{% if title_size > 55 %} class="article-title-long"{% endif %}>{{ page.heading | default: page.title }}</h1>
+      {% if page.description %}
+      <p class="article-description">{{ page.description }}</p>
+      {% elsif is_pt %}
+      <p class="article-description">Notas, exemplos e referências organizadas em um formato direto para leitura e consulta.</p>
+      {% else %}
+      <p class="article-description">Notes, examples and references organized in a direct format for reading and future use.</p>
+      {% endif %}
+      <div class="article-meta" aria-label="{% if is_pt %}Metadados do artigo{% else %}Article metadata{% endif %}">
+        {% if page.date %}<span>{% if is_pt %}{{ page.date | date: "%d.%m.%Y" }}{% else %}{{ page.date | date: "%Y-%m-%d" }}{% endif %}</span>{% endif %}
+        <span>{{ reading_time }} {% if is_pt %}min de leitura{% else %}min read{% endif %}</span>
+        {% if page.author %}<span>{{ page.author }}</span>{% endif %}
+      </div>
+    </div>
+    <div class="article-hero-visual">
+      {% if page.image %}
+      <img src="{{ page.image | relative_url }}" alt="" width="560" height="315">
+      {% else %}
+      <span>{% if is_pt %}Notas{% else %}Notes{% endif %}</span>
+      <strong>MD</strong>
+      {% endif %}
+    </div>
+  </div>
+</section>

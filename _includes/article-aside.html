@@ -1,0 +1,28 @@
+{% assign is_pt = false %}
+{% if page.lang == 'pt-BR' or page.layout == 'default-br' %}{% assign is_pt = true %}{% endif %}
+<aside class="article-aside" aria-label="{% if is_pt %}Informações do artigo{% else %}Article information{% endif %}">
+  <section class="article-aside-panel article-aside-about">
+    <p class="article-aside-label">{% if is_pt %}Sobre este espaço{% else %}About this space{% endif %}</p>
+    <h2>{% if is_pt %}Notas de um site pessoal.{% else %}Notes from a personal site.{% endif %}</h2>
+    <p>{% if is_pt %}Registro projetos, experiências e referências para consulta futura.{% else %}I document projects, experiences and references for future use.{% endif %}</p>
+  </section>
+
+  {% if page.tags %}
+  <section class="article-aside-panel article-aside-tags">
+    <p class="article-aside-label">Tags</p>
+    <ul>
+      {% for tag in page.tags %}<li>{{ tag }}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <nav class="article-aside-nav" aria-label="{% if is_pt %}Continuar navegando{% else %}Continue browsing{% endif %}">
+    {% if is_pt %}
+    <a href="{{ '/blog-br' | relative_url }}">Blog <span aria-hidden="true">→</span></a>
+    <a href="{{ '/projects-br' | relative_url }}">Projetos <span aria-hidden="true">→</span></a>
+    {% else %}
+    <a href="{{ '/blog-en' | relative_url }}">Blog <span aria-hidden="true">→</span></a>
+    <a href="{{ '/projects-en' | relative_url }}">Projects <span aria-hidden="true">→</span></a>
+    {% endif %}
+  </nav>
+</aside>

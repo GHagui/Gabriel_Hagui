@@ -1,16 +1,22 @@
 ---
 layout: exp-br
 title: Trajetória & Projetos
+heading: Experiência
 description: Experiência profissional em Engenharia de Software, DevOps AWS, arquitetura serverless e modernização de sistemas distribuídos.
 image: /assets/images/gabriel-hagui.webp
 lang: pt-BR
 permalink: /xp-br
+section: experience
+eyebrow: Trajetória profissional
+intro: Um registro dos projetos, responsabilidades e aprendizados que moldaram minha atuação em engenharia de software e cloud.
+marker_label: Desde
+marker_value: "2022"
 ---
 ## **Sobre Mim**
 
 Engenheiro de Software com foco na criação e modernização de sistemas distribuídos em larga escala no ecossistema AWS. Sou motivado por desafios complexos e pela oportunidade de construir soluções eficientes que geram impacto para o negócio. Minha trajetória no Itaú Unibanco tem sido marcada pela autonomia na condução de projetos críticos e pela co-fundação de uma nova squad cloud-native, onde atuo desde a concepção da arquitetura até a entrega em produção.
 
-Como surdo de nascença, desenvolvi uma comunicação assíncrona de alta precisão e uma abordagem resiliente para resolver problemas de forma criativa. Meu objetivo é continuar aplicando e expandindo minhas habilidades em arquitetura serverless, Python e automação para colaborar com times de alta performance na entrega de tecnologia de ponta.
+Como surdo de nascença, desenvolvi uma comunicação assíncrona de alta precisão e uma abordagem resiliente para resolver problemas de forma criativa. Este registro reúne como aplico e expando conhecimentos em arquitetura serverless, Python e automação no trabalho cotidiano.
 
 ---
 ## **Projetos & Conquistas no Itaú Unibanco**

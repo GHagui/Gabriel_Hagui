@@ -1,0 +1,25 @@
+{% assign items = include.items %}
+<div class="catalog-grid catalog-grid-{{ page.section }}" aria-label="{{ page.list_label }}">
+  {% for item in items %}
+  <a class="catalog-card" href="{{ item.url | relative_url }}" aria-label="{{ item.action }}: {{ item.title }}">
+    <div class="catalog-card-media">
+      <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}" decoding="async" width="720" height="405">
+      <span class="catalog-card-index" aria-hidden="true">0{{ forloop.index }}</span>
+    </div>
+    <div class="catalog-card-body">
+      <div class="catalog-card-meta">
+        <span>{{ item.category }}</span>
+        {% if item.year %}<span>{{ item.year }}</span>{% endif %}
+      </div>
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.description }}</p>
+      {% if item.tags %}
+      <ul class="catalog-card-tags" aria-label="Tags">
+        {% for tag in item.tags %}<li>{{ tag }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+      <span class="catalog-card-arrow" aria-hidden="true">↗</span>
+    </div>
+  </a>
+  {% endfor %}
+</div>

@@ -217,13 +217,25 @@
 }
 
 .about-pillars {
-  background: var(--color-bg-body);
+  position: relative;
+  background: var(--color-blue-primary);
   border-block: var(--border-strong);
+  isolation: isolate;
+}
+
+.about-pillars::after {
+  position: absolute;
+  z-index: 0;
+  background: var(--color-purple-accent);
+  content: "";
+  inset: 0 0 0 50%;
+  pointer-events: none;
 }
 
 .about-pillar-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
-  border-inline: var(--border-medium);
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -562,6 +574,10 @@
     width: 100%;
     max-width: none;
     grid-template-columns: 1fr;
+  }
+
+  .about-pillars::after {
+    display: none;
   }
 
   .about-pillar {

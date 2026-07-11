@@ -1,8 +1,18 @@
 - title: "De um simples NAS a um homelab completo, sem querer querendo"
   url: "/truenas"
   image: "/assets/images/projects/truenas.webp"
+  image_alt: "Interface do TrueNAS usado no homelab"
   description: "Construindo um homelab partindo de um simples servidor de arquivos usando TrueNAS."
+  category: "Homelab"
+  year: "2024"
+  tags: ["TrueNAS", "Storage", "Self-hosted"]
+  action: "Abrir projeto"
 - title: "Theme Jekyll Neubrutalism"
   url: "/markdown-examples"
   image: "/assets/images/projects/neubrutalism.webp"
+  image_alt: "Página de demonstração do tema Jekyll neubrutalista"
   description: "Um tema Jekyll inspirado no neubrutalismo."
+  category: "Web"
+  year: "2025"
+  tags: ["Jekyll", "SCSS", "Design"]
+  action: "Abrir projeto"
