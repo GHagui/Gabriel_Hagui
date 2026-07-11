@@ -11,19 +11,31 @@
 
 <body>
     {% include header-en.html %}
-    <main>
+    <main id="main-content">
         <div class="content">
-            <h1>{{ page.title }}</h1>
+            <h1>{{ page.heading | default: page.title }}</h1>
+            {% if page.date %}
+            <div class="post-meta">
+                <span class="post-meta-item">{{ page.date | date: "%Y-%m-%d" }}</span>
+                {% assign rt = content | number_of_words | divided_by: 180 | plus: 1 %}
+                <span class="post-meta-item">{{ rt }} min read</span>
+                {% for tag in page.tags limit: 3 %}
+                <span class="post-meta-tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
             {{ content }}
         </div>
         <div class="sidebar">
             <h2>About Me</h2>
-            <p>Gabriel Hagui is a Software Engineer with extensive experience in DevOps at Amazon AWS, where he works on challenging, large-scale projects. In addition to his professional work, Gabriel is driven by a passion for technology and a desire to share knowledge. His personal website was born with the purpose of being a space to record his experiments and discoveries, serving as a platform to inspire and help other developers grow in their careers.</p>
+            <p>Software Engineer focused on DevOps at AWS. This site is where I log experiments, studies and findings — and help other devs along the way.</p>
+            <a class="sidebar-cta" href="{{ '/xp-en' | relative_url }}">Full experience →</a>
         </div>
     </main>
     {% include footer-en.html %}
     <script src="{{ '/assets/js/callouts.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/comparison-slider.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/cursor.js' | relative_url }}" defer></script>
 </body>
 
 </html>

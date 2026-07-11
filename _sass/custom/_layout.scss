@@ -30,13 +30,47 @@ main {
     margin: 0 auto var(--spacing-lg);
     border: var(--border-medium);
     border-radius: var(--border-radius-large);
-    background-color: var(--color-purple-accent);
-    font-family: var(--font-secondary);
-
-    /* purple-accent slot is now Electric Violet — dark, needs white */
-    color: var(--color-white);
+    background-color: var(--color-bg-content);
+    font-family: var(--font-body);
+    color: var(--color-ink);
     box-shadow: var(--box-shadow-medium);
     margin-left: 0;
+}
+
+// "Sobre mim" label rendered as a violet tab — same language as the
+// content h2 section tabs, so the sidebar joins the system instead of
+// being a solid violet block of mono text.
+.sidebar h2 {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    margin: 0 0 var(--spacing-sm);
+    border: var(--border-small);
+    background: var(--color-purple-accent);
+    font-family: var(--font-primary);
+    font-size: var(--fs-md);
+    letter-spacing: .5px;
+    text-transform: uppercase;
+
+    /* purple-accent slot is Electric Violet — dark, needs white */
+    color: var(--color-white);
+    box-shadow: var(--box-shadow-xs);
+}
+
+.sidebar p {
+    margin: 0 0 var(--spacing-sm);
+    line-height: 1.6;
+}
+
+.sidebar-cta {
+    font-family: var(--font-secondary);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-blue-primary);
+}
+
+.sidebar-cta:hover {
+    color: var(--color-orange-accent);
 }
 
 .content {

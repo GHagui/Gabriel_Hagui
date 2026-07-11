@@ -14,14 +14,15 @@
 
 <body>
     {% include header-br.html %}
-    <main>
+    <main id="main-content">
         <div class="content">
-            <h1>{{ page.title }}</h1>
+            <h1>{{ page.heading | default: page.title }}</h1>
             {{ content }}
         </div>
     </main>
     {% include footer-br.html %}
     <script src="{{ '/assets/js/callouts.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/cursor.js' | relative_url }}" defer></script>
 </body>
 
 </html>

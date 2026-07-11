@@ -55,6 +55,22 @@
     border-bottom: var(--border-medium);
 }
 
+/* Card headers cycle through the accent palette by position —
+   magenta -> violet -> blue — instead of a monotone magenta row. */
+.project-card:nth-child(3n + 2) .project-card-image-wrapper {
+    background: var(--color-purple-accent);
+}
+
+.project-card:nth-child(3n) .project-card-image-wrapper {
+    background: var(--color-blue-primary);
+}
+
+/* violet/blue grounds are dark — placeholder text flips to white there */
+.project-card:nth-child(3n + 2) .project-card-placeholder,
+.project-card:nth-child(3n) .project-card-placeholder {
+    color: var(--color-white);
+}
+
 .project-card-image {
     display: block;
     width: 100%;

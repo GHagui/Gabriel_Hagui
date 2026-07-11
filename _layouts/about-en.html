@@ -11,21 +11,37 @@
 
 <body>
     {% include header-en.html %}
-    <main class="main-hello">
+    <main id="main-content" class="main-hello">
         <div class="hello">
             <img src="{{ '/assets/images/gabriel-hagui.webp' | relative_url }}" alt="Gabriel Hagui" class="profile-image">
             <div class="hello-content">
-                <h1>Hello!</h1>
-                <h2>My name is Gabriel Hagui</h2>
+                <p class="hero-eyebrow">Software Engineer — DevOps AWS</p>
+                <h1>Gabriel Hagui</h1>
                 <h3>I am an IT engineer working with software development and IT infrastructure.</h3>
+                <div class="hero-actions">
+                    <a class="hero-btn hero-btn-primary" href="{{ '/projects-en' | relative_url }}">See projects →</a>
+                    <a class="hero-btn" href="{{ '/contact-en' | relative_url }}">Get in touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="marquee" aria-hidden="true">
+            {%- comment -%}
+            10 identical copies = two identical 5-copy halves, so the
+            translateX(-50%) loop stays seamless even on 5120px ultrawides.
+            {%- endcomment -%}
+            <div class="marquee-track">
+                {%- for i in (1..10) -%}
+                <span>Serverless ✦ Python ✦ Rust ✦ AWS ✦ Homelab ✦ Sign Language ✦ Clean Architecture ✦ DevOps ✦ Automation ✦&nbsp;</span>
+                {%- endfor -%}
             </div>
         </div>
         <div class="about">
-            <h1>{{ page.title }}</h1>
+            <h1>{{ page.heading | default: page.title }}</h1>
             {{ content }}
         </div>
     </main>
     {% include footer-en.html %}
+    <script src="{{ '/assets/js/cursor.js' | relative_url }}" defer></script>
 </body>
 
 </html>

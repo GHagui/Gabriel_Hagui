@@ -12,7 +12,7 @@ Need to reach out? Pick any of the channels below, I usually reply within a few 
 			<h3>Main email</h3>
 		</div>
 		<div class="contact-body">
-			<a class="contact-link" href="mailto:gabriel.hagui@gmail.com" aria-label="Send email to gabriel.hagui@gmail.com">gabriel.hagui@gmail.com</a><br/>
+			<a class="contact-link" href="mailto:gabriel.hagui@gmail.com" aria-label="Send email to gabriel.hagui@gmail.com">gabriel.hagui@<wbr>gmail.com</a><br/>
 			<p style="margin:.35rem 0 0; font-size: var(--fs-xs);">Propostas, dúvidas e colaborações.
             </p>
 		</div>

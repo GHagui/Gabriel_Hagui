@@ -1,3 +1,4 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
 <head>
     <meta charset="UTF-8" />
     <meta name="theme-color" content="#0b27ff" />
@@ -20,7 +21,7 @@
 </head>
 <header class="site-header">
     <div class="container">
-        <h1 class="logo"><a>Gabriel Hagui</a></h1>
+        <h1 class="logo"><a href="{{ '/index-en' | relative_url }}">Gabriel Hagui</a></h1>
         <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -33,7 +34,7 @@
                 <li><a href="{{ '/blog-en' | relative_url }}" class="{% if page.url == '/blog-en' %}nav-active{% endif %}">Blog</a></li>
                 <li><a href="{{ '/xp-en' | relative_url }}" class="{% if page.url == '/xp-en' %}nav-active{% endif %}">Experience</a></li>
                 <li><a href="{{ '/contact-en' | relative_url }}" class="{% if page.url == '/contact-en' %}nav-active{% endif %}">Contact</a></li>
-                <li><a href="{{ '/' | relative_url }}">pt-BR</a></li>
+                <li><a class="lang-switch" href="{{ '/' | relative_url }}">pt-BR</a></li>
             </ul>
         </nav>
     </div>

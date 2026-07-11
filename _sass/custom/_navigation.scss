@@ -47,11 +47,16 @@
 
     /* purple-accent slot is now Electric Violet — dark, needs white */
     color: var(--color-white);
+    box-shadow: none;
 }
 
+/* Hovering the current page behaves like every other nav link — goes
+   vermilion, lifts, casts a shadow — so rest and hover never look alike. */
 .nav-active:hover {
-    color: var(--color-white) !important;
+    background: var(--color-orange-accent) !important;
+    color: var(--color-black) !important;
     box-shadow: var(--box-shadow-small);
+    transform: translate(-4px, -4px);
 }
 
 .nav-toggle {

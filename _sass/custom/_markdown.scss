@@ -35,51 +35,57 @@ blockquote {
   }
 }
 
-// Restored callouts structure
+// Restored callouts structure — neubrutalist: bold accent backgrounds,
+// hard shadows, thick borders. Same language as the section tabs.
 blockquote.callout {
   position: relative;
   border: var(--border-medium);
+  box-shadow: var(--box-shadow-small);
   border-left-width: 6px;
 }
 
 blockquote.callout .callout-title {
   display: inline-block;
+  padding: 2px var(--spacing-xs);
   margin: 0 0 var(--spacing-xs);
+  border: var(--border-small);
+  background: var(--color-black);
   font-family: var(--font-primary);
   font-size: var(--fs-sm);
   letter-spacing: 1px;
   text-transform: uppercase;
+  color: var(--color-white);
 }
 
-// Variants — these keep hardcoded light pastel backgrounds regardless of
-// theme, so text must stay black even though the page default is now light.
+// Variants use the site's accent palette — solid saturated blocks,
+// not washed-out pastels. Left border matches background.
 blockquote.callout.callout-info {
-  background: #e3f2fd;
-  color: var(--color-black);
+  background: var(--color-blue-primary);
+  color: var(--color-white);
   border-left-color: var(--color-blue-primary) !important;
 }
 
 blockquote.callout.callout-success {
-  background: #e8f5e8;
-  color: var(--color-black);
-  border-left-color: #4caf50 !important;
+  background: #00a000;
+  color: var(--color-white);
+  border-left-color: #00a000 !important;
 }
 
 blockquote.callout.callout-warning {
-  background: #fff3e0;
+  background: var(--color-orange-accent);
   color: var(--color-black);
-  border-left-color: #ff9800 !important;
+  border-left-color: var(--color-orange-accent) !important;
 }
 
 blockquote.callout.callout-error {
-  background: #ffebee;
-  color: var(--color-black);
-  border-left-color: #f44336 !important;
+  background: #d00;
+  color: var(--color-white);
+  border-left-color: #d00 !important;
 }
 
 blockquote.callout.callout-help {
-  background: #f3e5f5;
-  color: var(--color-black);
+  background: var(--color-purple-accent);
+  color: var(--color-white);
   border-left-color: var(--color-purple-accent) !important;
 }
 
@@ -290,6 +296,35 @@ tr:nth-child(even) {
   letter-spacing: .3px;
 }
 
+// Article meta strip: date, reading time and tags right under the title.
+// Rendered by default-br/en layouts only when the page has a date.
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-xs);
+  max-width: var(--measure);
+  margin: calc(var(--spacing-sm) * -1) 0 var(--spacing-md);
+  font-family: var(--font-secondary);
+  font-size: var(--fs-xs);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.post-meta-item {
+  padding: 2px 10px;
+  border: var(--border-small);
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.post-meta-tag {
+  padding: 2px 10px;
+  border: var(--border-small);
+  background: var(--color-bg-body);
+  color: var(--color-black);
+}
+
 .content > img,
 .content > table,
 .content > pre,
@@ -304,7 +339,9 @@ tr:nth-child(even) {
 }
 
 // 2) Editorial lede — first paragraph after the title carries the voice.
+//    (.post-meta may sit between the title and the lede on dated articles)
 .content > h1 + p,
+.content > .post-meta + p,
 .about > h1 + p {
   font-size: var(--fs-md);
   line-height: 1.5;

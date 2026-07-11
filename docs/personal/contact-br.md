@@ -1,6 +1,7 @@
 ---
 layout: hire-br
 title: Contato - Gabriel Hagui
+heading: Contato
 description: Entre em contato para oportunidades profissionais, colaborações em projetos ou consultoria em AWS, DevOps e arquitetura de software.
 image: /assets/images/gabriel-hagui.webp
 lang: pt-BR
@@ -15,7 +16,7 @@ Precisa falar comigo? Aqui estão os canais mais rápidos. Fique à vontade para
 			<h3>E-mail principal</h3>
 		</div>
 		<div class="contact-body">
-			<a class="contact-link" href="mailto:gabriel.hagui@gmail.com" aria-label="Enviar e-mail para gabriel.hagui@gmail.com">gabriel.hagui@gmail.com</a><br/>
+			<a class="contact-link" href="mailto:gabriel.hagui@gmail.com" aria-label="Enviar e-mail para gabriel.hagui@gmail.com">gabriel.hagui@<wbr>gmail.com</a><br/>
 			<p style="margin:.35rem 0 0; font-size: var(--fs-xs);">Propostas, dúvidas e colaborações.
             </p>
 		</div>

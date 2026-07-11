@@ -1,6 +1,7 @@
 ---
 layout: grid-br
 title: Blog - Gabriel Hagui
+heading: Blog
 description: Artigos técnicos sobre AWS, Serverless, DevOps, automação, arquitetura de software e experimentos práticos.
 image: /assets/images/gabriel-hagui.webp
 lang: pt-BR

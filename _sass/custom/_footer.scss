@@ -1,0 +1,74 @@
+// Site footer: black brutalist band closing every page
+.site-footer {
+  padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-md);
+  background: var(--color-black);
+  color: var(--color-white);
+  border-top: var(--border-strong);
+  margin-top: var(--spacing-xl);
+}
+
+.footer-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.footer-name {
+  margin: 0 0 var(--spacing-xs);
+  font-family: var(--font-primary);
+  font-size: var(--fs-xl);
+  text-transform: uppercase;
+}
+
+.footer-motto {
+  max-width: 32ch;
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--color-bg-body);
+}
+
+.footer-nav ul,
+.footer-social ul {
+  display: grid;
+  gap: var(--spacing-xs);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-nav a,
+.footer-social a {
+  font-family: var(--font-secondary);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.footer-nav a:hover,
+.footer-social a:hover {
+  color: var(--color-pink-accent);
+}
+
+.footer-copy {
+  max-width: var(--container-max-width);
+  margin: var(--spacing-lg) auto 0;
+  font-family: var(--font-secondary);
+  font-size: var(--fs-xs);
+  color: var(--color-bg-body);
+  border-top: 2px solid var(--color-white);
+  padding-top: var(--spacing-md);
+}
+
+@media (width <= 760px) {
+  .site-footer {
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-sm);
+  }
+
+  .footer-grid {
+    gap: var(--spacing-md);
+    grid-template-columns: 1fr;
+  }
+}

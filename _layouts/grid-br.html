@@ -11,18 +11,20 @@
 
 <body>
     {% include header-br.html %}
-    <main>
+    <main id="main-content">
         <div class="content">
-            <h1>{{ page.title }}</h1>
+            <h1>{{ page.heading | default: page.title }}</h1>
             {{ content }}
         </div>
         <div class="sidebar">
             <h2>Sobre mim</h2>
-            <p>Gabriel Hagui é um Engenheiro de Software com ampla experiência em DevOps na Amazon AWS, onde atua em projetos desafiadores e de grande escala. Além de sua atuação profissional, Gabriel é movido pela paixão por tecnologia e pela vontade de compartilhar conhecimento. Seu site pessoal nasceu com o propósito de ser um espaço para registrar seus experimentos e descobertas, servindo como uma plataforma para inspirar e ajudar outros desenvolvedores a crescerem em suas carreiras.</p>
+            <p>Engenheiro de Software com foco em DevOps na AWS. Este site é meu espaço para registrar experimentos, estudos e descobertas — e ajudar outros devs no caminho.</p>
+            <a class="sidebar-cta" href="{{ '/xp-br' | relative_url }}">Experiência completa →</a>
         </div>
     </main>
     {% include footer-br.html %}
     <script src="{{ '/assets/js/callouts.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/cursor.js' | relative_url }}" defer></script>
 </body>
 
 </html>

@@ -35,11 +35,29 @@
     padding: var(--spacing-lg);
 }
 
+.hero-eyebrow {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    margin: 0 0 var(--spacing-sm);
+    background: var(--color-black);
+    font-family: var(--font-secondary);
+    font-size: clamp(0.8rem, 1.4vw, 1.05rem);
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-white);
+    box-shadow: 6px 6px 0 var(--color-white);
+    align-self: center;
+}
+
 .hello-content h1 {
     margin: 0;
     font-family: var(--font-primary);
-    font-size: clamp(3.2rem, 11vw, 10rem);
+    font-size: clamp(3rem, 8.5vw, 8.5rem);
+    line-height: 0.95;
     text-align: center;
+    text-transform: uppercase;
 
     /* hero bg (pink-accent slot) is now Hot Magenta — bright enough that
        black text passes AA (5.71:1); shadow is white so it stays visible
@@ -48,20 +66,97 @@
     text-shadow: 8px 8px 0 var(--color-white);
 }
 
-.hello-content h2 {
-    margin: var(--spacing-xs) 0;
-    font-family: var(--font-secondary);
-    font-size: clamp(1.4rem, 5vw, 3rem);
-    text-align: center;
-    color: var(--color-black);
-}
-
 .hello-content h3 {
     margin: 0;
     font-family: var(--font-secondary);
     font-size: clamp(1rem, 3.2vw, 1.5rem);
     text-align: center;
     color: var(--color-black);
+}
+
+// Hero CTAs: the hero states who he is; these say what to do next.
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: var(--border-small);
+    background: var(--color-white);
+    font-family: var(--font-secondary);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-black);
+    box-shadow: var(--box-shadow-xs);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.hero-btn-primary {
+    background: var(--color-black);
+    color: var(--color-white);
+    box-shadow: 4px 4px 0 var(--color-white);
+}
+
+.hero-btn:hover,
+.hero-btn:focus-visible {
+    box-shadow: 7px 7px 0 var(--color-black);
+    transform: translate(-3px, -3px);
+}
+
+.hero-btn-primary:hover,
+.hero-btn-primary:focus-visible {
+    box-shadow: 7px 7px 0 var(--color-white);
+}
+
+@media (width <= 480px) {
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+// Signature band: black marquee strip under the hero. Duplicated span +
+// translateX(-50%) makes a seamless loop; static under reduced motion.
+.marquee {
+    max-width: 100%;
+    padding: 0.65rem 0;
+    background: var(--color-black);
+    overflow: hidden;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 150s linear infinite;
+}
+
+.marquee-track span {
+    font-family: var(--font-secondary);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-white);
+    white-space: nowrap;
+}
+
+@keyframes marquee-scroll {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+        animation: none;
+    }
 }
 
 .about {
@@ -104,10 +199,6 @@
         font-size: clamp(2.4rem, 9vw, 5.2rem);
     }
 
-    .hello-content h2 {
-        font-size: clamp(1.25rem, 5.2vw, 2.2rem);
-    }
-
     .hello-content h3 {
         font-size: clamp(0.95rem, 3.6vw, 1.25rem);
     }
@@ -130,10 +221,6 @@
         text-shadow: 4px 4px 0 var(--color-white);
     }
 
-    .hello-content h2 {
-        font-size: clamp(1.15rem, 6vw, 1.9rem);
-    }
-
     .hello-content h3 {
         font-size: clamp(0.9rem, 4vw, 1.15rem);
     }
@@ -151,10 +238,6 @@
     .hello-content h1 {
         font-size: clamp(2.0rem, 11vw, 3.0rem);
         text-shadow: 3px 3px 0 var(--color-white);
-    }
-
-    .hello-content h2 {
-        font-size: clamp(1.05rem, 7vw, 1.65rem);
     }
 
     .hello-content h3 {
