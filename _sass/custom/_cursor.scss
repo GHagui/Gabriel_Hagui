@@ -1,9 +1,7 @@
-// Custom cursor: a miniature brutalist card. The pointer is a chunky
-// magenta square with a thick black border; the trailing element is its
-// hard offset shadow — a solid black block that chases the square when
-// moving and settles at the classic 45° box-shadow offset at rest. Over
-// interactive elements the square lifts off its shadow and goes vermilion,
-// exactly what every card and button on the site does on hover.
+// Custom cursor: solid dot (exact tracking) + hollow ring (lerp inertia
+// trail). Both white under mix-blend-mode: difference, so they invert
+// whatever ground is underneath instead of tinting it — never disappears,
+// works over any color the site throws at it.
 // JS (assets/js/cursor.js) only runs on fine pointers and adds
 // .custom-cursor to <html>; without JS the native cursor stays untouched.
 html.custom-cursor,
@@ -12,59 +10,56 @@ html.custom-cursor * {
 }
 
 .cursor-dot,
-.cursor-halo {
+.cursor-ring {
   position: fixed;
   top: 0;
   left: 0;
+  border-radius: 50%;
   opacity: 0;
+  transition: opacity 0.25s ease;
   pointer-events: none;
 }
 
-// The shadow block: rides slightly down-right of the square (the site's
-// box-shadow offset), lags behind it in motion.
-.cursor-halo {
-  z-index: 9998;
-  width: 20px;
-  height: 20px;
-  margin: 7px 0 0 7px;
-  background: var(--color-black);
-  transition: opacity 0.2s ease;
-}
-
-// The element itself only carries position (JS writes its transform every
-// frame); the visual lives in ::after so the hover lift can transform it
-// without fighting the inline transform.
 .cursor-dot {
+  z-index: 10000;
+  width: 16px;
+  height: 16px;
+  background: var(--color-white);
+
+  /* Inverts the ground instead of darkening it — white + difference
+     always stays visible (math: |white - bg| = inverse of bg), so it
+     never disappears over dark grounds like the old multiply did. */
+  transition: opacity 0.25s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  mix-blend-mode: difference;
+}
+
+.cursor-ring {
   z-index: 9999;
-  width: 20px;
-  height: 20px;
-  transition: opacity 0.2s ease;
+  width: 42px;
+  height: 42px;
+  border: 2px solid var(--color-white);
+  background: transparent;
+  transition: opacity 0.25s ease;
+  mix-blend-mode: difference;
 }
 
-.cursor-dot::after {
-  position: absolute;
-  border: 3px solid var(--color-black);
-  background: var(--color-pink-accent);
-  transition: transform 0.2s ease, background 0.2s ease;
-  content: "";
-  inset: 0;
-}
-
-// Lift off the shadow + vermilion, like every card hover on the site.
-.cursor-dot.is-hover::after {
-  background: var(--color-orange-accent);
-  transform: translate(-4px, -4px);
-}
-
-.cursor-dot.is-visible,
-.cursor-halo.is-visible {
+.cursor-dot.on,
+.cursor-ring.on {
   opacity: 1;
+}
+
+// Hover: dot grows; ring's scale is applied via JS (its transform already
+// carries position each frame, so the hover scale rides along in that
+// same string — see cursor.js).
+.cursor-dot.is-hover {
+  width: 26px;
+  height: 26px;
 }
 
 /* Belt and suspenders beyond the JS pointer guard */
 @media (pointer: coarse) {
   .cursor-dot,
-  .cursor-halo {
+  .cursor-ring {
     display: none;
   }
 }

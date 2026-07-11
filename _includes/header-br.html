@@ -21,7 +21,9 @@
 </head>
 <header class="site-header">
     <div class="container">
-        <h1 class="logo"><a href="{{ '/' | relative_url }}">Gabriel Hagui</a></h1>
+        <a class="brand-lockup" href="{{ '/' | relative_url }}" aria-label="Gabriel Hagui — Página inicial">
+            <span class="brand-name">Gabriel Hagui</span>
+        </a>
         <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -29,12 +31,12 @@
         </button>
         <nav class="site-nav" id="primary-nav">
             <ul>
-                <li><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}nav-active{% endif %}">Página Inicial</a></li>
-                <li><a href="{{ '/projects-br' | relative_url }}" class="{% if page.url == '/projects-br' %}nav-active{% endif %}">Projetos</a></li>
-                <li><a href="{{ '/blog-br' | relative_url }}" class="{% if page.url == '/blog-br' %}nav-active{% endif %}">Blog</a></li>
-                <li><a href="{{ '/xp-br' | relative_url }}" class="{% if page.url == '/xp-br' %}nav-active{% endif %}">Experiência</a></li>
-                <li><a href="{{ '/contact-br' | relative_url }}" class="{% if page.url == '/contact-br' %}nav-active{% endif %}">Contato</a></li>
-                <li><a class="lang-switch" href="{{ '/index-en' | relative_url }}">en-US</a></li>
+                <li><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}nav-active{% endif %}"{% if page.url == '/' %} aria-current="page"{% endif %}>Início</a></li>
+                <li><a href="{{ '/projects-br' | relative_url }}" class="{% if page.url == '/projects-br' %}nav-active{% endif %}"{% if page.url == '/projects-br' %} aria-current="page"{% endif %}>Projetos</a></li>
+                <li><a href="{{ '/blog-br' | relative_url }}" class="{% if page.url == '/blog-br' %}nav-active{% endif %}"{% if page.url == '/blog-br' %} aria-current="page"{% endif %}>Blog</a></li>
+                <li><a href="{{ '/xp-br' | relative_url }}" class="{% if page.url == '/xp-br' %}nav-active{% endif %}"{% if page.url == '/xp-br' %} aria-current="page"{% endif %}>Experiência</a></li>
+                <li><a href="{{ '/contact-br' | relative_url }}" class="{% if page.url == '/contact-br' %}nav-active{% endif %}"{% if page.url == '/contact-br' %} aria-current="page"{% endif %}>Contato</a></li>
+                <li class="nav-language"><a class="lang-switch" href="{{ '/index-en' | relative_url }}" lang="en-US">EN</a></li>
             </ul>
         </nav>
     </div>

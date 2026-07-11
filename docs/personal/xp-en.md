@@ -1,13 +1,22 @@
 ---
 layout: exp-en
 title: Professional Journey & Projects
+heading: Experience
+description: Professional experience in software engineering, AWS DevOps, serverless architecture and distributed systems modernization.
+image: /assets/images/gabriel-hagui.webp
+lang: en-US
 permalink: /xp-en
+section: experience
+eyebrow: Professional journey
+intro: A record of the projects, responsibilities and lessons that shaped my work across software engineering and cloud.
+marker_label: Since
+marker_value: "2022"
 ---
 ## **About Me**
 
 I am a Software Engineer focused on creating and modernizing large-scale distributed systems within the AWS ecosystem. I am driven by complex challenges and the opportunity to build efficient, business-impactful solutions. My career at Itaú Unibanco has been marked by my autonomy in leading critical projects and co-founding a new cloud-native squad, where I've been involved from architectural design to production delivery.
 
-As someone who is Deaf from birth, I have developed highly precise asynchronous communication skills and a resilient, creative approach to problem-solving. My goal is to continue applying and expanding my skills in serverless architecture, Python, and automation, collaborating with high-performance teams to deliver cutting-edge technology.
+As someone who is Deaf from birth, I have developed highly precise asynchronous communication skills and a resilient, creative approach to problem-solving. This record shows how I apply and expand my knowledge of serverless architecture, Python and automation in everyday work.
 
 ---
 ## **Projects & Achievements at Itaú Unibanco**

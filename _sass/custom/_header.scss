@@ -1,76 +1,74 @@
-// Site header & branding
+// Site header and bilingual brand lockup.
 .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 0;
-    background: var(--color-blue-primary);
-    border-bottom: var(--border-strong);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-blue-primary);
+  border-bottom: var(--border-strong);
 }
 
 .site-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  width: min(calc(100% - 3rem), var(--container-max-width));
+  max-width: none;
+  padding: 0.75rem 0;
+  margin: 0 auto;
 }
 
-// Logo as a brutalist sticker: white block, hard border and shadow,
-// slightly tilted — it straightens up on hover.
-.site-header .logo {
-    margin: var(--spacing-sm) 0;
+.brand-lockup {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-black);
 }
 
-.site-header .logo a {
-    display: inline-block;
-    padding: 2px var(--spacing-sm);
-    border: var(--border-small);
-    background: var(--color-white);
-    font-family: var(--font-primary);
-    font-size: var(--fs-xl);
-    font-weight: 900;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--color-black);
-    box-shadow: var(--box-shadow-small);
-    transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
-    transform: rotate(-2deg);
-    white-space: nowrap;
+.brand-name {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border: var(--border-small);
+  background: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: var(--fs-xl);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--color-black);
+  box-shadow: 4px 4px 0 var(--color-black);
+  transition: background 160ms ease, box-shadow 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
-/* Hover inverts the sticker: black block, white text, white shadow. */
-.site-header .logo a:hover,
-.site-header .logo a:focus-visible {
-    background: var(--color-black);
-    color: var(--color-white);
-    box-shadow: 5px 5px 0 var(--color-white);
-    transform: rotate(0deg) translate(-2px, -2px);
+.brand-lockup:hover,
+.brand-lockup:focus-visible {
+  color: var(--color-black);
+  outline: 0;
 }
 
-// Language switch: same dimensions as other nav links, distinguished
-// by a visible white border instead of transparent.
-.site-header .site-nav a.lang-switch {
-    border-radius: 0;
+.brand-lockup:hover .brand-name,
+.brand-lockup:focus-visible .brand-name {
+  background: var(--color-orange-accent);
+  box-shadow: 7px 7px 0 var(--color-black);
+  transform: translate(-2px, -2px) rotate(-2deg);
 }
 
-.site-header .site-nav a.lang-switch:hover {
-    background: var(--color-white);
-    color: var(--color-black);
+@media (width <= 1120px) {
+  .site-header .container {
+    width: min(calc(100% - 2rem), var(--container-max-width));
+    padding-block: 0.6rem;
+  }
 }
 
-@media (width <= 1024px) {
-    .site-header .container {
-        padding: 0 var(--spacing-xs);
-    }
+@media (width <= 520px) {
+  .site-header .container {
+    gap: var(--spacing-sm);
+    width: calc(100% - 1rem);
+  }
 
-    .site-header .logo a {
-        padding: var(--spacing-xs) 0;
-        font-size: var(--fs-lg);
-    }
-}
-
-@media (width <= 480px) {
-    .site-header .logo a {
-        font-size: var(--fs-md);
-    }
+  .brand-name {
+    padding: 0.3rem 0.55rem;
+    font-size: var(--fs-lg);
+  }
 }

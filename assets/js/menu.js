@@ -31,7 +31,7 @@
     });
 
     // Reset state if resized to desktop
-    const mql = window.matchMedia('(min-width: 1290px)');
+    const mql = window.matchMedia('(min-width: 1121px)');
     function handleResize(e){
       if(e.matches) {
         toggle.setAttribute('aria-expanded','false');

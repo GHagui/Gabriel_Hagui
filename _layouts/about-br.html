@@ -11,35 +11,8 @@
 
 <body>
     {% include header-br.html %}
-    <main id="main-content" class="main-hello">
-        <div class="hello">
-            <img src="{{ '/assets/images/gabriel-hagui.webp' | relative_url }}" alt="Gabriel Hagui" class="profile-image">
-            <div class="hello-content">
-                <p class="hero-eyebrow">Engenheiro de Software — DevOps AWS</p>
-                <h1>Gabriel Hagui</h1>
-                <h3>Sou engenheiro de TI e trabalho com desenvolvimento e infraestrutura de TI.</h3>
-                <div class="hero-actions">
-                    <a class="hero-btn hero-btn-primary" href="{{ '/projects-br' | relative_url }}">Ver projetos →</a>
-                    <a class="hero-btn" href="{{ '/contact-br' | relative_url }}">Fale comigo</a>
-                </div>
-            </div>
-        </div>
-        <div class="marquee" aria-hidden="true">
-            {%- comment -%}
-            10 identical copies = two identical 5-copy halves, so the
-            translateX(-50%) loop stays seamless even on 5120px ultrawides.
-            {%- endcomment -%}
-            <div class="marquee-track">
-                {%- for i in (1..10) -%}
-                <span>Serverless ✦ Python ✦ Rust ✦ AWS ✦ Homelab ✦ LIBRAS ✦ Arquitetura Limpa ✦ DevOps ✦ Automação ✦&nbsp;</span>
-                {%- endfor -%}
-            </div>
-        </div>
-        <div class="about">
-            <h1>{{ page.heading | default: page.title }}</h1>
-            {{ content }}
-        </div>
-    </main>
+    {% assign about = site.data.about.pt_br %}
+    {% include about-page.html %}
     {% include footer-br.html %}
     <script src="{{ '/assets/js/cursor.js' | relative_url }}" defer></script>
 </body>

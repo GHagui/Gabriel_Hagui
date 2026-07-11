@@ -1,0 +1,31 @@
+<section class="contact-channels inner-shell" aria-labelledby="contact-channels-title">
+  <header class="inner-section-heading">
+    <h2 id="contact-channels-title">{{ contact.section_title }}</h2>
+    <p>{{ contact.section_intro }}</p>
+  </header>
+  <div class="channel-grid">
+    {% for channel in contact.channels %}
+    <a class="channel-card" href="{{ channel.href }}" aria-label="{{ channel.action }}"{% if channel.external %} target="_blank" rel="noopener noreferrer"{% endif %}>
+      <span class="channel-icon" aria-hidden="true">
+        {% case channel.icon %}
+          {% when 'email' %}{% include icons/email.svg %}
+          {% when 'github' %}{% include icons/github.svg %}
+          {% when 'telegram' %}{% include icons/telegram.svg %}
+          {% when 'linkedin' %}{% include icons/linkedin.svg %}
+        {% endcase %}
+      </span>
+      <span class="channel-label">{{ channel.label }}</span>
+      <strong>{{ channel.handle }}</strong>
+      <p>{{ channel.text }}</p>
+      <span class="channel-arrow" aria-hidden="true">↗</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="contact-note">
+  <div class="inner-shell contact-note-inner">
+    <h2>{{ contact.note_title }}</h2>
+    <p>{{ contact.note_text }}</p>
+  </div>
+</section>
