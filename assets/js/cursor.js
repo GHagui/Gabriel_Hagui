@@ -1,39 +1,53 @@
-// Custom neubrutalist cursor: square dot + trailing circular halo filled
-// with the site's "+" grid signature. Both render with
-// mix-blend-mode: difference (see _cursor.scss), so colors invert over any
-// background without per-element hover tracking.
+// Custom neubrutalist cursor: a solid dot that tracks the pointer exactly,
+// plus a ring that trails behind it with lerp inertia. No dependencies.
+//
+// - .cursor-dot: 16px solid accent circle, tracks pointermove 1:1.
+// - .cursor-ring: 42px hollow ink-bordered circle, chases the dot via
+//   requestAnimationFrame + linear interpolation (pos += (target - pos) * 0.18).
+// - Hovering a/button/[role="button"] grows + reheats the dot and shrinks
+//   the ring (aim → act feedback).
+// - Only runs on fine pointers; respects prefers-reduced-motion (ring
+//   snaps instead of trailing); native cursor is hidden only while this
+//   is active (html.custom-cursor), so degradation without JS is clean.
 (function () {
   'use strict';
 
-  // Fine pointers only — touch devices never see or pay for the effect.
   if (!window.matchMedia('(pointer: fine)').matches) return;
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   var dot = document.createElement('div');
   dot.className = 'cursor-dot';
-  var halo = document.createElement('div');
-  halo.className = 'cursor-halo';
-  document.body.appendChild(halo);
+  var ring = document.createElement('div');
+  ring.className = 'cursor-ring';
+  document.body.appendChild(ring);
   document.body.appendChild(dot);
   document.documentElement.classList.add('custom-cursor');
 
   var targetX = 0;
   var targetY = 0;
-  var haloX = 0;
-  var haloY = 0;
-  var visible = false;
+  var ringX = 0;
+  var ringY = 0;
+  var ringHover = false;
+  var hasMoved = false;
   var rafId = null;
 
-  function render() {
-    // Halo chases the dot; with reduced motion it snaps (no chase).
-    var ease = reduceMotion.matches ? 1 : 0.16;
-    haloX += (targetX - haloX) * ease;
-    haloY += (targetY - haloY) * ease;
-    halo.style.transform =
-      'translate3d(' + haloX + 'px, ' + haloY + 'px, 0) translate(-50%, -50%)';
-    if (Math.abs(targetX - haloX) > 0.1 || Math.abs(targetY - haloY) > 0.1) {
-      rafId = requestAnimationFrame(render);
+  function applyRingTransform() {
+    var scale = ringHover ? ' scale(0.6)' : '';
+    ring.style.transform =
+      'translate3d(' + ringX + 'px, ' + ringY + 'px, 0) translate(-50%, -50%)' + scale;
+  }
+
+  function renderRing() {
+    // Reduced motion: snap straight to the target, no trailing.
+    var ease = reduceMotion.matches ? 1 : 0.18;
+    ringX += (targetX - ringX) * ease;
+    ringY += (targetY - ringY) * ease;
+    applyRingTransform();
+
+    var dist = Math.hypot(targetX - ringX, targetY - ringY);
+    if (dist > 0.1) {
+      rafId = requestAnimationFrame(renderRing);
     } else {
       rafId = null;
     }
@@ -44,38 +58,48 @@
     targetY = e.clientY;
     dot.style.transform =
       'translate3d(' + targetX + 'px, ' + targetY + 'px, 0) translate(-50%, -50%)';
-    if (!visible) {
-      visible = true;
-      haloX = targetX;
-      haloY = targetY;
-      dot.classList.add('is-visible');
-      halo.classList.add('is-visible');
+
+    if (!hasMoved) {
+      hasMoved = true;
+      ringX = targetX;
+      ringY = targetY;
+      applyRingTransform();
+      dot.classList.add('on');
+      ring.classList.add('on');
     }
-    if (rafId === null) rafId = requestAnimationFrame(render);
+
+    if (rafId === null) rafId = requestAnimationFrame(renderRing);
   });
 
-  // Hide when the pointer leaves the window.
   document.addEventListener('pointerleave', function () {
-    dot.classList.remove('is-visible');
-    halo.classList.remove('is-visible');
-    visible = false;
+    dot.classList.remove('on');
+    ring.classList.remove('on');
   });
 
-  // Interactive feedback: replaces the native cursor: pointer semantics.
-  var INTERACTIVE =
-    'a, button, [role="button"], .project-card, .contact-card, .nav-toggle';
+  document.addEventListener('pointerenter', function () {
+    if (hasMoved) {
+      dot.classList.add('on');
+      ring.classList.add('on');
+    }
+  });
+
+  var INTERACTIVE = 'a, button, [role="button"]';
 
   document.addEventListener('pointerover', function (e) {
     if (e.target.closest(INTERACTIVE)) {
       dot.classList.add('is-hover');
-      halo.classList.add('is-hover');
+      ring.classList.add('is-hover');
+      ringHover = true;
+      applyRingTransform();
     }
   });
 
   document.addEventListener('pointerout', function (e) {
     if (e.target.closest(INTERACTIVE)) {
       dot.classList.remove('is-hover');
-      halo.classList.remove('is-hover');
+      ring.classList.remove('is-hover');
+      ringHover = false;
+      applyRingTransform();
     }
   });
 })();

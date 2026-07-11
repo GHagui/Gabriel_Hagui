@@ -1,0 +1,151 @@
+pt_br:
+  hero:
+    eyebrow: "Engenheiro de Software · DevOps AWS"
+    title: "Gabriel Hagui"
+    summary: "Um site pessoal sobre software, cloud, infraestrutura e os aprendizados pelo caminho."
+    primary_action: "Ver projetos"
+    primary_url: "/projects-br"
+    secondary_action: "Fale comigo"
+    secondary_url: "/contact-br"
+    marquee: "Serverless · Python · Rust · AWS · Homelab · LIBRAS · Arquitetura Limpa · DevOps · Automação"
+  intro:
+    label: "Sobre"
+    title: "Meu centro de operações."
+    text: >-
+      Este é o lugar onde registro projetos, aprendizados e desafios da minha jornada entre desenvolvimento
+      e infraestrutura de TI. Como surdo de nascença, minha comunicação é, por necessidade, clara e
+      assíncrona. O site segue os mesmos princípios: objetividade, contraste e conteúdo funcional.
+    availability: "Site pessoal · documentação em evolução"
+  pillars:
+    - number: "01"
+      title: "Documentar"
+      text: "Registrar projetos, decisões, aprendizados e desafios de forma útil para consulta futura."
+    - number: "02"
+      title: "Aprofundar"
+      text: "Compartilhar estudos sobre serverless, AWS, automação com Python e Rust e arquitetura limpa."
+    - number: "03"
+      title: "Experimentar"
+      text: "Centralizar projetos open source, ferramentas, snippets e a evolução prática do meu homelab."
+  highlights:
+    label: "Trabalho em prática"
+    title: "O que você encontra aqui"
+    lead: "Notas técnicas, experiências práticas e referências que quero manter organizadas."
+    items:
+      - title: "Projetos"
+        text: "Projetos versionados, experimentos com novas tecnologias e soluções construídas por curiosidade ou necessidade."
+        url: "/projects-br"
+        action: "Explorar projetos"
+      - title: "Artigos"
+        text: "Artigos técnicos e relatos práticos sobre cloud, serverless, homelab, storage e produtividade."
+        url: "/blog-br"
+        action: "Ler o blog"
+      - title: "Experiência"
+        text: "Minha trajetória profissional, os contextos em que trabalhei e o que aprendi em cada etapa."
+        url: "/xp-br"
+        action: "Ver trajetória"
+  proof:
+    label: "Princípios"
+    title: "Funcional por escolha."
+    text: >-
+      Contraste forte, bordas marcadas e tipografia direta não são apenas estética. O neubrutalismo cria
+      pontos de referência claros, acelera a leitura e mantém o conteúdo no centro da experiência.
+    quote: "Soluções reais, documentação honesta, execução simples."
+  roadmap:
+    label: "Em construção"
+    title: "Próximos estudos"
+    text: "Temas que pretendo estudar, construir ou documentar. A lista muda conforme a curiosidade e os projetos avançam."
+    items:
+      - topic: "Infraestrutura"
+        title: "Servidor de Minecraft auto-hospedado"
+        status: "Planejado"
+      - topic: "Desenvolvimento"
+        title: "Blog com Jekyll, HTML e CSS do zero"
+        status: "Planejado"
+      - topic: "AWS"
+        title: "Estudos práticos e anotações"
+        status: "Em estudo"
+      - topic: "Rust"
+        title: "GUI para conversão de HDR para SDR"
+        status: "Experimento"
+  contact:
+    label: "Contato"
+    title: "Quer trocar uma ideia?"
+    text: "Use a página de contato para conversar sobre um artigo, compartilhar uma referência ou propor uma colaboração."
+    action: "Ver contatos"
+    url: "/contact-br"
+
+en_us:
+  hero:
+    eyebrow: "Software Engineer · AWS DevOps"
+    title: "Gabriel Hagui"
+    summary: "A personal site about software, cloud, infrastructure and the lessons learned along the way."
+    primary_action: "See projects"
+    primary_url: "/projects-en"
+    secondary_action: "Get in touch"
+    secondary_url: "/contact-en"
+    marquee: "Serverless · Python · Rust · AWS · Homelab · Sign Language · Clean Architecture · DevOps · Automation"
+  intro:
+    label: "About"
+    title: "My personal operations hub."
+    text: >-
+      This is where I document projects, lessons and challenges from my journey across software development
+      and IT infrastructure. Being deaf since birth shaped a clear and asynchronous communication style.
+      This site follows the same principles: objectivity, contrast and functional content.
+    availability: "Personal site · documentation in progress"
+  pillars:
+    - number: "01"
+      title: "Document"
+      text: "Keep a useful record of projects, decisions, lessons and challenges for future reference."
+    - number: "02"
+      title: "Learn deeper"
+      text: "Share studies on serverless, AWS, Python and Rust automation and clean architecture."
+    - number: "03"
+      title: "Experiment"
+      text: "Bring together open-source projects, tools, snippets and the practical evolution of my homelab."
+  highlights:
+    label: "Work in practice"
+    title: "What you will find here"
+    lead: "Technical notes, practical experiences and references I want to keep organized."
+    items:
+      - title: "Projects"
+        text: "Versioned projects, experiments with new technologies and solutions built from curiosity or need."
+        url: "/projects-en"
+        action: "Explore projects"
+      - title: "Articles"
+        text: "Technical articles and practical notes on cloud, serverless, homelab, storage and productivity."
+        url: "/blog-en"
+        action: "Read the blog"
+      - title: "Experience"
+        text: "My professional journey, the contexts in which I worked and what I learned at each stage."
+        url: "/xp-en"
+        action: "View experience"
+  proof:
+    label: "Principles"
+    title: "Functional by design."
+    text: >-
+      Strong contrast, solid borders and direct typography are more than a visual style. Neubrutalism
+      creates clear landmarks, supports fast scanning and keeps content at the center of the experience.
+    quote: "Practical solutions, honest documentation, simple execution."
+  roadmap:
+    label: "In progress"
+    title: "What I am exploring next"
+    text: "Topics I intend to study, build or document. The list changes as curiosity and projects move forward."
+    items:
+      - topic: "Infrastructure"
+        title: "Minimal observability for small projects"
+        status: "Research"
+      - topic: "Serverless"
+        title: "Pipeline automation template"
+        status: "Planned"
+      - topic: "Productivity"
+        title: "Practical guide to personal indexing and search"
+        status: "Drafting"
+      - topic: "Rust"
+        title: "GUI for HDR to SDR conversion"
+        status: "Experiment"
+  contact:
+    label: "Contact"
+    title: "Want to exchange ideas?"
+    text: "Use the contact page to discuss an article, share a reference or suggest a collaboration."
+    action: "View contacts"
+    url: "/contact-en"

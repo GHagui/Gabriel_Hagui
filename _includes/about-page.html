@@ -1,0 +1,111 @@
+<main id="main-content" class="about-home">
+  <section class="about-hero" aria-labelledby="about-hero-title">
+    <div class="about-hero-portrait">
+      <img src="{{ '/assets/images/gabriel-hagui.webp' | relative_url }}" alt="Gabriel Hagui" width="800" height="800">
+    </div>
+    <div class="about-hero-copy">
+      <p class="about-kicker about-kicker-inverse">{{ about.hero.eyebrow }}</p>
+      <h1 id="about-hero-title">{{ about.hero.title }}</h1>
+      <p class="about-hero-summary">{{ about.hero.summary }}</p>
+      <div class="about-actions">
+        <a class="about-button about-button-primary" href="{{ about.hero.primary_url | relative_url }}">{{ about.hero.primary_action }} <span aria-hidden="true">→</span></a>
+        <a class="about-button" href="{{ about.hero.secondary_url | relative_url }}">{{ about.hero.secondary_action }}</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="about-marquee" aria-hidden="true">
+    <div class="about-marquee-track">
+      {%- for i in (1..8) -%}<span>{{ about.hero.marquee }}&nbsp;&nbsp;✦&nbsp;&nbsp;</span>{%- endfor -%}
+    </div>
+  </div>
+
+  <section class="about-intro about-shell" aria-labelledby="about-intro-title">
+    <div class="about-section-heading">
+      <p class="about-kicker">{{ about.intro.label }}</p>
+      <h2 id="about-intro-title">{{ about.intro.title }}</h2>
+    </div>
+    <div class="about-intro-copy">
+      <p>{{ about.intro.text }}</p>
+      <p class="about-availability"><span aria-hidden="true"></span>{{ about.intro.availability }}</p>
+    </div>
+  </section>
+
+  <section class="about-pillars" aria-label="{{ about.intro.label }}">
+    <div class="about-shell about-pillar-grid">
+      {% for pillar in about.pillars %}
+      <article class="about-pillar">
+        <span class="about-pillar-number" aria-hidden="true">{{ pillar.number }}</span>
+        <h3>{{ pillar.title }}</h3>
+        <p>{{ pillar.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="about-highlights about-shell" aria-labelledby="about-highlights-title">
+    <header class="about-wide-heading">
+      <div>
+        <p class="about-kicker">{{ about.highlights.label }}</p>
+        <h2 id="about-highlights-title">{{ about.highlights.title }}</h2>
+      </div>
+      <p>{{ about.highlights.lead }}</p>
+    </header>
+    <div class="about-highlight-grid">
+      {% for item in about.highlights.items %}
+      <a class="about-highlight-card" href="{{ item.url | relative_url }}" aria-label="{{ item.action }}">
+        <span class="about-card-index" aria-hidden="true">0{{ forloop.index }}</span>
+        <span class="about-card-arrow" aria-hidden="true">↗</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="about-proof">
+    <div class="about-shell about-proof-grid">
+      <div>
+        <p class="about-kicker about-kicker-light">{{ about.proof.label }}</p>
+        <h2>{{ about.proof.title }}</h2>
+      </div>
+      <div class="about-proof-copy">
+        <p>{{ about.proof.text }}</p>
+        <blockquote>{{ about.proof.quote }}</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-roadmap about-shell" aria-labelledby="about-roadmap-title">
+    <header class="about-wide-heading">
+      <div>
+        <p class="about-kicker">{{ about.roadmap.label }}</p>
+        <h2 id="about-roadmap-title">{{ about.roadmap.title }}</h2>
+      </div>
+      <p>{{ about.roadmap.text }}</p>
+    </header>
+    <ol class="about-roadmap-list">
+      {% for item in about.roadmap.items %}
+      <li>
+        <span class="about-roadmap-index" aria-hidden="true">0{{ forloop.index }}</span>
+        <div>
+          <span class="about-roadmap-topic">{{ item.topic }}</span>
+          <h3>{{ item.title }}</h3>
+        </div>
+        <span class="about-roadmap-status">{{ item.status }}</span>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <section class="about-contact" aria-labelledby="about-contact-title">
+    <div class="about-shell about-contact-inner">
+      <div>
+        <p class="about-kicker about-kicker-inverse">{{ about.contact.label }}</p>
+        <h2 id="about-contact-title">{{ about.contact.title }}</h2>
+        <p>{{ about.contact.text }}</p>
+      </div>
+      <a class="about-button about-button-light" href="{{ about.contact.url | relative_url }}">{{ about.contact.action }} <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</main>
